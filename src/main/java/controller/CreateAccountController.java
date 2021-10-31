@@ -2,9 +2,9 @@ package controller;
 
 import model.Account;
 
-import java.io.*;
 import java.util.Scanner;
 
+import static controller.AccountDatabaseController.saveAccountToDatabase;
 import static utilities.ClearConsole.cleanConsole;
 import static utilities.ClearConsole.newChapter;
 import static utilities.InputValidator.*;
@@ -13,12 +13,13 @@ public class CreateAccountController {
     public void showCreateAccountMenu() {
         cleanConsole(); //todo: find a way to clean console after choosing correct menu, meanwhile:
         newChapter();
+        MainMenuController mainMenuController = new MainMenuController();
         Scanner scanner = new Scanner(System.in);
         System.out.println("Please enter following information to create an account:");
         String name=null;
         do{
             System.out.print("First name: ");
-            name = scanner.nextLine();
+            name = scanner.nextLine();  //todo: find a way to break out of creation and get back to main menu
         } while(!isNameValid(name));
 
         String surname=null;
@@ -49,36 +50,8 @@ public class CreateAccountController {
         System.out.println("Account created!");
         saveAccountToDatabase(account);
         newChapter();
-        MainMenuController mainMenuController = new MainMenuController();
-        mainMenuController.showMenu();
-    }
 
-    private void saveAccountToDatabase(Account account) {
-        account.setId(getNumberOfAccountsInDatabase()+1);
-        try {
-            PrintWriter writer = new PrintWriter(new FileWriter("f:\\java\\AirlineApp\\src\\main\\resources\\UserDatabase.txt",true));
-            writer.println(account.toString());
-            writer.flush();
-            writer.close();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
-
-    private int getNumberOfAccountsInDatabase() {
-        Scanner scanner = null;
-        int accountsInDatabase = 0;
-        try {
-            scanner = new Scanner(new FileInputStream("f:\\java\\AirlineApp\\src\\main\\resources\\UserDatabase.txt"));
-
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-        }
-        while(scanner.hasNextLine()) {
-            scanner.nextLine();
-            accountsInDatabase++;
-        }
-        return accountsInDatabase;
+        mainMenuController.viewMainMenu();
     }
 
 }

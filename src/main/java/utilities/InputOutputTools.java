@@ -1,12 +1,11 @@
 package utilities;
 
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
+import java.io.*;
 import java.util.Scanner;
 
 public class InputOutputTools {
 
-    public static int readUserInput(int amountOfOptions) {
+    public static int readUserIntegerInput(int amountOfOptions) {
         Scanner userInput = new Scanner(System.in);
         int answer = 0;
         boolean validOption=false;
@@ -22,7 +21,6 @@ public class InputOutputTools {
 
         return answer;
     }
-
 
     private static boolean isOptionValid(int answer, int amountOfOptions) {
         if(answer>=0 && answer<=amountOfOptions-1) {
@@ -47,6 +45,11 @@ public class InputOutputTools {
             amountOfOptions++;
         }
         return amountOfOptions;
+    }
+
+    public static void clearFile(String path) throws IOException {
+        PrintWriter cleaner = new PrintWriter(new FileWriter(path));
+        cleaner.print("");
     }
 
 }

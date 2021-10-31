@@ -1,17 +1,17 @@
 package controller;
 
-import static utilities.InputOutputTools.readUserInput;
+import static utilities.InputOutputTools.readUserIntegerInput;
 import static utilities.InputOutputTools.showMenuOptions;
 
 
 public class MainMenuController {
         private String LIST_OF_MENU_OPTIONS = "f:\\java\\AirlineApp\\src\\main\\resources\\MainMenuOptions.csv";
 
-        public void showMenu() {
+        public void viewMainMenu() {
         System.out.println("Welcome to AirAir reservation service.");
         System.out.println("Please choose one of the following options:");
         int amountOfOptions = showMenuOptions(LIST_OF_MENU_OPTIONS);
-        int option = readUserInput(amountOfOptions);
+        int option = readUserIntegerInput(amountOfOptions);
         changeViewMainMenu(option);
     }
 

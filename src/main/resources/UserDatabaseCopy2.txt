@@ -7,6 +7,8 @@
 7. Piotr Palka, email: palka@piotr.pl, password: wladza
 8. Donald Duck, email: donald@po.pl, password: airplane
 9. Bobby Generic, email: generic@name.cartoon, password: 1234
-10. Daria Zawiało, email: zawialo@wiatr.pl, password: hejhej
-11. Łukasz Klepacz, email: klepacz@gmail.com, password: stalowe
-12. Grzegorz Pustówka, email: pustowka@Alsina.com, password: brak
+10. Dante Italy, email: DanteFromItaly@gmail.com, password: hell
+11. Piotr Szyjka, email: piotr@op.pl, password: gladko
+12. Daria Zawiało, email: zawialo@wiatr.pl, password: hejhej
+13. Łukasz Klepacz, email: klepacz@gmail.com, password: stalowe
+14. Grzegorz Pustówka, email: pustowka@Alsina.com, password: brak

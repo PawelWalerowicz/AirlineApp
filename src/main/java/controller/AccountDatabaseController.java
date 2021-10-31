@@ -1,20 +1,22 @@
 package controller;
 
-import controller.MainMenuController;
 import model.Account;
 
 import java.io.*;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 import static utilities.ClearConsole.newChapter;
+import static utilities.InputOutputTools.clearFile;
 
 public class AccountDatabaseController {
-    private static final String USER_DATABASE = "f:\\java\\AirlineApp\\src\\main\\resources\\UserDatabase.txt";
+    private static final String USER_DATABASE_FILE = "f:\\java\\AirlineApp\\src\\main\\resources\\UserDatabase.txt";
 
     public static void saveAccountToDatabase(Account account) {
         account.setId(getNumberOfAccountsInDatabase() + 1);
         try {
-            PrintWriter writer = new PrintWriter(new FileWriter("f:\\java\\AirlineApp\\src\\main\\resources\\UserDatabase.txt", true));
+            PrintWriter writer = new PrintWriter(new FileWriter(USER_DATABASE_FILE, true));
             writer.println(account.toString());
             writer.flush();
             writer.close();
@@ -27,7 +29,7 @@ public class AccountDatabaseController {
         Scanner scanner = null;
         int accountsInDatabase = 0;
         try {
-            scanner = new Scanner(new FileInputStream("f:\\java\\AirlineApp\\src\\main\\resources\\UserDatabase.txt"));
+            scanner = new Scanner(new FileInputStream(USER_DATABASE_FILE));
 
         } catch (FileNotFoundException e) {
             e.printStackTrace();
@@ -47,19 +49,18 @@ public class AccountDatabaseController {
         boolean accountFound = false;
         boolean passwordCorrect = true;
         try {
-            scanner = new Scanner(new FileInputStream(USER_DATABASE));
+            scanner = new Scanner(new FileInputStream(USER_DATABASE_FILE));
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         }
         while (scanner.hasNextLine()) {
             String user = scanner.nextLine().toString();
-            user = user.replace(",", "");
-            String[] userAttributes = user.split(" ");
-            if (userAttributes[4].toLowerCase().equals(email.toLowerCase()) && userAttributes[6].equals(password)) {
+            Account currentAccount = getAccountFromDatabaseString(user);
+            if (currentAccount.getEmail().toLowerCase().equals(email.toLowerCase()) && currentAccount.getPassword().equals(password)) {
                 accountFound = true;
                 passwordCorrect = true;
-                account = new Account(Integer.parseInt(userAttributes[0].substring(0, 1)), userAttributes[1], userAttributes[2], userAttributes[3], userAttributes[4]);
-            } else if (userAttributes[4].equals(email) && !userAttributes[6].equals(password)) {
+                account = currentAccount;
+            } else if (currentAccount.getEmail().toLowerCase().equals(email) && !currentAccount.getPassword().equals(password)) {
                 accountFound = true;
                 passwordCorrect = false;
             }
@@ -72,7 +73,7 @@ public class AccountDatabaseController {
                 e.printStackTrace();
             }
             newChapter();
-            mainMenuController.showMenu();
+            mainMenuController.viewMainMenu();
         }
         if (accountFound && !passwordCorrect) {
             System.out.println("Incorrect password.");
@@ -82,20 +83,95 @@ public class AccountDatabaseController {
                 e.printStackTrace();
             }
             newChapter();
-            mainMenuController.showMenu();
+            mainMenuController.viewMainMenu();
         }
         return account;
     }
 
     public static void editAccountInDatabase(int id, Account account) {
+        Scanner scanner = null;
+        List allAccounts = new ArrayList();
 
-//        user = user.replace(",", "");
-//        String[] userAttributes = user.split(" ");
-//        if (userAttributes[4].toLowerCase().equals(email.toLowerCase()) && userAttributes[6].equals(password)) {
-//            accountFound = true;
-//            passwordCorrect = true;
-//            account = new Account(Integer.parseInt(userAttributes[0].substring(0, 1)), userAttributes[1], userAttributes[2], userAttributes[3], userAttributes[4]);
-//
-//        }
+        try {
+            scanner = new Scanner(new FileInputStream(USER_DATABASE_FILE));
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
+        while (scanner.hasNextLine()) {
+            String user = scanner.nextLine().toString();
+            Account currentAccount = getAccountFromDatabaseString(user);
+            if(currentAccount.getId()==id) {
+                Account changedAccount = new Account(
+                        id,
+                        account.getName(),
+                        account.getSurname(),
+                        account.getEmail(),
+                        account.getPassword()
+                );
+                allAccounts.add(changedAccount.toString());
+            } else {
+                allAccounts.add(user);
+            }
+        }
+
+        rewriteDatabase(allAccounts,USER_DATABASE_FILE);
+
     }
+
+
+    public static void deleteAccountFromDatabase(Account account) {
+        Scanner scanner = null;
+        List allAccounts = new ArrayList();
+        int id = account.getId();
+
+        try {
+            scanner = new Scanner(new FileInputStream(USER_DATABASE_FILE));
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
+        int currentId=0;
+        while (scanner.hasNextLine()) {
+            String user = scanner.nextLine().toString();
+            Account currentAccount = getAccountFromDatabaseString(user);
+            if(currentAccount.getId()!=id) {
+                currentId++;
+                currentAccount.setId(currentId);
+                allAccounts.add(currentAccount.toString());
+            }
+        }
+
+        rewriteDatabase(allAccounts,USER_DATABASE_FILE);
+
+    }
+
+    private static String[] getUserAttributesFromDatabaseString(String userAsString) {
+        String[] parameters =  userAsString
+                .replace(",", "")
+                .split(" ");
+        parameters[0] = parameters[0].substring(0,parameters[0].length()-1);
+        return parameters;
+    }
+
+    private static Account getAccountFromAttributes(String[] userAttributes) {
+        return new Account(Integer.parseInt(userAttributes[0]), userAttributes[1], userAttributes[2], userAttributes[4], userAttributes[6]);
+    }
+
+    private static Account getAccountFromDatabaseString(String userAsString) {
+        return getAccountFromAttributes(getUserAttributesFromDatabaseString(userAsString));
+    }
+
+    private static void rewriteDatabase(List<String> allAccounts, String filePath) {
+        try {
+            clearFile(filePath);
+            PrintWriter writer = new PrintWriter(new FileWriter(filePath, true));
+            for(int i=0;i<allAccounts.size();i++) {
+                writer.println(allAccounts.get(i));
+            }
+            writer.flush();
+            writer.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
 }
