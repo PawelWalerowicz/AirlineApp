@@ -1,30 +1,24 @@
 package controller;
 
+import view.CreateAccountMenu;
+import view.LoginMenu;
+
 import static utilities.InputOutputTools.readUserIntegerInput;
 import static utilities.InputOutputTools.showMenuOptions;
 
 
 public class MainMenuController {
-        private String LIST_OF_MENU_OPTIONS = "f:\\java\\AirlineApp\\src\\main\\resources\\MainMenuOptions.csv";
 
-        public void viewMainMenu() {
-        System.out.println("Welcome to AirAir reservation service.");
-        System.out.println("Please choose one of the following options:");
-        int amountOfOptions = showMenuOptions(LIST_OF_MENU_OPTIONS);
-        int option = readUserIntegerInput(amountOfOptions);
-        changeViewMainMenu(option);
-    }
+    public void changeViewMainMenu(int option) {
 
-
-    private void changeViewMainMenu(int option) {
         switch(option) {
             case 0:
-                CreateAccountController createAccountController = new CreateAccountController();
-                createAccountController.showCreateAccountMenu();
+                CreateAccountMenu cam = new CreateAccountMenu();
+                cam.viewCreateAccountMenu();
                 break;
             case 1:
-                LoginController loginController = new LoginController();
-                loginController.showLoginMenu();
+                LoginMenu lm = new LoginMenu();
+                lm.viewLoginMenu();
                 break;
             case 2:
                 System.out.println("Goodbye!");

@@ -5,7 +5,7 @@ import java.io.IOException;
 public class ClearConsole {
         private static String DOUBLE_LINE="\n====================================================================\n";
         public static void cleanConsole() {
-//            try {
+//            try {     //todo: create function that cleans console
 //                new ProcessBuilder("cmd", "/c", "cls").inheritIO().start().waitFor();
 //            } catch (InterruptedException e) {
 //                e.printStackTrace();

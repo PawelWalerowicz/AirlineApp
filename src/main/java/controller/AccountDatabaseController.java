@@ -1,6 +1,7 @@
 package controller;
 
 import model.Account;
+import view.MainMenu;
 
 import java.io.*;
 import java.util.ArrayList;
@@ -9,9 +10,10 @@ import java.util.Scanner;
 
 import static utilities.ClearConsole.newChapter;
 import static utilities.InputOutputTools.clearFile;
+import static utilities.ResourcesIndex.USER_DATABASE_FILE;
 
 public class AccountDatabaseController {
-    private static final String USER_DATABASE_FILE = "f:\\java\\AirlineApp\\src\\main\\resources\\UserDatabase.txt";
+
 
     public static void saveAccountToDatabase(Account account) {
         account.setId(getNumberOfAccountsInDatabase() + 1);
@@ -43,7 +45,7 @@ public class AccountDatabaseController {
 
 
     public static Account getAccountFromDatabase(String email, String password) {
-        MainMenuController mainMenuController = new MainMenuController();
+        MainMenu mm = new MainMenu();
         Account account = null;
         Scanner scanner = null;
         boolean accountFound = false;
@@ -56,11 +58,11 @@ public class AccountDatabaseController {
         while (scanner.hasNextLine()) {
             String user = scanner.nextLine().toString();
             Account currentAccount = getAccountFromDatabaseString(user);
-            if (currentAccount.getEmail().toLowerCase().equals(email.toLowerCase()) && currentAccount.getPassword().equals(password)) {
+            if (currentAccount.getEmail().equals(email.toLowerCase()) && currentAccount.getPassword().equals(password)) {
                 accountFound = true;
                 passwordCorrect = true;
                 account = currentAccount;
-            } else if (currentAccount.getEmail().toLowerCase().equals(email) && !currentAccount.getPassword().equals(password)) {
+            } else if (currentAccount.getEmail().equals(email) && !currentAccount.getPassword().equals(password)) {
                 accountFound = true;
                 passwordCorrect = false;
             }
@@ -68,22 +70,22 @@ public class AccountDatabaseController {
         if (!accountFound) {
             System.out.println("Account not found.");
             try {
-                Thread.sleep(1500);
+                Thread.sleep(1000);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
             newChapter();
-            mainMenuController.viewMainMenu();
+            mm.viewMainMenu();
         }
         if (accountFound && !passwordCorrect) {
             System.out.println("Incorrect password.");
             try {
-                Thread.sleep(1500);
+                Thread.sleep(1000);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
             newChapter();
-            mainMenuController.viewMainMenu();
+            mm.viewMainMenu();
         }
         return account;
     }
@@ -153,7 +155,13 @@ public class AccountDatabaseController {
     }
 
     private static Account getAccountFromAttributes(String[] userAttributes) {
-        return new Account(Integer.parseInt(userAttributes[0]), userAttributes[1], userAttributes[2], userAttributes[4], userAttributes[6]);
+        return new Account(
+                Integer.parseInt(userAttributes[0]),
+                userAttributes[1],
+                userAttributes[2],
+                userAttributes[4],
+                userAttributes[6]
+        );
     }
 
     private static Account getAccountFromDatabaseString(String userAsString) {

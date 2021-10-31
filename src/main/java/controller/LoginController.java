@@ -1,6 +1,7 @@
 package controller;
 
 import model.Account;
+import view.UserMenu;
 
 import java.util.Scanner;
 
@@ -11,12 +12,8 @@ import static utilities.InputValidator.*;
 
 public class LoginController {
 
-    public void showLoginMenu() {
-        cleanConsole(); //todo: find a way to clean console after choosing correct menu, meanwhile:
-        newChapter();
+    public void login() {   //todo: add validator to check if account exist
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Please enter following information to log into your account:");
-
         String email=null;
         do{
             System.out.print("Email: ");
@@ -30,8 +27,10 @@ public class LoginController {
         } while(!isPasswordValid(password));
 
         Account account = getAccountFromDatabase(email,password);
-        UserController userController = new UserController(account);
-        userController.showUserMenu();
+        System.out.println("Account found.");
+        UserMenu um = new UserMenu(account);
+        System.out.println("User created");
+        um.viewUserMenu();
     }
 
 

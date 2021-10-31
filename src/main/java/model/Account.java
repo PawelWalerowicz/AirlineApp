@@ -4,6 +4,7 @@ import controller.MainMenuController;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
+import java.util.Locale;
 import java.util.Scanner;
 
 import static utilities.ClearConsole.newChapter;
@@ -19,7 +20,7 @@ public class Account {
         this.id = id;
         this.name = name;
         this.surname = surname;
-        this.email = email;
+        this.email = email.toLowerCase();
         this.password = password;
     }
 
@@ -27,7 +28,7 @@ public class Account {
         this.id = 0;
         this.name = name;
         this.surname = surname;
-        this.email = email;
+        this.email = email.toLowerCase();
         this.password = password;
     }
 
