@@ -7,7 +7,11 @@ import view.UserMenu;
 
 import java.util.Scanner;
 
+import static utilities.ClearConsole.cleanConsole;
+import static utilities.InputOutputTools.readUserIntegerInput;
+import static utilities.InputOutputTools.showMenuOptions;
 import static utilities.InputValidator.*;
+import static utilities.ResourcesIndex.LIST_OF_EDIT_ACCOUNT_MENU_OPTIONS;
 
 public class EditAccountController {
     Account account;
@@ -19,9 +23,23 @@ public class EditAccountController {
         this.account = account;
     }
 
+    public void viewEditAccountOptions() {
+        int amountOfOptions = showMenuOptions(LIST_OF_EDIT_ACCOUNT_MENU_OPTIONS);
+        try {
+            int option = readUserIntegerInput(amountOfOptions);
+            changeViewEditAccount(option);
+        } catch (NumberFormatException exc) {
+            System.out.println("Wrong input, please try again.\n");
+            EditAccountMenu eam = new EditAccountMenu(account);
+            eam.viewEditAccountMenu();
+        }
+
+    }
+
+
     public void changeViewEditAccount(int option) {
         um = new UserMenu(account);
-        switch(option) {
+        switch (option) {
             case 0:
                 changeName();
                 um.viewUserMenu();
@@ -54,60 +72,61 @@ public class EditAccountController {
 
     private void changeName() {
         Scanner scanner = new Scanner(System.in);
-        String name=account.getName();
+        String name = account.getName();
         System.out.print("Current name is " + name + ", please enter new name or \"Q\" to discard changes: ");
-        do{
-            name = scanner.nextLine();
-            if(name.toLowerCase().equals("q")) {
-                break;
-            }
-        } while(!isNameValid(name));
-
-        if(name.toLowerCase().equals("q")) {
-            eam.viewEditAccountMenu();
-        } else {
-            account.setName(name);
-            AccountDatabaseController.editAccountInDatabase(account.getId(),account);
-            System.out.println("Name changed to " + name + ".");
+        boolean proceed = true;
+        if (proceed) {
+            do {
+                name = scanner.nextLine();
+                proceed = checkForQuit(name);
+            } while (proceed && !isNameValid(name));
+        }
+            if (!proceed) {
+                eam = new EditAccountMenu(account);
+                eam.viewEditAccountMenu();
+            } else {
+                account.setName(name);
+                AccountDatabaseController.editAccountInDatabase(account.getId(), account);
+                System.out.println("Name changed to " + name + ".");
         }
     }
 
     private void changeSurname() {
         Scanner scanner = new Scanner(System.in);
-        String surname=account.getSurname();
+        String surname = account.getSurname();
+        boolean proceed = true;
         System.out.print("Current surname is " + surname + ", please enter new surname or \"Q\" to discard changes: ");
-        do{
-            surname = scanner.nextLine();
-            if(surname.toLowerCase().equals("q")) {
-                break;
-            }
-        } while(!isNameValid(surname));
+            do {
+                surname = scanner.nextLine();
+                proceed = checkForQuit(surname);
+            } while (proceed && !isNameValid(surname));
 
-        if(surname.toLowerCase().equals("q")) {
+        if (!proceed) {
+            eam = new EditAccountMenu(account);
             eam.viewEditAccountMenu();
         } else {
             account.setSurname(surname);
-            AccountDatabaseController.editAccountInDatabase(account.getId(),account);
+            AccountDatabaseController.editAccountInDatabase(account.getId(), account);
             System.out.println("Surname changed to " + surname + ".");
         }
     }
 
     private void changeEmail() {
         Scanner scanner = new Scanner(System.in);
-        String email=account.getEmail();
+        String email = account.getEmail();
+        boolean proceed = true;
         System.out.print("Current email is " + email + ", please enter new email or \"Q\" to discard changes: ");
-        do{
+        do {
             email = scanner.nextLine();
-            if(email.toLowerCase().equals("q")) {
-                break;
-            }
-        } while(!isEmailValid(email));
+            proceed = checkForQuit(email);
+        } while (proceed && !isEmailValid(email));
 
-        if(email.toLowerCase().equals("q")) {
+        if (!proceed) {
+            eam = new EditAccountMenu(account);
             eam.viewEditAccountMenu();
         } else {
             account.setEmail(email);
-            AccountDatabaseController.editAccountInDatabase(account.getId(),account);
+            AccountDatabaseController.editAccountInDatabase(account.getId(), account);
             System.out.println("Email changed to " + email + ".");
         }
     }
@@ -116,24 +135,27 @@ public class EditAccountController {
     private void changePassword() {
         Scanner scanner = new Scanner(System.in);
         String password;
+        boolean proceed = true;
         System.out.print("Please enter new password or \"Q\" to discard changes: ");
-        do{
+        do {
             password = scanner.nextLine();
-            if(password.toLowerCase().equals("q")) {
-                break;
-            }
-        } while(!isPasswordValid(password));
-        String confirmPassword=null;
-        do{
-            System.out.print("Repeat password: ");
-            confirmPassword=scanner.nextLine();
-        } while(!passwordConfirmation(password, confirmPassword));
+            proceed = checkForQuit(password);
+        } while (!isPasswordValid(password));
+        String confirmPassword = null;
+        if(proceed) {
+            do {
+                System.out.print("Repeat password: ");
+                confirmPassword = scanner.nextLine();
+                proceed = checkForQuit(confirmPassword);
+            } while (proceed && !passwordConfirmation(password, confirmPassword));
+        }
 
-        if(password.toLowerCase().equals("q")) {
+        if (!proceed) {
+            eam = new EditAccountMenu(account);
             eam.viewEditAccountMenu();
         } else {
             account.setPassword(password);
-            AccountDatabaseController.editAccountInDatabase(account.getId(),account);
+            AccountDatabaseController.editAccountInDatabase(account.getId(), account);
             System.out.println("Password changed.");
         }
     }
@@ -142,15 +164,13 @@ public class EditAccountController {
         Scanner scanner = new Scanner(System.in);
         String password;
         System.out.print("You are about to delete your account. If you really want to do that enter your password or \"Q\" to quit: ");
-        do{
+        boolean proceed = true;
+        do {
             password = scanner.nextLine();
-            if(password.toLowerCase().equals("q")) {
-                break;
-            }
-        } while(!isPasswordValid(password));
+            proceed = checkForQuit(password);
+        } while (!isPasswordValid(password));
 
-        if(password.toLowerCase().equals("q")) {
-            MainMenuController mmc = new MainMenuController();
+        if (!proceed) {
             mm.viewMainMenu();
         } else {
             AccountDatabaseController.deleteAccountFromDatabase(account);

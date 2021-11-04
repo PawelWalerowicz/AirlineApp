@@ -7,6 +7,8 @@
 7. Donald Duck, email: donald@po.pl, password: airplane
 8. Bobby Generic, email: generic@name.cartoon, password: 1234
 9. Daria Zawiało, email: zawialo@wiatr.pl, password: hejhej
-10. Łukasz Klepacz, email: klepacz@gmail.com, password: stalowe
-11. Grzegorz Pustówka, email: pustowka@alsina.com, password: brak
-12. Dariusz Kołatka, email: darek@op.pl, password: wies
+10. Grzegorz Pustówka, email: pustowka@alsina.com, password: brak
+11. Dariusz Kołatka, email: darek@op.pl, password: wies
+12. Hermann Hess, email: szklane@paciorki.pl, password: wojsko
+13. Daria Maria, email: pawmaria@pol.pl, password: pawmaria
+14. Martyna Walerowicz, email: martynawalerowicz90@gmail.com, password: Zd1

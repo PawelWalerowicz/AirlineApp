@@ -1,17 +1,18 @@
 package controller;
 
 import model.Account;
+import utilities.ResourcesIndex;
 import view.EditAccountMenu;
 import view.MainMenu;
 import view.UserMenu;
 
 import java.util.Scanner;
 
-import static utilities.ClearConsole.newChapter;
+import static utilities.ClearConsole.cleanConsole;
 import static utilities.InputOutputTools.readUserIntegerInput;
 import static utilities.InputOutputTools.showMenuOptions;
 import static utilities.InputValidator.*;
-import static utilities.ResourcesIndex.LIST_OF_EDIT_ACCOUNT_MENU_OPTIONS;
+import static utilities.ResourcesIndex.*;
 
 public class UserController {
     Account account;
@@ -21,6 +22,18 @@ public class UserController {
 
     public UserController(Account account) {
         this.account = account;
+    }
+
+    public void viewUserOptions() {
+        int amountOfOptions = showMenuOptions(LIST_OF_USER_MENU_OPTIONS);
+        try {
+            int option = readUserIntegerInput(amountOfOptions);
+            changeViewLoggedInUser(option);
+        } catch (NumberFormatException exc) {
+            System.out.println("Wrong input, please try again.\n");
+            UserMenu um = new UserMenu(account);
+            um.viewUserMenu();
+        }
     }
 
     public void changeViewLoggedInUser(int option) {
@@ -36,7 +49,7 @@ public class UserController {
                 System.out.println("TODO: View flights menu");
                 break;
             case 3:
-                newChapter();
+                cleanConsole();
                 mm.viewMainMenu();
             case 4:
                 System.out.println("Goodbye!");

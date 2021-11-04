@@ -7,8 +7,6 @@ import java.io.FileNotFoundException;
 import java.util.Locale;
 import java.util.Scanner;
 
-import static utilities.ClearConsole.newChapter;
-
 public class Account {
     private int id;
     private String name;

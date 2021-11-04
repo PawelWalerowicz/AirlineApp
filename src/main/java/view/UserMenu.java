@@ -4,7 +4,7 @@ import controller.UserController;
 import model.Account;
 import utilities.ResourcesIndex;
 
-import static utilities.ClearConsole.newChapter;
+import static utilities.ClearConsole.cleanConsole;
 import static utilities.InputOutputTools.readUserIntegerInput;
 import static utilities.InputOutputTools.showMenuOptions;
 
@@ -18,11 +18,9 @@ public class UserMenu {
     }
 
     public void viewUserMenu() {
-        newChapter();
+        cleanConsole();
         System.out.println("Welcome again " + account.getName() + " " + account.getSurname()+". How can we help you?" );
-        int amountOfOptions = showMenuOptions(ResourcesIndex.LIST_OF_USER_MENU_OPTIONS);
-        int option = readUserIntegerInput(amountOfOptions);
-        uc.changeViewLoggedInUser(option);
+        uc.viewUserOptions();
     }
 
 }

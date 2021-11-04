@@ -8,7 +8,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-import static utilities.ClearConsole.newChapter;
+import static utilities.ClearConsole.cleanConsole;
 import static utilities.InputOutputTools.clearFile;
 import static utilities.ResourcesIndex.USER_DATABASE_FILE;
 
@@ -74,7 +74,7 @@ public class AccountDatabaseController {
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
-            newChapter();
+            cleanConsole();
             mm.viewMainMenu();
         }
         if (accountFound && !passwordCorrect) {
@@ -84,7 +84,7 @@ public class AccountDatabaseController {
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
-            newChapter();
+            cleanConsole();
             mm.viewMainMenu();
         }
         return account;
@@ -180,6 +180,27 @@ public class AccountDatabaseController {
         } catch (IOException e) {
             e.printStackTrace();
         }
+    }
+
+    public static boolean isInDatabase(String email) {
+        Scanner scanner = null;
+        boolean isInDatabase = false;
+        try {
+            scanner = new Scanner(new FileInputStream(USER_DATABASE_FILE));
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
+        while (scanner.hasNextLine()) {
+            String user = scanner.nextLine().toString();
+            Account currentAccount = getAccountFromDatabaseString(user);
+            if (currentAccount.getEmail().equals(email.toLowerCase())) {
+                isInDatabase=true;
+                break;
+            }
+
+        }
+        return isInDatabase;
+
     }
 
 }

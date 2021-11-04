@@ -5,8 +5,9 @@ import view.MainMenu;
 
 import java.util.Scanner;
 
+import static controller.AccountDatabaseController.isInDatabase;
 import static controller.AccountDatabaseController.saveAccountToDatabase;
-import static utilities.ClearConsole.newChapter;
+import static utilities.ClearConsole.cleanConsole;
 import static utilities.InputValidator.*;
 
 public class CreateAccountController {
@@ -16,40 +17,61 @@ public class CreateAccountController {
 
         Scanner scanner = new Scanner(System.in);
         String name = null;
+        String surname = null;
+        String email = null;
+        String password = null;
+        String confirmPassword = null;
+
+        boolean proceed = true;
         do {
             System.out.print("First name: ");
-            name = scanner.nextLine();  //todo: find a way to break out of creation and get back to main menu
-        } while (!isNameValid(name));
+            name = scanner.nextLine();
+            proceed = checkForQuit(name);
+        } while (proceed && !isNameValid(name));
 
-        String surname = null;
-        do {
-            System.out.print("Surname: ");
-            surname = scanner.nextLine();
-        } while (!isNameValid(surname));
+        if (proceed) {
 
-        String email = null;
-        do {
-            System.out.print("Email: ");
-            email = scanner.nextLine();
-        } while (!isEmailValid(email));
+            do {
+                System.out.print("Surname: ");
+                surname = scanner.nextLine();
+                proceed = checkForQuit(surname);
+            } while (proceed && !isNameValid(surname));
+        }
 
-        String password = null;
-        do {
-            System.out.print("Create password: ");
-            password = scanner.nextLine();
-        } while (!isPasswordValid(password));
+        if (proceed) {
 
-        String confirmPassword = null;
-        do {
-            System.out.print("Repeat password: ");
-            confirmPassword = scanner.nextLine();
-        } while (!passwordConfirmation(password, confirmPassword));
+            do {
+                System.out.print("Email: ");
+                email = scanner.nextLine();
+                proceed = checkForQuit(email);
+                if (isInDatabase(email.toLowerCase())) {
+                    System.out.println("Account with this email address already exists.");
+                    proceed = false;
+                }
+            } while (proceed && !isEmailValid(email));
+        }
 
-        Account account = new Account(name, surname, email, password);
-        System.out.println("Account created!");
-        saveAccountToDatabase(account);
-        newChapter();
+        if (proceed) {
 
+            do {
+                System.out.print("Create password: ");
+                password = scanner.nextLine();
+                proceed = checkForQuit(password);
+            } while (proceed && !isPasswordValid(password));
+        }
+        if (proceed) {
+            do {
+                System.out.print("Repeat password: ");
+                confirmPassword = scanner.nextLine();
+                proceed = checkForQuit(confirmPassword);
+            } while (proceed && !passwordConfirmation(password, confirmPassword));
+
+            Account account = new Account(name, surname, email, password);
+            System.out.println("Account created!");
+            saveAccountToDatabase(account);
+        }
+
+        cleanConsole();
         mm.viewMainMenu();
     }
 

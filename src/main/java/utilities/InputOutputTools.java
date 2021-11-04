@@ -5,18 +5,13 @@ import java.util.Scanner;
 
 public class InputOutputTools {
 
-    public static int readUserIntegerInput(int amountOfOptions) {
+    public static int readUserIntegerInput(int amountOfOptions) throws NumberFormatException{
         Scanner userInput = new Scanner(System.in);
         int answer = 0;
         boolean validOption=false;
         do {
-            try {
                 answer = Integer.parseInt(userInput.nextLine());
                 validOption = isOptionValid(answer, amountOfOptions);
-
-            } catch (NumberFormatException exc) {
-                System.out.println("Wrong type of input. Choose a number");
-            }
         } while(!validOption);
 
         return answer;

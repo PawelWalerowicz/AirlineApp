@@ -3,7 +3,7 @@ package view;
 import controller.EditAccountController;
 import model.Account;
 
-import static utilities.ClearConsole.newChapter;
+import static utilities.ClearConsole.cleanConsole;
 import static utilities.InputOutputTools.readUserIntegerInput;
 import static utilities.InputOutputTools.showMenuOptions;
 import static utilities.ResourcesIndex.LIST_OF_EDIT_ACCOUNT_MENU_OPTIONS;
@@ -18,10 +18,8 @@ public class EditAccountMenu {
 
     public void viewEditAccountMenu() {
         eac = new EditAccountController(account);
-        newChapter();
+        cleanConsole();
         System.out.println("What would you like to do with your account?" );
-        int amountOfOptions = showMenuOptions(LIST_OF_EDIT_ACCOUNT_MENU_OPTIONS);
-        int option = readUserIntegerInput(amountOfOptions);
-        eac.changeViewEditAccount(option);
+        eac.viewEditAccountOptions();
     }
 }
