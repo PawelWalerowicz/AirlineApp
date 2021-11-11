@@ -30,22 +30,20 @@ public class Airport {
     private final int ICAO_LENGTH=4;
 
     //PROBLEM WITH INVALID CODES FOR AIRPORTS IN ROUTES - when there is no IATA for airport, it uses substring of ICAO
-    public Airport(String NAMEorIATAorICAO) {
-        System.out.println(NAMEorIATAorICAO);
-        if(NAMEorIATAorICAO.length()>ICAO_LENGTH) {
-            this.name = NAMEorIATAorICAO;
-        }else if(NAMEorIATAorICAO.equals("\\N") || NAMEorIATAorICAO.length()==ICAO_LENGTH) {
-            this.ICAO = new ICAO(NAMEorIATAorICAO);
-            this.name = getNameByICAO();
+    public Airport(String nameOrIATA) {
+        if(nameOrIATA.length()>IATA_LENGTH) {
+            this.name = nameOrIATA;
         } else {
-            this.IATA = new IATA(NAMEorIATAorICAO);
+            this.IATA = new IATA(nameOrIATA);
             this.name = getNameByIATA();
         }
 
         if(isValidAirport()) {
             getOtherParametersByName(name);
         } else {
-            System.out.println("Invalid airport!"); //todo: figure out real exception handling
+            getNameByInvalidICAO(nameOrIATA);
+            getOtherParametersByName(name);
+//            System.out.println("Invalid airport!"); //todo: figure out real exception handling
         }
 
     }
@@ -82,15 +80,14 @@ public class Airport {
         return name;
     }
 
-
-    private String getNameByICAO() {
+    //bruteforce solution for mistakes in Routes database
+    private String getNameByInvalidICAO(String invalidICAO) {
         List<String[]> allAirports = getAirportsFromDatabase();
         for(String [] airport:allAirports) {
-            if(airport[ICAO_POSITION].equalsIgnoreCase(this.ICAO.toString())) {
+            if(airport[ICAO_POSITION].substring(1).equalsIgnoreCase(invalidICAO) || airport[ICAO_POSITION].substring(0,2).equalsIgnoreCase(invalidICAO) ) {
                 name = airport[NAME_POSITION];
-            } else if (airport[ICAO_POSITION].substring(1).equalsIgnoreCase(this.ICAO.toString())) {
-                name = airport[NAME_POSITION];
-            }
+            } else name="Rustaq Airport";
+
         }
         return name;
     }
@@ -156,6 +153,13 @@ public class Airport {
 
     @Override
     public String toString() {
-        return  name + " (" + country.getName() + ", " + IATA + ")";
+        String toString;
+        if(IATA.toString().equals("\\N")) {
+            toString = name + " (" + country.getName() + ", " + ICAO + ")";
+        } else {
+            toString = name + " (" + country.getName() + ", " + IATA + ")";
+        }
+
+        return toString;
     }
 }

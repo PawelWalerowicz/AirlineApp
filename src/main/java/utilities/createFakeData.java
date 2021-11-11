@@ -7,9 +7,15 @@ public class createFakeData {
     public static void createFakeDates(int amount, Date startingDate, Date endingDate) {
         //todo: method that create fake dates and hours of departure in set time period. Amount of dates to create set in input
     }
+    //TODO: non linear price (lower multiplier for higher distance
+    public static Price createFakePrice(Distance distance) {
+        return new Price(distance.getDistance() * randomNumberInRange(0.3,0.6));
+    }
 
-    public static double createFakePrice(double distance) {
-        return distance * randomNumberInRange(0.8,2);
+
+    public static JourneyTime createFakeJourneyTime(Distance distance) {
+        int averageSpeed = 500;
+        return new JourneyTime(distance.getDistance() / 500 * randomNumberInRange(0.85,1.15));
     }
 
     public static double randomNumberInRange(double rangeMin, double rangeMax) {

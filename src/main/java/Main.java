@@ -18,19 +18,18 @@ public class Main {
         Country czechy = new Country("CZ");
         System.out.println(czechy.getName());
 
-        System.out.println("Tworzymy lotnisko w Heathrow");
-        Airport heathrow = new Airport("London Heathrow Airport");
-        System.out.println(heathrow.getCountry().toString());
-        System.out.println(heathrow.getGeolocation().toString());
-        System.out.println(heathrow.getIATA());
+        Airport krakow = new Airport("KRK");
+        System.out.println(krakow.getCountry().toString());
+        System.out.println(krakow.getGeolocation().toString());
+        System.out.println(krakow.getIATA());
 
 
         System.out.println("Tworzymy lotnisko w Hamburgu(przez IATA)");
-        Airport hamburg = new Airport(new IATA("HAM"));
-        System.out.println(hamburg.getName());
-        System.out.println(hamburg.getCountry().toString());
-        System.out.println(hamburg.getGeolocation().toString());
-        System.out.println(hamburg.getIATA());
+        Airport jfk = new Airport(new IATA("JFK"));
+        System.out.println(jfk.getName());
+        System.out.println(jfk.getCountry().toString());
+        System.out.println(jfk.getGeolocation().toString());
+        System.out.println(jfk.getIATA());
         System.out.println("Tworzymy lotnisko z dupy");
         Airport zdupy = new Airport("PIESE");
 //        System.out.println(zdupy.getCountry().toString());
@@ -47,7 +46,7 @@ public class Main {
 //        Airport airport = new Airport("OBR");
 //        System.out.println(airport.toString());
 //        System.out.println("Tworzymy trasę");
-        Route route = new Route(linia,heathrow,hamburg);
+        Route route = new Route(linia,krakow,jfk);
         System.out.println(route.exist());
 
 
