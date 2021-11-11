@@ -1,10 +1,29 @@
 package utilities;
 
-import model.Account;
+public class ResourcesIndex {
 
-public class ResourcesIndex { //todo: find a way to use relative path
-    public static final String LIST_OF_MAIN_MENU_OPTIONS = "f:\\java\\AirlineApp\\src\\main\\resources\\ViewData\\MainMenuOptions.csv";
-    public static final String LIST_OF_USER_MENU_OPTIONS = "f:\\java\\AirlineApp\\src\\main\\resources\\ViewData\\LoggedInUserOptions.csv";
-    public static final String LIST_OF_EDIT_ACCOUNT_MENU_OPTIONS = "f:\\java\\AirlineApp\\src\\main\\resources\\ViewData\\EditAccountOptions.csv";
-    public static final String USER_DATABASE_FILE = "f:\\java\\AirlineApp\\src\\main\\resources\\UserData\\UserDatabase.txt";
+    public static final String MAIN_MENU_WELCOME_MESSAGE = convertRelativePathToNonrelative("../ViewData/WelcomeMessage.csv");
+    public static final String LIST_OF_MAIN_MENU_OPTIONS = convertRelativePathToNonrelative("../ViewData/MainMenuOptions.csv");
+    public static final String LIST_OF_USER_MENU_OPTIONS =  convertRelativePathToNonrelative("../ViewData/LoggedInUserOptions.csv");
+    public static final String LIST_OF_EDIT_ACCOUNT_MENU_OPTIONS = convertRelativePathToNonrelative("../ViewData/EditAccountOptions.csv");
+
+    public static final String USER_DATABASE_FILE = convertRelativePathToNonrelative("../UserData/UserDatabase");
+
+    public static final String AIRLINES_DATABASE_FILE = convertRelativePathToNonrelative("../AerialData/Airlines");
+    public static final String COUNTRIES_DATABASE_FILE = convertRelativePathToNonrelative("../AerialData/Countries");
+    public static final String AIRPORTS_DATABASE_FILE = convertRelativePathToNonrelative("../AerialData/Airports");
+    public static final String ROUTES_DATABASE_FILE = convertRelativePathToNonrelative("../AerialData/Routes");
+
+
+    private static String convertRelativePathToNonrelative(String relativePath) {
+        String unreliativeFileReference = ResourcesIndex.class.getResource(relativePath).toString();
+        return deleteFileTagFromReference(unreliativeFileReference);
+    }
+
+    private static String deleteFileTagFromReference(String fileReference) {
+        if (fileReference.substring(0, 6).equals("file:/")) {
+            return fileReference.substring(6, fileReference.length());
+        } else return fileReference;
+
+    }
 }

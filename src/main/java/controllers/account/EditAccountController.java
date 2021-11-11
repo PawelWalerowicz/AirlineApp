@@ -1,4 +1,4 @@
-package controller;
+package controllers.account;
 
 import model.Account;
 import view.EditAccountMenu;
@@ -7,61 +7,60 @@ import view.UserMenu;
 
 import java.util.Scanner;
 
-import static utilities.ClearConsole.cleanConsole;
 import static utilities.InputOutputTools.readUserIntegerInput;
-import static utilities.InputOutputTools.showMenuOptions;
+import static utilities.InputOutputTools.printMenuOptions;
 import static utilities.InputValidator.*;
+
 import static utilities.ResourcesIndex.LIST_OF_EDIT_ACCOUNT_MENU_OPTIONS;
 
 public class EditAccountController {
     Account account;
-    UserMenu um;
-    EditAccountMenu eam;
-    MainMenu mm = new MainMenu();
+    UserMenu userMenu;
+    EditAccountMenu editAccountMenu;
+    MainMenu mainMenu = new MainMenu();
 
     public EditAccountController(Account account) {
         this.account = account;
+        viewOptions();
     }
 
-    public void viewEditAccountOptions() {
-        int amountOfOptions = showMenuOptions(LIST_OF_EDIT_ACCOUNT_MENU_OPTIONS);
+    public void viewOptions() {
+        int amountOfOptions = printMenuOptions(LIST_OF_EDIT_ACCOUNT_MENU_OPTIONS);
         try {
             int option = readUserIntegerInput(amountOfOptions);
-            changeViewEditAccount(option);
+            changeView(option);
         } catch (NumberFormatException exc) {
             System.out.println("Wrong input, please try again.\n");
-            EditAccountMenu eam = new EditAccountMenu(account);
-            eam.viewEditAccountMenu();
+            editAccountMenu.viewMenu();
         }
 
     }
 
-
-    public void changeViewEditAccount(int option) {
-        um = new UserMenu(account);
+    public void changeView(int option) {
+        userMenu = new UserMenu(account);
         switch (option) {
             case 0:
                 changeName();
-                um.viewUserMenu();
+                userMenu.viewMenu();
                 break;
             case 1:
                 changeSurname();
-                um.viewUserMenu();
+                userMenu.viewMenu();
                 break;
             case 2:
                 changeEmail();
-                um.viewUserMenu();
+                userMenu.viewMenu();
                 break;
             case 3:
                 changePassword();
-                um.viewUserMenu();
+                userMenu.viewMenu();
                 break;
             case 4:
                 deleteAccount();
-                mm.viewMainMenu();
+                mainMenu.viewMenu();
                 break;
             case 5:
-                um.viewUserMenu();
+                userMenu.viewMenu();
                 break;
             default:
                 System.out.println("Something went wrong.");
@@ -82,8 +81,7 @@ public class EditAccountController {
             } while (proceed && !isNameValid(name));
         }
             if (!proceed) {
-                eam = new EditAccountMenu(account);
-                eam.viewEditAccountMenu();
+                editAccountMenu = new EditAccountMenu(account);
             } else {
                 account.setName(name);
                 AccountDatabaseController.editAccountInDatabase(account.getId(), account);
@@ -102,8 +100,7 @@ public class EditAccountController {
             } while (proceed && !isNameValid(surname));
 
         if (!proceed) {
-            eam = new EditAccountMenu(account);
-            eam.viewEditAccountMenu();
+            editAccountMenu = new EditAccountMenu(account);
         } else {
             account.setSurname(surname);
             AccountDatabaseController.editAccountInDatabase(account.getId(), account);
@@ -122,8 +119,7 @@ public class EditAccountController {
         } while (proceed && !isEmailValid(email));
 
         if (!proceed) {
-            eam = new EditAccountMenu(account);
-            eam.viewEditAccountMenu();
+            editAccountMenu = new EditAccountMenu(account);
         } else {
             account.setEmail(email);
             AccountDatabaseController.editAccountInDatabase(account.getId(), account);
@@ -151,8 +147,7 @@ public class EditAccountController {
         }
 
         if (!proceed) {
-            eam = new EditAccountMenu(account);
-            eam.viewEditAccountMenu();
+            editAccountMenu = new EditAccountMenu(account);
         } else {
             account.setPassword(password);
             AccountDatabaseController.editAccountInDatabase(account.getId(), account);
@@ -171,7 +166,7 @@ public class EditAccountController {
         } while (!isPasswordValid(password));
 
         if (!proceed) {
-            mm.viewMainMenu();
+            mainMenu.viewMenu();
         } else {
             AccountDatabaseController.deleteAccountFromDatabase(account);
             System.out.println("Account deleted. Goodbye.");

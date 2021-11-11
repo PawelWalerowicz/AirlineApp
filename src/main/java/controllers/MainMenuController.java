@@ -1,38 +1,41 @@
-package controller;
+package controllers;
 
 import view.CreateAccountMenu;
 import view.LoginMenu;
 import view.MainMenu;
 
 import static utilities.InputOutputTools.readUserIntegerInput;
-import static utilities.InputOutputTools.showMenuOptions;
+import static utilities.InputOutputTools.printMenuOptions;
 import static utilities.ResourcesIndex.LIST_OF_MAIN_MENU_OPTIONS;
 
 
 public class MainMenuController {
 
-    public void viewMainMenuOptions() {
-        int amountOfOptions = showMenuOptions(LIST_OF_MAIN_MENU_OPTIONS);
+    public MainMenuController() {
+        viewOptions();
+    }
+
+    public void viewOptions() {
+        int amountOfOptions = printMenuOptions(LIST_OF_MAIN_MENU_OPTIONS);
         try {
             int option = readUserIntegerInput(amountOfOptions);
-            changeViewMainMenu(option);
+            changeView(option);
         } catch (NumberFormatException exc) {
             System.out.println("Wrong input, please try again.\n");
-            MainMenu mm = new MainMenu();
-            mm.viewMainMenu();
+            MainMenu mainMenu = new MainMenu();
+            mainMenu.viewMenu();
         }
     }
 
-    public void changeViewMainMenu(int option) {
-
+    public void changeView(int option) {
         switch (option) {
             case 0:
-                CreateAccountMenu cam = new CreateAccountMenu();
-                cam.viewCreateAccountMenu();
+                CreateAccountMenu createAccountMenu = new CreateAccountMenu();
+                createAccountMenu.viewMenu();
                 break;
             case 1:
-                LoginMenu lm = new LoginMenu();
-                lm.viewLoginMenu();
+                LoginMenu loginMenu = new LoginMenu();
+                loginMenu.viewMenu();
                 break;
             case 2:
                 System.out.println("Goodbye!");

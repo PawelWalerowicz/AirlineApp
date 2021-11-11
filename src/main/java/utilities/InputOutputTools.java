@@ -3,6 +3,8 @@ package utilities;
 import java.io.*;
 import java.util.Scanner;
 
+import static utilities.ResourcesIndex.USER_DATABASE_FILE;
+
 public class InputOutputTools {
 
     public static int readUserIntegerInput(int amountOfOptions) throws NumberFormatException{
@@ -27,7 +29,20 @@ public class InputOutputTools {
 
     }
 
-    public static int showMenuOptions(String path) {
+
+    public static void printTextFromFile(String path) {
+        Scanner inputFile = null;
+        try {
+            inputFile = new Scanner(new FileInputStream(path)); //todo: find a way to load file with relative path
+        } catch (FileNotFoundException e) {
+            e.getMessage();
+        }
+        while(inputFile.hasNextLine()) {
+            System.out.println(inputFile.nextLine());
+        }
+    }
+
+    public static int printMenuOptions(String path) {
         Scanner inputFile = null;
         int amountOfOptions=0;
         try {
@@ -45,6 +60,17 @@ public class InputOutputTools {
     public static void clearFile(String path) throws IOException {
         PrintWriter cleaner = new PrintWriter(new FileWriter(path));
         cleaner.print("");
+    }
+
+
+    public static Scanner loadDatabaseIntoScanner(String filePath) {
+        Scanner scanner = null;
+        try {
+            scanner = new Scanner(new FileInputStream(filePath));
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
+        return scanner;
     }
 
 }

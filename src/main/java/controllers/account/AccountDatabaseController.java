@@ -1,4 +1,4 @@
-package controller;
+package controllers.account;
 
 import model.Account;
 import view.MainMenu;
@@ -10,10 +10,10 @@ import java.util.Scanner;
 
 import static utilities.ClearConsole.cleanConsole;
 import static utilities.InputOutputTools.clearFile;
+import static utilities.InputOutputTools.loadDatabaseIntoScanner;
 import static utilities.ResourcesIndex.USER_DATABASE_FILE;
 
 public class AccountDatabaseController {
-
 
     public static void saveAccountToDatabase(Account account) {
         account.setId(getNumberOfAccountsInDatabase() + 1);
@@ -32,7 +32,6 @@ public class AccountDatabaseController {
         int accountsInDatabase = 0;
         try {
             scanner = new Scanner(new FileInputStream(USER_DATABASE_FILE));
-
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         }
@@ -45,19 +44,15 @@ public class AccountDatabaseController {
 
 
     public static Account getAccountFromDatabase(String email, String password) {
-        MainMenu mm = new MainMenu();
         Account account = null;
-        Scanner scanner = null;
         boolean accountFound = false;
         boolean passwordCorrect = true;
-        try {
-            scanner = new Scanner(new FileInputStream(USER_DATABASE_FILE));
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-        }
+
+        Scanner scanner = loadDatabaseIntoScanner(USER_DATABASE_FILE);
+
         while (scanner.hasNextLine()) {
             String user = scanner.nextLine().toString();
-            Account currentAccount = getAccountFromDatabaseString(user);
+            Account currentAccount = convertDatabaseStringToAccount(user);
             if (currentAccount.getEmail().equals(email.toLowerCase()) && currentAccount.getPassword().equals(password)) {
                 accountFound = true;
                 passwordCorrect = true;
@@ -67,41 +62,20 @@ public class AccountDatabaseController {
                 passwordCorrect = false;
             }
         }
-        if (!accountFound) {
-            System.out.println("Account not found.");
-            try {
-                Thread.sleep(1000);
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
-            cleanConsole();
-            mm.viewMainMenu();
-        }
-        if (accountFound && !passwordCorrect) {
-            System.out.println("Incorrect password.");
-            try {
-                Thread.sleep(1000);
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
-            cleanConsole();
-            mm.viewMainMenu();
-        }
+
+        handleIncorrectLoginInput(accountFound,passwordCorrect);
+
         return account;
     }
 
     public static void editAccountInDatabase(int id, Account account) {
-        Scanner scanner = null;
         List allAccounts = new ArrayList();
 
-        try {
-            scanner = new Scanner(new FileInputStream(USER_DATABASE_FILE));
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-        }
+        Scanner scanner = loadDatabaseIntoScanner(USER_DATABASE_FILE);
+
         while (scanner.hasNextLine()) {
             String user = scanner.nextLine().toString();
-            Account currentAccount = getAccountFromDatabaseString(user);
+            Account currentAccount = convertDatabaseStringToAccount(user);
             if(currentAccount.getId()==id) {
                 Account changedAccount = new Account(
                         id,
@@ -115,9 +89,7 @@ public class AccountDatabaseController {
                 allAccounts.add(user);
             }
         }
-
         rewriteDatabase(allAccounts,USER_DATABASE_FILE);
-
     }
 
 
@@ -134,7 +106,7 @@ public class AccountDatabaseController {
         int currentId=0;
         while (scanner.hasNextLine()) {
             String user = scanner.nextLine().toString();
-            Account currentAccount = getAccountFromDatabaseString(user);
+            Account currentAccount = convertDatabaseStringToAccount(user);
             if(currentAccount.getId()!=id) {
                 currentId++;
                 currentAccount.setId(currentId);
@@ -144,6 +116,10 @@ public class AccountDatabaseController {
 
         rewriteDatabase(allAccounts,USER_DATABASE_FILE);
 
+    }
+
+    private static Account convertDatabaseStringToAccount(String userAsString) {
+        return getAccountFromAttributes(getUserAttributesFromDatabaseString(userAsString));
     }
 
     private static String[] getUserAttributesFromDatabaseString(String userAsString) {
@@ -162,10 +138,6 @@ public class AccountDatabaseController {
                 userAttributes[4],
                 userAttributes[6]
         );
-    }
-
-    private static Account getAccountFromDatabaseString(String userAsString) {
-        return getAccountFromAttributes(getUserAttributesFromDatabaseString(userAsString));
     }
 
     private static void rewriteDatabase(List<String> allAccounts, String filePath) {
@@ -192,8 +164,8 @@ public class AccountDatabaseController {
         }
         while (scanner.hasNextLine()) {
             String user = scanner.nextLine().toString();
-            Account currentAccount = getAccountFromDatabaseString(user);
-            if (currentAccount.getEmail().equals(email.toLowerCase())) {
+            Account currentAccount = convertDatabaseStringToAccount(user);
+            if (currentAccount.getEmail().toString().equals(email.toLowerCase())) {
                 isInDatabase=true;
                 break;
             }
@@ -201,6 +173,31 @@ public class AccountDatabaseController {
         }
         return isInDatabase;
 
+    }
+
+    private static void handleIncorrectLoginInput(boolean accountFound, boolean passwordCorrect) {
+        MainMenu mainMenu = new MainMenu();
+        if (!accountFound) {
+            System.out.println("Account not found.");
+            try {
+                Thread.sleep(1000);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+            cleanConsole();
+            mainMenu.viewMenu();
+        }
+
+        if (accountFound && !passwordCorrect) {
+            System.out.println("Incorrect password.");
+            try {
+                Thread.sleep(1000);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+            cleanConsole();
+            mainMenu.viewMenu();
+        }
     }
 
 }

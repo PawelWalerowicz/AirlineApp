@@ -1,56 +1,53 @@
-package controller;
+package controllers.account;
 
 import model.Account;
-import utilities.ResourcesIndex;
 import view.EditAccountMenu;
 import view.MainMenu;
+import view.SearchFlightsMenu;
 import view.UserMenu;
-
-import java.util.Scanner;
 
 import static utilities.ClearConsole.cleanConsole;
 import static utilities.InputOutputTools.readUserIntegerInput;
-import static utilities.InputOutputTools.showMenuOptions;
-import static utilities.InputValidator.*;
-import static utilities.ResourcesIndex.*;
+import static utilities.InputOutputTools.printMenuOptions;
+import static utilities.ResourcesIndex.LIST_OF_USER_MENU_OPTIONS;
 
-public class UserController {
+public class UserMenuController {
     Account account;
-    MainMenu mm = new MainMenu();
-    UserMenu um;
-    EditAccountMenu eam;
 
-    public UserController(Account account) {
+    public UserMenuController(Account account) {
         this.account = account;
+        viewOptions();
     }
 
-    public void viewUserOptions() {
-        int amountOfOptions = showMenuOptions(LIST_OF_USER_MENU_OPTIONS);
+    public void viewOptions() {
+        int amountOfOptions = printMenuOptions(LIST_OF_USER_MENU_OPTIONS);
         try {
             int option = readUserIntegerInput(amountOfOptions);
-            changeViewLoggedInUser(option);
+            changeView(option);
         } catch (NumberFormatException exc) {
             System.out.println("Wrong input, please try again.\n");
-            UserMenu um = new UserMenu(account);
-            um.viewUserMenu();
+            UserMenu userMenu = new UserMenu(account);
+            userMenu.viewMenu();
         }
     }
 
-    public void changeViewLoggedInUser(int option) {
+    public void changeView(int option) {
         switch(option) {
             case 0:
-                eam = new EditAccountMenu(account);
-                eam.viewEditAccountMenu();
+                EditAccountMenu editAccountMenu = new EditAccountMenu(account);
+                editAccountMenu.viewMenu();
                 break;
             case 1:
-                System.out.println("TODO: View or Edit your flights menu");
+                SearchFlightsMenu searchFlightsMenu = new SearchFlightsMenu();
                 break;
             case 2:
                 System.out.println("TODO: View flights menu");
                 break;
             case 3:
                 cleanConsole();
-                mm.viewMainMenu();
+                MainMenu mainMenu = new MainMenu();
+                mainMenu.viewMenu();
+                break;
             case 4:
                 System.out.println("Goodbye!");
                 break;

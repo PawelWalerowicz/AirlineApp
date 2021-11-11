@@ -1,15 +1,15 @@
 package view;
 
-import controller.LoginController;
+import controllers.LoginController;
 
 import static utilities.ClearConsole.cleanConsole;
 
 public class LoginMenu {
-    LoginController lc = new LoginController();
 
-    public void viewLoginMenu() {
+
+    public void viewMenu() {
         cleanConsole();
         System.out.println("Please enter following information to log into your account (or press \"Q\" to quit):");
-        lc.login();
+        LoginController loginController = new LoginController();
     }
 }

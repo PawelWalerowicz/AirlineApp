@@ -1,19 +1,16 @@
 package view;
 
-import controller.MainMenuController;
+import controllers.MainMenuController;
 
-import static utilities.InputOutputTools.readUserIntegerInput;
-import static utilities.InputOutputTools.showMenuOptions;
-import static utilities.ResourcesIndex.LIST_OF_MAIN_MENU_OPTIONS;
+import static utilities.InputOutputTools.printTextFromFile;
+import static utilities.ResourcesIndex.MAIN_MENU_WELCOME_MESSAGE;
+
 
 public class MainMenu {
-    MainMenuController mmc = new MainMenuController();
 
-    public void viewMainMenu() {
-        System.out.println("Welcome to AirAir reservation service.");
-        System.out.println("Please choose one of the following options:");
-        mmc.viewMainMenuOptions();
-
+    public void viewMenu() {
+        printTextFromFile(MAIN_MENU_WELCOME_MESSAGE);
+        MainMenuController mainMenuController = new MainMenuController();
 
     }
 
