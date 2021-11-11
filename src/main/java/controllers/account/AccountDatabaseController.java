@@ -19,7 +19,7 @@ public class AccountDatabaseController {
         account.setId(getNumberOfAccountsInDatabase() + 1);
         try {
             PrintWriter writer = new PrintWriter(new FileWriter(USER_DATABASE_FILE, true));
-            writer.println(account.toString());
+            writer.println(account);
             writer.flush();
             writer.close();
         } catch (IOException e) {
@@ -51,7 +51,7 @@ public class AccountDatabaseController {
         Scanner scanner = loadDatabaseIntoScanner(USER_DATABASE_FILE);
 
         while (scanner.hasNextLine()) {
-            String user = scanner.nextLine().toString();
+            String user = scanner.nextLine();
             Account currentAccount = convertDatabaseStringToAccount(user);
             if (currentAccount.getEmail().equals(email.toLowerCase()) && currentAccount.getPassword().equals(password)) {
                 accountFound = true;
@@ -69,12 +69,12 @@ public class AccountDatabaseController {
     }
 
     public static void editAccountInDatabase(int id, Account account) {
-        List allAccounts = new ArrayList();
+        List<String> allAccounts = new ArrayList<>();
 
         Scanner scanner = loadDatabaseIntoScanner(USER_DATABASE_FILE);
 
         while (scanner.hasNextLine()) {
-            String user = scanner.nextLine().toString();
+            String user = scanner.nextLine();
             Account currentAccount = convertDatabaseStringToAccount(user);
             if(currentAccount.getId()==id) {
                 Account changedAccount = new Account(
@@ -89,13 +89,13 @@ public class AccountDatabaseController {
                 allAccounts.add(user);
             }
         }
-        rewriteDatabase(allAccounts,USER_DATABASE_FILE);
+        rewriteDatabase(allAccounts);
     }
 
 
     public static void deleteAccountFromDatabase(Account account) {
         Scanner scanner = null;
-        List allAccounts = new ArrayList();
+        List<String> allAccounts = new ArrayList<>();
         int id = account.getId();
 
         try {
@@ -105,7 +105,7 @@ public class AccountDatabaseController {
         }
         int currentId=0;
         while (scanner.hasNextLine()) {
-            String user = scanner.nextLine().toString();
+            String user = scanner.nextLine();
             Account currentAccount = convertDatabaseStringToAccount(user);
             if(currentAccount.getId()!=id) {
                 currentId++;
@@ -114,7 +114,7 @@ public class AccountDatabaseController {
             }
         }
 
-        rewriteDatabase(allAccounts,USER_DATABASE_FILE);
+        rewriteDatabase(allAccounts);
 
     }
 
@@ -140,12 +140,12 @@ public class AccountDatabaseController {
         );
     }
 
-    private static void rewriteDatabase(List<String> allAccounts, String filePath) {
+    private static void rewriteDatabase(List<String> allAccounts) {
         try {
-            clearFile(filePath);
-            PrintWriter writer = new PrintWriter(new FileWriter(filePath, true));
-            for(int i=0;i<allAccounts.size();i++) {
-                writer.println(allAccounts.get(i));
+            clearFile(USER_DATABASE_FILE);
+            PrintWriter writer = new PrintWriter(new FileWriter(USER_DATABASE_FILE, true));
+            for (String allAccount : allAccounts) {
+                writer.println(allAccount);
             }
             writer.flush();
             writer.close();
@@ -163,9 +163,9 @@ public class AccountDatabaseController {
             e.printStackTrace();
         }
         while (scanner.hasNextLine()) {
-            String user = scanner.nextLine().toString();
+            String user = scanner.nextLine();
             Account currentAccount = convertDatabaseStringToAccount(user);
-            if (currentAccount.getEmail().toString().equals(email.toLowerCase())) {
+            if (currentAccount.getEmail().equals(email.toLowerCase())) {
                 isInDatabase=true;
                 break;
             }

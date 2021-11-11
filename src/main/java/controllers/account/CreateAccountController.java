@@ -72,7 +72,7 @@ public class CreateAccountController {
 
     private String askForPasswordWithConfirmation() {
         String password = null;
-        String confirmPassword = null;
+        String confirmPassword;
         if (proceed) {
             do {
                 System.out.print("Create password: ");

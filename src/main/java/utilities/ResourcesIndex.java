@@ -16,13 +16,19 @@ public class ResourcesIndex {
 
 
     private static String convertRelativePathToNonrelative(String relativePath) {
-        String unreliativeFileReference = ResourcesIndex.class.getResource(relativePath).toString();
+        String unreliativeFileReference="";
+        try {
+            unreliativeFileReference = ResourcesIndex.class.getResource(relativePath).toString();
+        } catch (NullPointerException exc) {
+            System.out.println(exc);
+        }
+
         return deleteFileTagFromReference(unreliativeFileReference);
     }
 
     private static String deleteFileTagFromReference(String fileReference) {
-        if (fileReference.substring(0, 6).equals("file:/")) {
-            return fileReference.substring(6, fileReference.length());
+        if (fileReference.startsWith("file:/")) {
+            return fileReference.substring(6);
         } else return fileReference;
 
     }

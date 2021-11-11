@@ -7,12 +7,12 @@ import view.UserMenu;
 
 import java.util.Scanner;
 
-import static utilities.InputOutputTools.readUserIntegerInput;
 import static utilities.InputOutputTools.printMenuOptions;
+import static utilities.InputOutputTools.readUserIntegerInput;
 import static utilities.InputValidator.*;
-
 import static utilities.ResourcesIndex.LIST_OF_EDIT_ACCOUNT_MENU_OPTIONS;
 
+//TODO: add option to change prefered currency
 public class EditAccountController {
     Account account;
     UserMenu userMenu;
@@ -80,12 +80,12 @@ public class EditAccountController {
                 proceed = checkForQuit(name);
             } while (proceed && !isNameValid(name));
         }
-            if (!proceed) {
-                editAccountMenu = new EditAccountMenu(account);
-            } else {
-                account.setName(name);
-                AccountDatabaseController.editAccountInDatabase(account.getId(), account);
-                System.out.println("Name changed to " + name + ".");
+        if (!proceed) {
+            editAccountMenu = new EditAccountMenu(account);
+        } else {
+            account.setName(name);
+            AccountDatabaseController.editAccountInDatabase(account.getId(), account);
+            System.out.println("Name changed to " + name + ".");
         }
     }
 
@@ -94,10 +94,10 @@ public class EditAccountController {
         String surname = account.getSurname();
         boolean proceed = true;
         System.out.print("Current surname is " + surname + ", please enter new surname or \"Q\" to discard changes: ");
-            do {
-                surname = scanner.nextLine();
-                proceed = checkForQuit(surname);
-            } while (proceed && !isNameValid(surname));
+        do {
+            surname = scanner.nextLine();
+            proceed = checkForQuit(surname);
+        } while (proceed && !isNameValid(surname));
 
         if (!proceed) {
             editAccountMenu = new EditAccountMenu(account);
@@ -138,7 +138,7 @@ public class EditAccountController {
             proceed = checkForQuit(password);
         } while (!isPasswordValid(password));
         String confirmPassword = null;
-        if(proceed) {
+        if (proceed) {
             do {
                 System.out.print("Repeat password: ");
                 confirmPassword = scanner.nextLine();

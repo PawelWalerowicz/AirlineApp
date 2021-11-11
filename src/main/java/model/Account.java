@@ -64,9 +64,7 @@ public class Account {
     }
 
     public boolean hasId() {
-        if (getId() == 0) {
-            return false;
-        } else return true;
+        return getId() != 0;
     }
 
     public String toString() {

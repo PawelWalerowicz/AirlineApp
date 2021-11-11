@@ -1,55 +1,46 @@
 package model;
 
+import model.Codes.IsoCode;
+
 import java.util.List;
 
 import static controllers.aerial.AerialDatabaseController.getCountriesFromDatabase;
 
 public class Country {
     String name;
-    String isoCode;
+    IsoCode isoCode;
 
     private final int NAME_POSITION = 0;
     private final int ISO_CODE_POSITION = 1;
 
-    private final int ISO_CODE_LENGTH = 2;
-
-    public Country(String nameOrIso) {
-        if(nameOrIso.length()>ISO_CODE_LENGTH) {
-            createCountryByName(nameOrIso);
-        } else {
-            createCountryByIsoCode(nameOrIso);
-        }
-    }
-
-    private void createCountryByName(String name) {
+    //todo: figure out exception handling
+    public Country(String name) {
         this.name = name;
-        this.isoCode = getIsoCodeByName(name);
+        this.isoCode = getIsoCodeByName();
     }
 
-
-    private void createCountryByIsoCode(String isoCode) {
+    public Country(IsoCode isoCode) {
         this.isoCode = isoCode;
-        this.name = getNameByIsoCode(isoCode);
+        this.name = getNameByIsoCode();
     }
 
-
-    private String getIsoCodeByName(String name) {
+    private IsoCode getIsoCodeByName() {
         List<String[]> countriesList = getCountriesFromDatabase();
-        String isoCode="";
+        IsoCode isoCode=null;
         for(String[] country: countriesList) {
             if(country[NAME_POSITION].equals(name)) {
-                isoCode=country[ISO_CODE_POSITION];
+                isoCode=new IsoCode(country[ISO_CODE_POSITION]);
             }
         }
 
         return isoCode;
     }
 
-    private String getNameByIsoCode(String isoCode) {
+    private String getNameByIsoCode() {
         List<String[]> countriesList = getCountriesFromDatabase();
         String name="";
         for(String[] country: countriesList) {
-            if(country[ISO_CODE_POSITION].equals(isoCode)) {
+            if(country[ISO_CODE_POSITION].equalsIgnoreCase(isoCode.toString())) {
                 name=country[NAME_POSITION];
             }
         }
@@ -65,12 +56,16 @@ public class Country {
         this.name = name;
     }
 
-    public String getIsoCode() {
+    public IsoCode getIsoCode() {
         return isoCode;
     }
 
-    public void setIsoCode(String isoCode) {
+    public void setIsoCode(IsoCode isoCode) {
         this.isoCode = isoCode;
+    }
+
+    public void setIsoCode(String isoCode) {
+        this.isoCode = new IsoCode(isoCode);
     }
 
     @Override

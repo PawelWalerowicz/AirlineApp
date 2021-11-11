@@ -3,6 +3,15 @@ package utilities;
 import model.Geolocation;
 
 public class Distance {
+    Geolocation geolocation1;
+    Geolocation geolocation2;
+    double distance;
+
+    public Distance(Geolocation geolocation1, Geolocation geolocation2) {
+        this.geolocation1=geolocation1;
+        this.geolocation2=geolocation2;
+        this.distance = calculateDistance(geolocation1, geolocation2);
+    }
 
     //calucaltes orthodromic distance in kilometers
     public static double calculateDistance(Geolocation point1, Geolocation point2) {
@@ -18,16 +27,42 @@ public class Distance {
                         + (Math.cos(latitude1) * Math.cos(latitude2) * Math.cos(deltaLongitude))
         );
 
-        return roundDistanceToMeters(angularDistance * earthRadius);
+        return roundDistanceToWholeKilometers(angularDistance * earthRadius);
     }
 
-    public static double roundDistanceToMeters(double distance) {
-        int numberOfDecimalPlaces = 3;
+    public static double roundDistanceToWholeKilometers(double distance) {
+        int numberOfDecimalPlaces = 1;
         double decimalOperator = Math.pow(10, numberOfDecimalPlaces);
-        double roundedDouble = (Math.round(distance * decimalOperator)) / decimalOperator;
-        return roundedDouble;
+        return (Math.round(distance * decimalOperator)) / decimalOperator;
     }
 
+    public Geolocation getGeolocation1() {
+        return geolocation1;
+    }
 
+    public void setGeolocation1(Geolocation geolocation1) {
+        this.geolocation1 = geolocation1;
+    }
+
+    public Geolocation getGeolocation2() {
+        return geolocation2;
+    }
+
+    public void setGeolocation2(Geolocation geolocation2) {
+        this.geolocation2 = geolocation2;
+    }
+
+    public double getDistance() {
+        return distance;
+    }
+
+    public void setDistance(double distance) {
+        this.distance = distance;
+    }
+
+    @Override
+    public String toString() {
+        return distance + " km";
+    }
 }
 

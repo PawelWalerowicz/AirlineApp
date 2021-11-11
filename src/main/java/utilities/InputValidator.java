@@ -40,9 +40,7 @@ public class InputValidator {
     }
 
     public static boolean checkForQuit(String string) {
-        if (string.toLowerCase().equals("q")) {
-            return false;
-        } else return true;
+        return !string.toLowerCase().equals("q");
     }
 
 }

@@ -3,14 +3,12 @@ package utilities;
 import java.io.*;
 import java.util.Scanner;
 
-import static utilities.ResourcesIndex.USER_DATABASE_FILE;
-
 public class InputOutputTools {
 
     public static int readUserIntegerInput(int amountOfOptions) throws NumberFormatException{
         Scanner userInput = new Scanner(System.in);
-        int answer = 0;
-        boolean validOption=false;
+        int answer;
+        boolean validOption;
         do {
                 answer = Integer.parseInt(userInput.nextLine());
                 validOption = isOptionValid(answer, amountOfOptions);
