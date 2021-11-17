@@ -38,10 +38,11 @@ public class UserMenuController {
                 editAccountMenu.viewMenu();
                 break;
             case 1:
-                SearchFlightsMenu searchFlightsMenu = new SearchFlightsMenu();
+                System.out.println("TODO: View or edit your flights menu");
                 break;
             case 2:
-                System.out.println("TODO: View flights menu");
+                SearchFlightsMenu searchFlightsMenu = new SearchFlightsMenu();
+                searchFlightsMenu.viewMenu();
                 break;
             case 3:
                 cleanConsole();

@@ -1,6 +1,5 @@
 package model;
 
-import model.Codes.IsoCode;
 
 import java.util.List;
 
@@ -8,28 +7,30 @@ import static controllers.aerial.AerialDatabaseController.getCountriesFromDataba
 
 public class Country {
     String name;
-    IsoCode isoCode;
+    String isoCode;
 
-    private final int NAME_POSITION = 0;
+    private static final int NAME_POSITION = 0;
     private final int ISO_CODE_POSITION = 1;
+    private final int ISO_CODE_LENGTH = 2;
 
     //todo: figure out exception handling
-    public Country(String name) {
-        this.name = name;
-        this.isoCode = getIsoCodeByName();
+    public Country(String nameOrIsocode) {
+        if(nameOrIsocode.length()>ISO_CODE_LENGTH) {
+            this.name = nameOrIsocode;
+            this.isoCode = getIsoCodeByName();
+        } else {
+            this.isoCode = nameOrIsocode;
+            this.name = getNameByIsoCode();
+        }
     }
 
-    public Country(IsoCode isoCode) {
-        this.isoCode = isoCode;
-        this.name = getNameByIsoCode();
-    }
 
-    private IsoCode getIsoCodeByName() {
+    private String getIsoCodeByName() {
         List<String[]> countriesList = getCountriesFromDatabase();
-        IsoCode isoCode=null;
+        String isoCode=null;
         for(String[] country: countriesList) {
             if(country[NAME_POSITION].equals(name)) {
-                isoCode=new IsoCode(country[ISO_CODE_POSITION]);
+                isoCode=country[ISO_CODE_POSITION];
             }
         }
 
@@ -40,12 +41,23 @@ public class Country {
         List<String[]> countriesList = getCountriesFromDatabase();
         String name="";
         for(String[] country: countriesList) {
-            if(country[ISO_CODE_POSITION].equalsIgnoreCase(isoCode.toString())) {
+            if(country[ISO_CODE_POSITION].equalsIgnoreCase(isoCode)) {
                 name=country[NAME_POSITION];
             }
         }
-
         return name;
+    }
+
+    public static boolean isCountry(String input) {
+        List<String[]> countriesList = getCountriesFromDatabase();
+        boolean answer= false;
+        String name="";
+        for(String[] country: countriesList) {
+            if(country[NAME_POSITION].equalsIgnoreCase(input)) {
+                answer = true;
+            }
+        }
+        return answer;
     }
 
     public String getName() {
@@ -56,16 +68,12 @@ public class Country {
         this.name = name;
     }
 
-    public IsoCode getIsoCode() {
+    public String getIsoCode() {
         return isoCode;
     }
 
-    public void setIsoCode(IsoCode isoCode) {
-        this.isoCode = isoCode;
-    }
-
     public void setIsoCode(String isoCode) {
-        this.isoCode = new IsoCode(isoCode);
+        this.isoCode = isoCode;
     }
 
     @Override

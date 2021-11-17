@@ -27,7 +27,6 @@ public class InputOutputTools {
 
     }
 
-
     public static void printTextFromFile(String path) {
         Scanner inputFile = null;
         try {

@@ -630,7 +630,7 @@
 638,"Kristiansand Airport","Kristiansand","Norway","KRS","ENCN",58.204201,8.08537,57,1,"E","Europe/Oslo","airport","OurAirports"
 639,"Geilo Airport Dagali","Geilo","Norway","DLD","ENDI",60.417301177978516,8.518349647521973,2618,1,"E","Europe/Oslo","airport","OurAirports"
 640,"Bardufoss Airport","Bardufoss","Norway","BDU","ENDU",69.055801391602,18.540399551392,252,1,"E","Europe/Oslo","airport","OurAirports"
-641,"Harstad/Narvik Airport, Evenes","Harstad/Narvik","Norway","EVE","ENEV",68.491302490234,16.678100585938,84,1,"E","Europe/Oslo","airport","OurAirports"
+641,"Harstad/Narvik Airport Evenes","Harstad/Narvik","Norway","EVE","ENEV",68.491302490234,16.678100585938,84,1,"E","Europe/Oslo","airport","OurAirports"
 642,"Leirin Airport","Fagernes","Norway","VDB","ENFG",61.015598297119,9.2880601882935,2697,1,"E","Europe/Oslo","airport","OurAirports"
 643,"Florø Airport","Floro","Norway","FRO","ENFL",61.583599090576,5.0247201919556,37,1,"E","Europe/Oslo","airport","OurAirports"
 644,"Oslo Lufthavn","Oslo","Norway","OSL","ENGM",60.121,11.0502,681,1,"E","Europe/Oslo","airport","OurAirports"
@@ -646,8 +646,8 @@
 654,"Notodden Airport","Notodden","Norway","NTB","ENNO",59.565701,9.21222,63,1,"E","Europe/Oslo","airport","OurAirports"
 655,"Ørland Airport","Orland","Norway","OLA","ENOL",63.69889831542969,9.604000091552734,28,1,"E","Europe/Oslo","airport","OurAirports"
 656,"Røros Airport","Roros","Norway","RRS","ENRO",62.578399658203,11.342300415039,2054,1,"E","Europe/Oslo","airport","OurAirports"
-657,"Moss Airport, Rygge","Rygge","Norway","RYG","ENRY",59.378817,10.785439,174,1,"E","Europe/Oslo","airport","OurAirports"
-658,"Svalbard Airport, Longyear","Svalbard","Norway","LYR","ENSB",78.246101379395,15.465600013733,88,1,"E","Arctic/Longyearbyen","airport","OurAirports"
+657,"Moss Airport Rygge","Rygge","Norway","RYG","ENRY",59.378817,10.785439,174,1,"E","Europe/Oslo","airport","OurAirports"
+658,"Svalbard Airport Longyear","Svalbard","Norway","LYR","ENSB",78.246101379395,15.465600013733,88,1,"E","Arctic/Longyearbyen","airport","OurAirports"
 659,"Skien Airport","Skien","Norway","SKE","ENSN",59.185001373291016,9.566940307617188,463,1,"E","Europe/Oslo","airport","OurAirports"
 660,"Stord Airport","Stord","Norway","SRP","ENSO",59.791900634765625,5.340849876403809,160,1,"E","Europe/Oslo","airport","OurAirports"
 662,"Sandnessjøen Airport (Stokka)","Sandnessjoen","Norway","SSJ","ENST",65.956802368164,12.468899726868,56,1,"E","Europe/Oslo","airport","OurAirports"
@@ -663,7 +663,7 @@
 673,"Mielec Airport","Mielec","Poland",\N,"EPML",50.32229995727539,21.462099075317383,548,1,"E","Europe/Warsaw","airport","OurAirports"
 674,"Poznań-Ławica Airport","Poznan","Poland","POZ","EPPO",52.421001434299995,16.8262996674,308,1,"E","Europe/Warsaw","airport","OurAirports"
 675,"Rzeszów-Jasionka Airport","Rzeszow","Poland","RZE","EPRZ",50.1100006104,22.0189990997,675,1,"E","Europe/Warsaw","airport","OurAirports"
-676,"Szczecin-Goleniów","Solidarność"" Airport","Szczecin","Poland","SZZ","EPSC",53.584701538100006,14.902199745199999,154,1,"E","Europe/Warsaw","airport","OurAirports"
+676,"Szczecin-Goleniów, Solidarność Airport","Szczecin","Poland","SZZ","EPSC",53.584701538100006,14.902199745199999,154,1,"E","Europe/Warsaw","airport","OurAirports"
 677,"Redzikowo Air Base","Slupsk","Poland","OSP","EPSK",54.47890090942383,17.107500076293945,217,1,"E","Europe/Warsaw","airport","OurAirports"
 678,"Swidwin Military Air Base","Shapaja","Poland",\N,"EPSN",53.790599823,15.826299667399999,385,1,"E","Europe/Warsaw","airport","OurAirports"
 679,"Warsaw Chopin Airport","Warsaw","Poland","WAW","EPWA",52.1656990051,20.967100143399996,362,1,"E","Europe/Warsaw","airport","OurAirports"
@@ -6016,7 +6016,7 @@
 8220,"Whiteman Airport","Los Angeles","United States","WHP","KWHP",34.2593002319,-118.413002014,1003,-8,"A","America/Los_Angeles","airport","OurAirports"
 8221,"Madera Municipal Airport","Madera","United States","MAE","KMAE",36.9886016846,-120.111999512,255,-8,"A","America/Los_Angeles","airport","OurAirports"
 8223,"Trail Airport","Trail","Canada","YZZ","CAD4",49.0555992126,-117.60900116,1427,-8,"A","America/Vancouver","airport","OurAirports"
-8224,"Victoria Airport","Patricia Bay","Canada",\N,"CAP5",48.6538920506,-123.450450897,0,-8,"A","America/Vancouver","airport","OurAirports"
+8224,"Victoria Airport - Canada","Patricia Bay","Canada",\N,"CAP5",48.6538920506,-123.450450897,0,-8,"A","America/Vancouver","airport","OurAirports"
 8225,"Old Arctic Bay Airport","Arctic Bay","Canada","YAB","CJX7",73.0058922479,-85.0325489044,100,-6,"A","America/Winnipeg","airport","OurAirports"
 8227,"Birchwood Airport","Belmopan","Belize",\N,"PABV",61.41650009,-149.5070038,83,-9,"U","America/Anchorage","airport","OurAirports"
 8228,"Grand-Santi Airport","Grand-Santi","French Guiana","GSI","SOGS",4.285833,-54.373056,207,-3,"S","America/Cayenne","airport","OurAirports"
@@ -6979,320 +6979,320 @@
 11739,"Hüttenbusch Airport","Huettenbusch","Germany",\N,"EDXU",53.28666687011719,8.947221755981445,10,1,"E",\N,"airport","OurAirports"
 11740,"Vrsar Crljenka Airport","Vsar","Croatia",\N,"LDPV",45.141700744628906,13.630599975585938,121,1,"E",\N,"airport","OurAirports"
 11742,"Union County Airport","Marysville","United States",\N,"KMRT",40.224700927734375,-83.35160064697266,1021,-5,"A",\N,"airport","OurAirports"
-11743,"La Grande-4 Airport","La Grande-4","Canada","YAH","CYAH",53.754699707,-73.6753005981,1005,\N,\N,\N,"airport","OurAirports"
-11744,"Alert Bay Airport","Alert Bay","Canada","YAL","CYAL",50.58219909667969,-126.91600036621094,240,\N,\N,\N,"airport","OurAirports"
-11745,"Liverpool South Shore Regional Airport","Liverpool","Canada",\N,"CYAU",44.2303009033,-64.85610198970001,321,\N,\N,\N,"airport","OurAirports"
-11747,"Nipawin Airport","Nipawin","Canada",\N,"CYBU",53.33250045776367,-104.00800323486328,1220,\N,\N,\N,"airport","OurAirports"
-11748,"Centralia / James T. Field Memorial Aerodrome","Centralia","Canada","YCE","CYCE",43.285599,-81.508301,824,\N,\N,\N,"airport","OurAirports"
-11749,"Blue River Airport","Blue River","Canada",\N,"CYCP",52.11669921875,-119.28299713134766,2240,\N,\N,\N,"airport","OurAirports"
-11750,"Chetwynd Airport","Chetwynd","Canada","YCQ","CYCQ",55.687198638916016,-121.62699890136719,2000,\N,\N,\N,"airport","OurAirports"
-11751,"Ross River Airport","Ross River","Canada","XRR","CYDM",61.9706001282,-132.42300415,2314,\N,\N,\N,"airport","OurAirports"
-11752,"Dolbeau St Felicien Airport","Dolbeau-St-Félicien","Canada","YDO","CYDO",48.778499603271,-72.375,372,\N,\N,\N,"airport","OurAirports"
-11753,"Amos/Magny Airport","Amos","Canada","YEY","CYEY",48.563903,-78.249702,1068,\N,\N,\N,"airport","OurAirports"
-11754,"Goderich Airport","Goderich","Canada",\N,"CYGD",43.7668991089,-81.7106018066,712,\N,\N,\N,"airport","OurAirports"
-11755,"Hope Airport","Hope","Canada","YHE","CYHE",49.3683013916,-121.498001099,128,\N,\N,\N,"airport","OurAirports"
-11756,"Haines Junction Airport","Haines Junction","Canada","YHT","CYHT",60.78919982910156,-137.54600524902344,2150,\N,\N,\N,"airport","OurAirports"
-11757,"Digby / Annapolis Regional Airport","Digby","Canada","YDG","CYID",44.5458450365,-65.7854247093,499,\N,\N,\N,"airport","OurAirports"
-11758,"Fort Liard Airport","Fort Liard","Canada","YJF","CYJF",60.235801696799996,-123.46900177,708,\N,\N,\N,"airport","OurAirports"
-11759,"Key Lake Airport","Key Lake","Canada","YKJ","CYKJ",57.256099700927734,-105.61799621582031,1679,\N,\N,\N,"airport","OurAirports"
-11760,"Leaf Rapids Airport","Leaf Rapids","Canada","YLR","CYLR",56.513301849365234,-99.98529815673828,959,\N,\N,\N,"airport","OurAirports"
-11761,"Matane Airport","Matane","Canada","YME","CYME",48.85689926147461,-67.45330047607422,102,\N,\N,\N,"airport","OurAirports"
-11762,"Charlevoix Airport","Charlevoix","Canada","YML","CYML",47.59749984741211,-70.2238998413086,977,\N,\N,\N,"airport","OurAirports"
-11763,"Nejanilini Lake Airport","Nejanilini Lake","Canada",\N,"CYNN",59.4874992371,-97.78029632570001,1000,\N,\N,\N,"airport","OurAirports"
-11764,"Owen Sound / Billy Bishop Regional Airport","Owen Sound","Canada","YOS","CYOS",44.5903015137,-80.8375015259,1007,\N,\N,\N,"airport","OurAirports"
-11765,"Port Hawkesbury Airport","Port Hawkesbury","Canada","YPS","CYPD",45.6567001343,-61.3680992126,377,\N,\N,\N,"airport","OurAirports"
-11766,"St Thomas Municipal Airport","St Thomas","Canada","YQS","CYQS",42.77000045776367,-81.11080169677734,778,\N,\N,\N,"airport","OurAirports"
-11767,"Ottawa / Rockcliffe Airport","Ottawa","Canada","YRO","CYRO",45.4603004456,-75.64610290530001,188,\N,\N,\N,"airport","OurAirports"
-11768,"Ottawa / Carp Airport","Ottawa","Canada",\N,"CYRP",45.3191986084,-76.0222015381,382,\N,\N,\N,"airport","OurAirports"
-11769,"Smiths Falls-Montague (Russ Beach) Airport","Smiths Falls","Canada","YSH","CYSH",44.94580078125,-75.94059753417969,416,\N,\N,\N,"airport","OurAirports"
-11770,"St Leonard Airport","St Leonard","Canada","YSL","CYSL",47.157501220703125,-67.83470153808594,793,\N,\N,\N,"airport","OurAirports"
-11771,"Virden/R.J. (Bob) Andrew Field Regional Aerodrome","Virden","Canada",\N,"CYVD",49.8782997131,-100.917999268,1454,\N,\N,\N,"airport","OurAirports"
-11772,"Vernon Airport","Vernon","Canada","YVE","CYVK",50.24810028076172,-119.33100128173828,1140,\N,\N,\N,"airport","OurAirports"
-11773,"Beaver Creek Airport","Beaver Creek","Canada","YXQ","CYXQ",62.410301208496094,-140.86700439453125,2131,\N,\N,\N,"airport","OurAirports"
-11774,"Shuswap Regional Airport","Salmon Arm","Canada","YSN","CZAM",50.682802,-119.228996,1751,\N,\N,\N,"airport","OurAirports"
-11775,"Kelsey Airport","Kelsey","Canada","KES","CZEE",56.0374984741,-96.50969696039999,600,\N,\N,\N,"airport","OurAirports"
-11776,"Pukatawagan Airport","Pukatawagan","Canada","XPK","CZFG",55.7491989136,-101.26599884,958,\N,\N,\N,"airport","OurAirports"
-11777,"Grand Forks Airport","Grand Forks","Canada","ZGF","CZGF",49.01559829711914,-118.43099975585938,1720,\N,\N,\N,"airport","OurAirports"
-11778,"Jenpeg Airport","Jenpeg","Canada","ZJG","CZJG",54.51890182495117,-98.04609680175781,729,\N,\N,\N,"airport","OurAirports"
-11779,"Thicket Portage Airport","Thicket Portage","Canada","YTD","CZLQ",55.31890106201172,-97.70780181884766,678,\N,\N,\N,"airport","OurAirports"
-11780,"Pikwitonei Airport","Pikwitonei","Canada","PIW","CZMN",55.58890151977539,-97.16419982910156,630,\N,\N,\N,"airport","OurAirports"
-11781,"Poplar River Airport","Poplar River","Canada","XPP","CZNG",52.9965258788,-97.2741937637,728,\N,\N,\N,"airport","OurAirports"
-11782,"Pincher Creek Airport","Pincher Creek","Canada","WPC","CZPC",49.520599365200006,-113.997001648,3903,\N,\N,\N,"airport","OurAirports"
-11783,"Stewart Airport","Stewart","Canada","ZST","CZST",55.935410448,-129.982434511,24,\N,\N,\N,"airport","OurAirports"
-11784,"Ignace Municipal Airport","Ignace","Canada","ZUC","CZUC",49.4296989440918,-91.7177963256836,1435,\N,\N,\N,"airport","OurAirports"
-11785,"Neubrandenburg Airport","Neubrandenburg","Germany","FNB","EDBN",53.6022,13.306,228,\N,\N,\N,"airport","OurAirports"
-11786,"Airport Bamberg-Breitenau","Bamberg","Germany",\N,"EDQA",49.920403,10.914233,811,\N,\N,\N,"airport","OurAirports"
-11787,"Zerbst Airport","Zerbst/Anhalt","Germany",\N,"EDUZ",52.000832,12.148611,289,\N,\N,\N,"airport","OurAirports"
-11788,"RAF Spadeadam","Spadeadam","United Kingdom",\N,"EGOM",55.0499992371,-2.54999995232,1066,\N,\N,\N,"airport","OurAirports"
-11789,"RAF Kinloss","Kinloss","United Kingdom","FSS","EGQK",57.6493988037,-3.56064009666,22,\N,\N,\N,"airport","OurAirports"
-11790,"Biała Podlaska Airfield","Biała Podlaska","Poland","BXP","EPBP",52.00078,23.1325278,485,\N,\N,\N,"airport","OurAirports"
-11791,"Cewice Air Base","Lębork","Poland",\N,"EPCE",54.416,17.7633,495,\N,\N,\N,"airport","OurAirports"
-11792,"Deblin Military Air Base","Dęblin","Poland",\N,"EPDE",51.551399231,21.8936004639,392,\N,\N,\N,"airport","OurAirports"
-11793,"Leczyca Military Air Base","Leczyca","Poland",\N,"EPLY",52.004699707,19.1455993652,377,\N,\N,\N,"airport","OurAirports"
-11794,"Minsk Mazowiecki Military Air Base","","Poland",\N,"EPMM",52.1954994202,21.6558990479,604,\N,\N,\N,"airport","OurAirports"
-11795,"Powidz Military Air Base","","Poland",\N,"EPPW",52.379398,17.853901,371,\N,\N,\N,"airport","OurAirports"
-11796,"Tomaszow Mazowiecki Military Air Base","Tomaszów Mazowiecki","Poland",\N,"EPTM",51.584400177,20.0977993011,571,\N,\N,\N,"airport","OurAirports"
-11797,"Björkvik Air Base","Björkvik","Sweden",\N,"ESKX",58.79079818725586,16.571199417114258,0,\N,\N,\N,"airport","OurAirports"
-11798,"Ljungbyhed Airport","Ljungbyhed","Sweden",\N,"ESTL",56.082801818847656,13.212499618530273,140,\N,\N,\N,"airport","OurAirports"
-11799,"Daugavpils Intrenational Airport","Daugavpils","Latvia","DGP","EVDA",55.944721221900004,26.6650009155,398,\N,\N,\N,"airport","OurAirports"
-11800,"Jēkabpils Air Base","Jēkabpils","Latvia",\N,"EVKA",56.534698,25.8925,289,\N,\N,\N,"airport","OurAirports"
-11801,"Jūrmala Airport","Tukums","Latvia",\N,"EVTA",56.9422,23.2239,220,\N,\N,\N,"airport","OurAirports"
-11802,"Kėdainiai Air Base","Kėdainiai","Lithuania",\N,"EYKD",55.31169891357422,23.95639991760254,171,\N,\N,\N,"airport","OurAirports"
-11803,"Lime Acres Finsch Mine Airport","Lime Acres","South Africa","LMR","FALC",-28.36009979248047,23.43910026550293,4900,\N,\N,\N,"airport","OurAirports"
-11804,"Sua Pan Airport","Sowa","Botswana","SXN","FBSN",-20.5534,26.115801,2985,\N,\N,\N,"airport","OurAirports"
-11805,"Lusaka City Airport","Lusaka","Zambia",\N,"FLLC",-15.4138002396,28.3306999207,4200,\N,\N,\N,"airport","OurAirports"
-11806,"Sumbe Airport","Sumbe","Angola","NDD","FNSU",-11.167900085449219,13.84749984741211,36,\N,\N,\N,"airport","OurAirports"
-11807,"Mangochi Airport","Mangochi","Malawi","MAI","FWMG",-14.482999801635742,35.266998291015625,1580,\N,\N,\N,"airport","OurAirports"
-11808,"Arandis Airport","Arandis","Namibia","ADI","FYAR",-22.462200164794922,14.979999542236328,1905,\N,\N,\N,"airport","OurAirports"
-11809,"Mariental Airport","Mariental","Namibia",\N,"FYML",-24.60540008544922,17.925399780273438,3650,\N,\N,\N,"airport","OurAirports"
-11810,"Almaza Air Force Base","Cairo","Egypt",\N,"HEAZ",30.091800689697266,31.360000610351562,300,\N,\N,\N,"airport","OurAirports"
-11811,"Beni Suef Air Base","Beni Suef","Egypt",\N,"HEBS",29.20829963684082,31.016599655151367,108,\N,\N,\N,"airport","OurAirports"
-11812,"Jiyanklis Air Base","Jiyanklis","Egypt",\N,"HEGS",30.819799423217773,30.191200256347656,49,\N,\N,\N,"airport","OurAirports"
-11813,"Merowe New Airport","Merowe","Sudan","MWE","HSMN",18.4433333333,31.8433333333,897,\N,\N,\N,"airport","OurAirports"
-11814,"St Louis Regional Airport","Alton/St Louis","United States","ALN","KALN",38.89030075069999,-90.0459976196,544,\N,\N,\N,"airport","OurAirports"
-11815,"Chandler Field","Alexandria","United States","AXN","KAXN",45.8662986755,-95.39469909670001,1425,\N,\N,\N,"airport","OurAirports"
-11816,"Columbus Municipal Airport","Columbus","United States","CLU","KBAK",39.2619018555,-85.8963012695,656,\N,\N,\N,"airport","OurAirports"
-11817,"Curtis Field","Brady","United States","BBD","KBBD",31.1793003082,-99.3238983154,1827,\N,\N,\N,"airport","OurAirports"
-11818,"Eastern Sierra Regional Airport","Bishop","United States","BIH","KBIH",37.3731002808,-118.363998413,4124,\N,\N,\N,"airport","OurAirports"
-11819,"Baker City Municipal Airport","Baker City","United States","BKE","KBKE",44.837299346900004,-117.808998108,3373,\N,\N,\N,"airport","OurAirports"
-11820,"Miley Memorial Field","Big Piney","United States","BPI","KBPI",42.58509827,-110.1110001,6990,\N,\N,\N,"airport","OurAirports"
-11821,"Ozark Regional Airport","Mountain Home","United States","WMH","KBPK",36.3689002991,-92.47049713130001,928,\N,\N,\N,"airport","OurAirports"
-11822,"W K Kellogg Airport","Battle Creek","United States","BTL","KBTL",42.307300567599995,-85.2515029907,952,\N,\N,\N,"airport","OurAirports"
-11823,"Burley Municipal Airport","Burley","United States","BYI","KBYI",42.542598724399994,-113.772003174,4150,\N,\N,\N,"airport","OurAirports"
-11824,"Northeast Iowa Regional Airport","Charles City","United States","CCY","KCCY",43.0726013184,-92.6108016968,1125,\N,\N,\N,"airport","OurAirports"
-11825,"Chanute Martin Johnson Airport","Chanute","United States","CNU","KCNU",37.668800354,-95.4850997925,1002,\N,\N,\N,"airport","OurAirports"
-11826,"Jacksonville Executive at Craig Airport","Jacksonville","United States","CRG","KCRG",30.3362998962,-81.51439666750001,41,\N,\N,\N,"airport","OurAirports"
-11827,"Crossville Memorial Whitson Field","Crossville","United States","CSV","KCSV",35.9513015747,-85.08499908450001,1881,\N,\N,\N,"airport","OurAirports"
-11828,"Davison Army Air Field","Fort Belvoir","United States","DAA","KDAA",38.715000152600005,-77.1809997559,73,\N,\N,\N,"airport","OurAirports"
-11829,"Barstow Daggett Airport","Daggett","United States","DAG","KDAG",34.85369873,-116.7870026,1930,\N,\N,\N,"airport","OurAirports"
-11830,"Deming Municipal Airport","Deming","United States","DMN","KDMN",32.262298584,-107.721000671,4314,\N,\N,\N,"airport","OurAirports"
-11831,"Desert Rock Airport","Mercury","United States","DRA","KDRA",36.6194,-116.032997,3314,\N,\N,\N,"airport","OurAirports"
-11832,"Needles Airport","Needles","United States","EED","KEED",34.7663002014,-114.623001099,983,\N,\N,\N,"airport","OurAirports"
-11833,"Duke Field","Crestview","United States","EGI","KEGI",30.65040016,-86.52290344,191,\N,\N,\N,"airport","OurAirports"
-11834,"Murray Field","Eureka","United States","EKA","KEKA",40.803398132299996,-124.112998962,7,\N,\N,\N,"airport","OurAirports"
-11835,"San Marcos Regional Airport","San Marcos","United States",\N,"KHYI",29.8927,-97.862999,597,\N,\N,\N,"airport","OurAirports"
-11836,"Sawyer County Airport","Hayward","United States","HYR","KHYR",46.025199890100005,-91.44429779050002,1216,\N,\N,\N,"airport","OurAirports"
-11837,"Kimble County Airport","Junction","United States","JCT","KJCT",30.5112991333,-99.7634963989,1749,\N,\N,\N,"airport","OurAirports"
-11838,"Monticello Municipal Ellis Field","Monticello","United States",\N,"KLLQ",33.6385994,-91.75099945,270,\N,\N,\N,"airport","OurAirports"
-11839,"Derby Field","Lovelock","United States","LOL","KLOL",40.0663986206,-118.565002441,3904,\N,\N,\N,"airport","OurAirports"
-11840,"Mobridge Municipal Airport","Mobridge","United States","MBG","KMBG",45.54650116,-100.4079971,1716,\N,\N,\N,"airport","OurAirports"
-11841,"Mc Comb/Pike County Airport/John E Lewis Field","Mc Comb","United States","MCB","KMCB",31.17849922,-90.47190094,413,\N,\N,\N,"airport","OurAirports"
-11842,"Southern Illinois Airport","Carbondale/Murphysboro","United States","MDH","KMDH",37.778099060058594,-89.25199890136719,411,\N,\N,\N,"airport","OurAirports"
-11843,"Mc Entire Joint National Guard Base","Eastover","United States","MMT","KMMT",33.92079926,-80.80130005,254,\N,\N,\N,"airport","OurAirports"
-11844,"Brunswick Executive Airport","Brunswick","United States","NHZ","KNHZ",43.89220047,-69.93859863,72,\N,\N,\N,"airport","OurAirports"
-11845,"Naval Station Mayport (Admiral David L. Mcdonald Field)","Mayport","United States","NRB","KNRB",30.39109993,-81.42469788,15,\N,\N,\N,"airport","OurAirports"
-11846,"Orangeburg Municipal Airport","Orangeburg","United States","OGB","KOGB",33.456798553467,-80.859497070312,195,\N,\N,\N,"airport","OurAirports"
-11847,"Columbus Municipal Airport","Columbus","United States",\N,"KOLU",41.44800186,-97.34259796,1447,\N,\N,\N,"airport","OurAirports"
-11848,"Ottumwa Regional Airport","Ottumwa","United States","OTM","KOTM",41.10660172,-92.44789886,845,\N,\N,\N,"airport","OurAirports"
-11849,"Cairns AAF (Fort Rucker) Air Field","Fort Rucker/Ozark","United States","OZR","KOZR",31.27569962,-85.71340179,301,\N,\N,\N,"airport","OurAirports"
-11850,"Ralph Wenz Field","Pinedale","United States","PWY","KPNA",42.79550171,-109.8069992,7102,\N,\N,\N,"airport","OurAirports"
-11851,"Dutchess County Airport","Poughkeepsie","United States","POU","KPOU",41.6265983581543,-73.88420104980469,165,\N,\N,\N,"airport","OurAirports"
-11852,"New Richmond Regional Airport","New Richmond","United States",\N,"KRNH",45.14830017,-92.5381012,998,\N,\N,\N,"airport","OurAirports"
-11853,"Russell Municipal Airport","Russell","United States","RSL","KRSL",38.872100830078,-98.811798095703,1862,\N,\N,\N,"airport","OurAirports"
-11854,"Redwood Falls Municipal Airport","Redwood Falls","United States","RWF","KRWF",44.54719925,-95.08229828,1024,\N,\N,\N,"airport","OurAirports"
-11855,"Salinas Municipal Airport","Salinas","United States","SNS","KSNS",36.662799835205,-121.60600280762,85,\N,\N,\N,"airport","OurAirports"
-11856,"Sonora Municipal Airport","Sonora","United States",\N,"KSOA",30.585699081421,-100.6490020752,2140,\N,\N,\N,"airport","OurAirports"
-11857,"Saline County Regional Airport","Benton","United States",\N,"KSUZ",34.59059906,-92.47940063,390,\N,\N,\N,"airport","OurAirports"
-11858,"Tonopah Airport","Tonopah","United States","TPH","KTPH",38.06019974,-117.086998,5430,\N,\N,\N,"airport","OurAirports"
-11859,"Aurora State Airport","Aurora","United States",\N,"KUAO",45.247100830078125,-122.7699966430664,200,\N,\N,\N,"airport","OurAirports"
-11860,"Ukiah Municipal Airport","Ukiah","United States","UKI","KUKI",39.125999450684,-123.20099639893,614,\N,\N,\N,"airport","OurAirports"
-11861,"University Oxford Airport","Oxford","United States","UOX","KUOX",34.384300231934,-89.536796569824,452,\N,\N,\N,"airport","OurAirports"
-11862,"Huntsville Regional Airport","Huntsville","United States","HTV","KUTS",30.7469005585,-95.5871963501,363,\N,\N,\N,"airport","OurAirports"
-11863,"Miller Field","Valentine","United States","VTN","KVTN",42.85779953,-100.5479965,2596,\N,\N,\N,"airport","OurAirports"
-11864,"Winnemucca Municipal Airport","Winnemucca","United States","WMC","KWMC",40.8965988159,-117.805999756,4308,\N,\N,\N,"airport","OurAirports"
-11865,"West Woodward Airport","Woodward","United States","WWR","KWWR",36.438,-99.5226667,2189,\N,\N,\N,"airport","OurAirports"
-11866,"Cape Canaveral AFS Skid Strip","Cocoa Beach","United States",\N,"KXMR",28.4675998688,-80.56659698490002,10,\N,\N,\N,"airport","OurAirports"
-11867,"Homey (Area 51) Airport","Groom Lake","United States",\N,"KXTA",37.23500061035156,-115.81099700927734,4462,\N,\N,\N,"airport","OurAirports"
-11868,"Zanesville Municipal Airport","Zanesville","United States","ZZV","KZZV",39.9444007874,-81.89209747310001,900,\N,\N,\N,"airport","OurAirports"
-11869,"Gjadër Air Base","Gjadër","Albania",\N,"LAGJ",41.895199,19.5987,23,\N,\N,\N,"airport","OurAirports"
-11870,"Kukës Airport","Kukës","Albania",\N,"LAKU",42.033699035599994,20.4158992767,1120,\N,\N,\N,"airport","OurAirports"
-11871,"Kuçovë Air Base","Kuçovë","Albania",\N,"LAKV",40.77190017700195,19.901899337768555,135,\N,\N,\N,"airport","OurAirports"
-11872,"Vlorë Air Base","Vlorë","Albania",\N,"LAVL",40.47610092163086,19.474199295043945,3,\N,\N,\N,"airport","OurAirports"
-11873,"Haskovo Malevo Airport","Haskovo","Bulgaria",\N,"LBHS",41.976398,25.5898,160,\N,\N,\N,"airport","OurAirports"
-11874,"Gabrovnitsa Air Base","Gabrovnitsa","Bulgaria",\N,"LBMG",43.5443000793457,23.272499084472656,626,\N,\N,\N,"airport","OurAirports"
-11875,"Graf Ignatievo Air Base","Graf Ignatievo","Bulgaria",\N,"LBPG",42.290401458740234,24.714000701904297,190,\N,\N,\N,"airport","OurAirports"
-11876,"Dolna Mitropoliya Air Base","Dolna Mitropoliya","Bulgaria",\N,"LBPL",43.451401,24.5028,330,\N,\N,\N,"airport","OurAirports"
-11877,"Balchik Air Base","Balchik","Bulgaria",\N,"LBWB",43.42380142211914,28.181299209594727,660,\N,\N,\N,"airport","OurAirports"
-11878,"Cuatro Vientos Airport","Madrid","Spain","ECV","LECU",40.370701,-3.78514,2269,\N,\N,\N,"airport","OurAirports"
-11879,"Castellón-Costa Azahar Airport","Castellón de la Plana","Spain","CDT","LEDS",40.213889,0.073333,1145,\N,\N,\N,"airport","OurAirports"
-11880,"Teruel Airport","Teruel","Spain","TEV","LETL",40.403,-1.2183,3380,\N,\N,\N,"airport","OurAirports"
-11881,"Blois-Le Breuil Airport","Blois/Le Breuil","France",\N,"LFOQ",47.678502,1.20884,398,\N,\N,\N,"airport","OurAirports"
-11882,"Trento-Mattarello Airport","Trento (TN)","Italy",\N,"LIDT",46.0214,11.1242,610,\N,\N,\N,"airport","OurAirports"
-11883,"Alessandria Airport","Alessandria","Italy",\N,"LILA",44.925201,8.62513,299,\N,\N,\N,"airport","OurAirports"
-11884,"Biella-Cerrione Airport","Biella (BI)","Italy",\N,"LILE",45.4953,8.10278,920,\N,\N,\N,"airport","OurAirports"
-11885,"Vercelli Airport","Vercelli","Italy",\N,"LILI",45.310233,8.417935,417,\N,\N,\N,"airport","OurAirports"
-11886,"Casale Monferrato Airport","Casale Monferrato","Italy",\N,"LILM",45.111198,8.45603,377,\N,\N,\N,"airport","OurAirports"
-11887,"Varese-Venegono Airport","Varese","Italy",\N,"LILN",45.742199,8.888233,1050,\N,\N,\N,"airport","OurAirports"
-11888,"Novi Ligure Airport","Novi Ligure","Italy",\N,"LIMR",44.779999,8.78639,607,\N,\N,\N,"airport","OurAirports"
-11889,"Sarzana-Luni Air Base","Sarzana (SP)","Italy","QLP","LIQW",44.088001,9.98795,45,\N,\N,\N,"airport","OurAirports"
-11890,"Câmpia Turzii Air Base","Câmpia Turzii","Romania",\N,"LRCT",46.50230026245117,23.885900497436523,1083,\N,\N,\N,"airport","OurAirports"
-11891,"Mărculeşti International Airport","Mărculeşti","Moldova",\N,"LUBM",47.862701416015625,28.212799072265625,312,\N,\N,\N,"airport","OurAirports"
-11892,"Cahul International Airport","Cahul","Moldova",\N,"LUCH",45.8437995911,28.263700485199998,652,\N,\N,\N,"airport","OurAirports"
-11893,"Tiraspol Airport","Tiraspol","Moldova",\N,"LUTR",46.868099212646484,29.590599060058594,141,\N,\N,\N,"airport","OurAirports"
-11894,"Batajnica Air Base","Batajnica","Serbia","BJY","LYBT",44.935299,20.2575,265,\N,\N,\N,"airport","OurAirports"
-11895,"Rubelsanto Airport","Rubelsanto","Guatemala","RUV","MGRB",15.991999626159668,-90.44529724121094,426,\N,\N,\N,"airport","OurAirports"
-11896,"Coronel Enrique Soto Cano Air Base","Comayagua","Honduras","XPL","MHSC",14.3824,-87.621201,2061,\N,\N,\N,"airport","OurAirports"
-11897,"Upala Airport","Upala","Costa Rica","UPL","MRUP",10.8922,-85.016197,184,\N,\N,\N,"airport","OurAirports"
-11898,"San Nicolas De Bari Airport","San Nicolás","Cuba","QSN","MUNB",22.756099700927734,-81.9208984375,49,\N,\N,\N,"airport","OurAirports"
-11899,"San Julian Air Base","Pinar Del Rio","Cuba","SNJ","MUSJ",22.095300674438477,-84.1520004272461,98,\N,\N,\N,"airport","OurAirports"
-11900,"King Salman Abdulaziz Airport","","Saudi Arabia","DWD","OEDM",24.4499,44.121201,3026,\N,\N,\N,"airport","OurAirports"
-11901,"King Khaled Air Base","","Saudi Arabia","KMX","OEKM",18.297300338745117,42.80350112915039,6778,\N,\N,\N,"airport","OurAirports"
-11902,"Riyadh Air Base","Riyadh","Saudi Arabia","XXN","OERY",24.709800720214844,46.72520065307617,2082,\N,\N,\N,"airport","OurAirports"
-11903,"Jam Airport","Kangan","Iran","KNR","OIBJ",27.820499420166016,52.35219955444336,2173,\N,\N,\N,"airport","OurAirports"
-11904,"Hamadan Air Base","Hamadan","Iran",\N,"OIHS",35.21160125732422,48.65340042114258,5609,\N,\N,\N,"airport","OurAirports"
-11905,"Payam International Airport","Karaj","Iran","PYK","OIIP",35.776100158691,50.826698303223,4170,\N,\N,\N,"airport","OurAirports"
-11906,"Ahmed Al Jaber Air Base","Ahmed Al Jaber AB","Kuwait","XIJ","OKAJ",28.9347991943,47.791900634799994,409,\N,\N,\N,"airport","OurAirports"
-11907,"Rayak Air Base","Rayak","Lebanon",\N,"OLRA",33.850799560546875,35.987701416015625,3018,\N,\N,\N,"airport","OurAirports"
-11908,"Mirpur Khas Air Base","Mirpur Khas","Pakistan",\N,"OPMK",25.682501,69.0728,180,\N,\N,\N,"airport","OurAirports"
-11909,"Minhas Air Base","Kamra","Pakistan","ATG","OPMS",33.8690986633,72.4009017944,1023,\N,\N,\N,"airport","OurAirports"
-11910,"Rafiqui Air Base","Shorkot","Pakistan",\N,"OPRQ",30.758100509643555,72.28250122070312,492,\N,\N,\N,"airport","OurAirports"
-11911,"Faisal Air Base","Karachi","Pakistan",\N,"OPSF",24.87420082092285,67.11849975585938,29,\N,\N,\N,"airport","OurAirports"
-11912,"Mushaf Air Base","Sargodha","Pakistan","SGI","OPSR",32.04859924316406,72.66500091552734,614,\N,\N,\N,"airport","OurAirports"
-11913,"Qayyarah West Airport","Qayyarah","Iraq","RQW","ORQW",35.76720047,43.125099182099994,749,\N,\N,\N,"airport","OurAirports"
-11914,"Al Sahra Army Air Field","Tikrit","Iraq",\N,"ORSH",34.67319869995117,43.542999267578125,451,\N,\N,\N,"airport","OurAirports"
-11915,"Tall Afar Army Air Field","Tall Afar","Iraq",\N,"ORTF",36.28310012817383,42.40299987792969,996,\N,\N,\N,"airport","OurAirports"
-11916,"Al Taji Army Air Field","Taji","Iraq",\N,"ORTI",33.52389907836914,44.25669860839844,121,\N,\N,\N,"airport","OurAirports"
-11917,"Ubaydah Bin Al Jarrah Airport","Al Cut","Iraq",\N,"ORUB",32.481998443603516,45.75709915161133,68,\N,\N,\N,"airport","OurAirports"
-11918,"Nenana Municipal Airport","Nenana","United States","ENN","PANN",64.54730224609375,-149.07400512695312,362,\N,\N,\N,"airport","OurAirports"
-11919,"Wasilla Airport","Wasilla","United States","WWA","PAWS",61.5717010498,-149.539993286,354,\N,\N,\N,"airport","OurAirports"
-11920,"Gangshan Air Force Base","Gangshan","Taiwan",\N,"RCAY",22.782499313354492,120.26300048828125,34,\N,\N,\N,"airport","OurAirports"
-11921,"Asahikawa Airfield","","Japan",\N,"RJCA",43.794734,142.365432,377,\N,\N,\N,"airport","OurAirports"
-11922,"Iwakuni Marine Corps Air Station","Iwakuni","Japan","IWK","RJOI",34.143902,132.235992,7,\N,\N,\N,"airport","OurAirports"
-11923,"Utsunomiya Airport","","Japan",\N,"RJTU",36.5145,139.87101,334,\N,\N,\N,"airport","OurAirports"
-11924,"Jungwon Air Base/Chungju Airport","","South Korea",\N,"RKTI",37.03024,127.886353,281,\N,\N,\N,"airport","OurAirports"
-11925,"Ie Jima Airport","Ie","Japan","IEJ","RORE",26.7220001221,127.785003662,246,\N,\N,\N,"airport","OurAirports"
-11926,"Allah Valley Airport","Surallah","Philippines","AAV","RPMA",6.366819858551025,124.7509994506836,659,\N,\N,\N,"airport","OurAirports"
-11927,"Bislig Airport","","Philippines","BPH","RPMF",8.19594955444336,126.3219985961914,12,\N,\N,\N,"airport","OurAirports"
-11928,"Mati National Airport","","Philippines","MXI","RPMQ",6.949091,126.27368,156,\N,\N,\N,"airport","OurAirports"
-11929,"Presidente Néstor Kirchner Regionsl Airport","Villa Maria","Argentina",\N,"SAOV",-32.3201,-63.22663,670,\N,\N,\N,"airport","OurAirports"
-11930,"Chafei Amsei Airport","Barretos","Brazil","BAT","SBBT",-20.584499359131,-48.594100952148,1898,\N,\N,\N,"airport","OurAirports"
-11931,"Base de Aviação de Taubaté Airport","Taubaté","Brazil","QHP","SBTA",-23.04010009765625,-45.51599884033203,1908,\N,\N,\N,"airport","OurAirports"
-11932,"Barriles Airport","Tocopilla","Chile","TOQ","SCBE",-22.14109992980957,-70.06289672851562,3475,\N,\N,\N,"airport","OurAirports"
-11933,"Schroeder's field","Cochrane","Chile",\N,"SCHR",35.071718,-91.738801,0,\N,\N,\N,"airport","OurAirports"
-11934,"Chañaral Airport","Chañaral","Chile","CNR","SCRA",-26.332500457763672,-70.6072998046875,97,\N,\N,\N,"airport","OurAirports"
-11935,"Panguilemo Airport","Talca","Chile","TLX","SCTL",-35.37779998779297,-71.60169982910156,371,\N,\N,\N,"airport","OurAirports"
-11936,"Victoria Airport","Victoria","Chile","ZIC","SCTO",-38.245601654052734,-72.34860229492188,1148,\N,\N,\N,"airport","OurAirports"
-11937,"Las Breas Airport","Taltal","Chile","TTC","SCTT",-25.564300537109375,-70.37590026855469,2580,\N,\N,\N,"airport","OurAirports"
-11938,"Gomez Nino Apiay Air Base","Apiay","Colombia","API","SKAP",4.07607,-73.5627,1207,\N,\N,\N,"airport","OurAirports"
-11939,"Coveñas Airport","Coveñas","Colombia","CVE","SKCV",9.40092,-75.6913,31,\N,\N,\N,"airport","OurAirports"
-11940,"German Olano Air Base","La Dorada","Colombia","PAL","SKPQ",5.48361,-74.6574,566,\N,\N,\N,"airport","OurAirports"
-11941,"Paz De Ariporo Airport","Paz De Ariporo","Colombia","PZA","SKPZ",5.87615,-71.8866,900,\N,\N,\N,"airport","OurAirports"
-11942,"Tunja Airport","Tunja","Colombia",\N,"SKTJ",5.54138,-73.3445,8940,\N,\N,\N,"airport","OurAirports"
-11943,"Tres Esquinas Air Base","Tres Esquinas","Colombia","TQS","SKTQ",0.7459,-75.234,585,\N,\N,\N,"airport","OurAirports"
-11944,"Marandúa Air Base","Marandúa","Colombia",\N,"SKUA",5.52448,-68.6856,285,\N,\N,\N,"airport","OurAirports"
-11945,"Juan Simons Vela Airport","Rioja","Peru","RIJ","SPJA",-6.067860126495361,-77.16000366210938,2707,\N,\N,\N,"airport","OurAirports"
-11946,"Shumba Airport","Jaén","Peru","JAE","SPJE",-5.59248,-78.774002,2477,\N,\N,\N,"airport","OurAirports"
-11947,"Metropolitano Airport","","Venezuela",\N,"SVMP",10.133169174194336,-66.78782653808594,574,\N,\N,\N,"airport","OurAirports"
-11948,"Issyk-Kul International Airport","Tamchy","Kyrgyzstan","IKU","UAFL",42.58792,76.713046,5425,\N,\N,\N,"airport","OurAirports"
-11949,"Kant Air Base","Kant","Kyrgyzstan",\N,"UAFW",42.85319900512695,74.84649658203125,2549,\N,\N,\N,"airport","OurAirports"
-11950,"Ayaguz Airport","Ayaguz","Kazakhstan",\N,"UASA",47.91859817504883,80.45279693603516,2119,\N,\N,\N,"airport","OurAirports"
-11951,"Chelkar Airport","Chelkar","Kazakhstan",\N,"UATR",47.904998779296875,59.619998931884766,0,\N,\N,\N,"airport","OurAirports"
-11952,"Kyzyl-Syr Airport","Kyzyl-Syr","Russia",\N,"UENK",63.8849983215332,122.7770004272461,331,\N,\N,\N,"airport","OurAirports"
-11953,"Vilyuisk Airport","Vilyuisk","Russia","VYI","UENW",63.75666809082,121.69333648682,361,\N,\N,\N,"airport","OurAirports"
-11954,"Belaya Gora Airport","","Russia","BGN","UESG",68.556602,146.231506,118,\N,\N,\N,"airport","OurAirports"
-11955,"Dzhermuk Airport","Dzhermuk","Armenia",\N,"UGEJ",39.8240013123,45.673999786399996,0,\N,\N,\N,"airport","OurAirports"
-11956,"Kamenny Ruchey Naval Air Base","Sovetskaya Gavan","Russia",\N,"UHKG",49.23570251464844,140.19309997558594,659,\N,\N,\N,"airport","OurAirports"
-11957,"Maygatka Airport.","Sovetskaya Gavan","Russia","GVN","UHKM",48.926998138399995,140.033996582,768,\N,\N,\N,"airport","OurAirports"
-11958,"Omsukchan Airport","Omsukchan","Russia",\N,"UHMF",62.457000732421875,155.7449951171875,1732,\N,\N,\N,"airport","OurAirports"
-11959,"Chaybukha Airport","Chaybukha","Russia",\N,"UHMG",61.834999084472656,160.54800415039062,207,\N,\N,\N,"airport","OurAirports"
-11960,"Keperveem Airport","Keperveem","Russia",\N,"UHMK",67.8450012207,166.13999939,623,\N,\N,\N,"airport","OurAirports"
-11961,"Magadan-13 Airport","Magadan","Russia",\N,"UHMT",59.62329864501953,150.9219970703125,164,\N,\N,\N,"airport","OurAirports"
-11962,"Nikolayevsk-na-Amure Airport","Nikolayevsk-na-Amure Airport","Russia","NLI","UHNN",53.154999,140.649994,170,\N,\N,\N,"airport","OurAirports"
-11963,"Palana Airport","Palana","Russia",\N,"UHPL",59.08169937133789,159.88800048828125,112,\N,\N,\N,"airport","OurAirports"
-11964,"Zheleznogorsk Airport","Zheleznogorsk-Ilimsky","Russia",\N,"UIBV",56.487701416015625,104.10600280761719,1946,\N,\N,\N,"airport","OurAirports"
-11965,"Gvardeyskoe Air Base","Sarabuz","Ukraine",\N,"UKFG",45.1150016784668,33.97700119018555,721,\N,\N,\N,"airport","OurAirports"
-11966,"Saki Air Base","Saki","Ukraine",\N,"UKFI",45.09299850463867,33.595001220703125,36,\N,\N,\N,"airport","OurAirports"
-11967,"Dzhankoy Airport","Dzhankoy","Ukraine",\N,"UKFY",45.70090103149414,34.41889953613281,75,\N,\N,\N,"airport","OurAirports"
-11968,"Ozerne Air Base","Zhytomyr","Ukraine",\N,"UKKO",50.158298,28.7383,761,\N,\N,\N,"airport","OurAirports"
-11969,"Severomorsk-1 Naval Air Base","Severomorsk","Russia",\N,"ULAK",69.03166961669922,33.418331146240234,239,\N,\N,\N,"airport","OurAirports"
-11970,"Pushkin Airport","St. Petersburg","Russia",\N,"ULLP",59.685001,30.338301,230,\N,\N,\N,"airport","OurAirports"
-11971,"Siversky Air Base","Siversky","Russia",\N,"ULLS",59.3567008972168,30.036699295043945,341,\N,\N,\N,"airport","OurAirports"
-11972,"Staraya Russa Air Base","Staraya Russa","Russia",\N,"ULNR",57.961399,31.384399,52,\N,\N,\N,"airport","OurAirports"
-11973,"Peski Airport","Petrozavodsk","Russia",\N,"ULPP",61.83194351196289,34.295555114746094,0,\N,\N,\N,"airport","OurAirports"
-11974,"Baranavichi Air Base","Baranavichi","Belarus",\N,"UMMA",53.099998474121094,26.049999237060547,0,\N,\N,\N,"airport","OurAirports"
-11975,"Babruisk Air Base","Babruisk","Belarus",\N,"UMNB",53.105,29.205,502,\N,\N,\N,"airport","OurAirports"
-11976,"Severo-Eniseysk Airport","Severo-Eniseysk","Russia",\N,"UNIS",60.37329864501953,93.01170349121094,1706,\N,\N,\N,"airport","OurAirports"
-11977,"Sharypovo Airport","Sharypovo","Russia",\N,"UNKO",55.454914093,89.1738815308,1099,\N,\N,\N,"airport","OurAirports"
-11978,"Omsk Severny Airport","Omsk","Russia",\N,"UNOS",54.9749984741,73.5550003052,0,\N,\N,\N,"airport","OurAirports"
-11979,"Nagurskoye","Murmansk","Russia",\N,"UODN",80.803207,47.663586,59,\N,\N,\N,"airport","OurAirports"
-11980,"Svetlogorsk Airport","Svetlogorsk","Russia",\N,"UOIG",66.83999633789062,88.40333557128906,394,\N,\N,\N,"airport","OurAirports"
-11981,"Valek Airport","Valek","Russia",\N,"UOOW",69.39690399169922,88.35368347167969,108,\N,\N,\N,"airport","OurAirports"
-11982,"Khanskaya Air Base","Maykop","Russia",\N,"URKH",44.68,40.035,600,\N,\N,\N,"airport","OurAirports"
-11983,"Dudinka Airport","Dudinka","Russia",\N,"UROD",69.375,86.15666961669922,82,\N,\N,\N,"airport","OurAirports"
-11984,"Volgodonsk Airport","","Russia","VLK","URRY",47.682098388671875,42.07279968261719,276,\N,\N,\N,"airport","OurAirports"
-11985,"Tashkent East Airport","Tashkent","Uzbekistan",\N,"UTTP",41.31269836425781,69.39140319824219,1574,\N,\N,\N,"airport","OurAirports"
-11986,"Myachkovo Airport","Moscow","Russia",\N,"UUBM",55.5600013733,37.9850006104,410,\N,\N,\N,"airport","OurAirports"
-11987,"Tretyakovo Airport","Lukhovitsy","Russia",\N,"UUMT",54.904998779299994,39.02666854859999,515,\N,\N,\N,"airport","OurAirports"
-11988,"Yermolino Airport","Balabanovo","Russia",\N,"UUWE",55.2283325195,36.6083335876,640,\N,\N,\N,"airport","OurAirports"
-11989,"Inta Airport","Inta","Russia","INA","UUYI",66.0548324584961,60.110321044921875,184,\N,\N,\N,"airport","OurAirports"
-11990,"Izhma Airport","Izhma","Russia",\N,"UUYV",65.03170013427734,53.970001220703125,230,\N,\N,\N,"airport","OurAirports"
-11991,"Borisoglebskoye Airport","Kazan","Russia",\N,"UWKG",55.86669921875,49.13330078125,213,\N,\N,\N,"airport","OurAirports"
-11992,"Zhigansk Airport","Zhigansk","Russia","ZIX","UWKV",66.7965011597,123.361000061,292,\N,\N,\N,"airport","OurAirports"
-11993,"Maksimovka Airport","Ufa","Russia",\N,"UWUM",54.83000183105469,56.16830062866211,325,\N,\N,\N,"airport","OurAirports"
-11994,"Buguruslan Severny Airport","Buguruslan","Russia",\N,"UWWB",53.71839904789999,52.3718986511,728,\N,\N,\N,"airport","OurAirports"
-11995,"Bezymyanka Airfield","Samara","Russia",\N,"UWWG",53.220001220703125,50.32500076293945,135,\N,\N,\N,"airport","OurAirports"
-11996,"Ratnagiri Airport","","India","RTC","VARG",17.013599,73.327797,305,\N,\N,\N,"airport","OurAirports"
-11997,"Hingurakgoda Air Force Base","Polonnaruwa Town","Sri Lanka","HIM","VCCH",8.04981,80.9814,170,\N,\N,\N,"airport","OurAirports"
-11998,"Kazi Nazrul Islam Airport","Durgapur","India","RDP","VEDG",23.6225,87.243,300,\N,\N,\N,"airport","OurAirports"
-11999,"Ambala Air Force Station","","India",\N,"VIAM",30.368099212646484,76.81670379638672,909,\N,\N,\N,"airport","OurAirports"
-12000,"Sirsa Air Force Station","","India",\N,"VISA",29.56060028076172,75.006103515625,650,\N,\N,\N,"airport","OurAirports"
-12001,"Udhampur Air Force Station","","India",\N,"VIUX",32.902198791503906,75.15619659423828,2066,\N,\N,\N,"airport","OurAirports"
-12002,"Sri Sathya Sai Airport","Puttaparthi","India","PUT","VOPN",14.1492996216,77.7910995483,1558,\N,\N,\N,"airport","OurAirports"
-12003,"Meiktila Air Base","Meiktila","Burma",\N,"VYML",20.88640022277832,95.89279174804688,699,\N,\N,\N,"airport","OurAirports"
-12004,"Changi Air Base (East)","Singapore","Singapore",\N,"WSAC",1.3441400528,104.009002686,22,\N,\N,\N,"airport","OurAirports"
-12005,"Soltsy-2 Air Base","Soltsy","Russia",\N,"XLLL",58.139545,30.33042,266,\N,\N,\N,"airport","OurAirports"
-12006,"Severomorsk-3 Naval Air Base","Severomorsk","Russia",\N,"XLMV",68.866669,33.716667,564,\N,\N,\N,"airport","OurAirports"
-12007,"Fedotovo Naval Air Base","Kipelovo","Russia",\N,"XLWF",59.193031,39.129411,574,\N,\N,\N,"airport","OurAirports"
-12008,"Lebyazhye Air Base","Kamyshin","Russia",\N,"XRWL",50.201698303200004,45.2083015442,381,\N,\N,\N,"airport","OurAirports"
-12009,"Smolensk North Airport","Smolensk","Russia","LNX","XUBS",54.824,32.025,820,\N,\N,\N,"airport","OurAirports"
-12010,"Rtishchevo Air Base","Rtishchevo","Russia",\N,"XWPR",52.297317,43.7241,673,\N,\N,\N,"airport","OurAirports"
-12011,"Alpha Airport","Alpha","Australia","ABH","YAPH",-23.646099,146.584,1255,\N,\N,\N,"airport","OurAirports"
-12012,"Ararat Airport","","Australia","ARY","YARA",-37.30939865112305,142.98899841308594,1008,\N,\N,\N,"airport","OurAirports"
-12013,"Benalla Airport","","Australia","BLN","YBLA",-36.55189895629883,146.0070037841797,569,\N,\N,\N,"airport","OurAirports"
-12014,"Balranald Airport","","Australia","BZD","YBRN",-34.623600006103516,143.5780029296875,210,\N,\N,\N,"airport","OurAirports"
-12015,"Brewarrina Airport","","Australia","BWQ","YBRW",-29.973899841308594,146.81700134277344,414,\N,\N,\N,"airport","OurAirports"
-12016,"Cleve Airport","","Australia","CVC","YCEE",-33.70970153808594,136.5050048828125,589,\N,\N,\N,"airport","OurAirports"
-12017,"Corowa Airport","","Australia","CWW","YCOR",-35.99470138549805,146.35699462890625,469,\N,\N,\N,"airport","OurAirports"
-12018,"Corryong Airport","","Australia","CYG","YCRG",-36.18280029296875,147.88800048828125,963,\N,\N,\N,"airport","OurAirports"
-12019,"Cootamundra Airport","","Australia","CMD","YCTM",-34.6239013671875,148.0279998779297,1110,\N,\N,\N,"airport","OurAirports"
-12020,"Dirranbandi Airport","","Australia","DRN","YDBI",-28.591699600219727,148.2169952392578,567,\N,\N,\N,"airport","OurAirports"
-12021,"Deniliquin Airport","Deniliquin","Australia","DNQ","YDLQ",-35.5593986511,144.945999146,316,\N,\N,\N,"airport","OurAirports"
-12022,"Dysart Airport","","Australia","DYA","YDYS",-22.62220001220703,148.36399841308594,670,\N,\N,\N,"airport","OurAirports"
-12023,"Echuca Airport","","Australia","ECH","YECH",-36.15719985961914,144.76199340820312,323,\N,\N,\N,"airport","OurAirports"
-12024,"Forbes Airport","Forbes","Australia","FRB","YFBS",-33.363602,147.934998,760,\N,\N,\N,"airport","OurAirports"
-12025,"Gunnedah Airport","","Australia","GUH","YGDH",-30.96109962463379,150.25100708007812,863,\N,\N,\N,"airport","OurAirports"
-12026,"Hay Airport","","Australia","HXX","YHAY",-34.53139877319336,144.8300018310547,305,\N,\N,\N,"airport","OurAirports"
-12027,"Hopetoun Airport","","Australia","HTU","YHPN",-35.715301513671875,142.36000061035156,256,\N,\N,\N,"airport","OurAirports"
-12028,"Kerang Airport","","Australia","KRA","YKER",-35.751399993896484,143.93899536132812,254,\N,\N,\N,"airport","OurAirports"
-12029,"Kempsey Airport","","Australia","KPS","YKMP",-31.074399948120117,152.77000427246094,54,\N,\N,\N,"airport","OurAirports"
-12030,"Kingaroy Airport","","Australia","KGY","YKRY",-26.580799102783203,151.84100341796875,1492,\N,\N,\N,"airport","OurAirports"
-12031,"Latrobe Valley Airport","Morwell","Australia","TGN","YLTV",-38.207199,146.470001,180,\N,\N,\N,"airport","OurAirports"
-12032,"Mareeba Airport","","Australia","MRG","YMBA",-17.06920051574707,145.41900634765625,1560,\N,\N,\N,"airport","OurAirports"
-12033,"Ngukurr Airport","","Australia","RPM","YNGU",-14.722800254821777,134.7469940185547,45,\N,\N,\N,"airport","OurAirports"
-12034,"Narromine Airport","","Australia","QRM","YNRM",-32.214698791503906,148.22500610351562,782,\N,\N,\N,"airport","OurAirports"
-12035,"Port Pirie Airport","","Australia","PPI","YPIR",-33.23889923095703,137.9949951171875,40,\N,\N,\N,"airport","OurAirports"
-12036,"Smithton Airport","","Australia","SIO","YSMI",-40.834999084472656,145.08399963378906,31,\N,\N,\N,"airport","OurAirports"
-12037,"Snake Bay Airport","","Australia","SNB","YSNB",-11.422800064086914,130.6540069580078,173,\N,\N,\N,"airport","OurAirports"
-12038,"Stawell Airport","","Australia","SWC","YSWL",-37.07170104980469,142.74099731445312,807,\N,\N,\N,"airport","OurAirports"
-12039,"Tibooburra Airport","","Australia","TYB","YTIB",-29.451099395751953,142.05799865722656,584,\N,\N,\N,"airport","OurAirports"
-12040,"Tumut Airport","","Australia","TUM","YTMU",-35.26279830932617,148.24099731445312,878,\N,\N,\N,"airport","OurAirports"
-12041,"Wangaratta Airport","","Australia","WGT","YWGT",-36.41579818725586,146.3070068359375,504,\N,\N,\N,"airport","OurAirports"
-12042,"Warracknabeal Airport","","Australia","WKB","YWKB",-36.32109832763672,142.41900634765625,397,\N,\N,\N,"airport","OurAirports"
-12043,"Warren Airport","","Australia","QRR","YWRN",-31.733299255371094,147.80299377441406,669,\N,\N,\N,"airport","OurAirports"
-12044,"West Sale Airport","Sale","Australia","SXE","YWSL",-38.090827,146.965335,72,\N,\N,\N,"airport","OurAirports"
-12045,"West Wyalong Airport","West Wyalong","Australia","WWY","YWWL",-33.9371986389,147.190994263,859,\N,\N,\N,"airport","OurAirports"
-12046,"Young Airport","","Australia","NGA","YYNG",-34.25559997558594,148.2480010986328,1267,\N,\N,\N,"airport","OurAirports"
-12047,"Guangzhou MR Air Base","Guanghua","China","LHK","ZHGH",32.389400482177734,111.69499969482422,0,\N,\N,\N,"airport","OurAirports"
-12048,"Shiyan Wudangshan Airport","Shiyan","China","WDS","ZHSY",32.591667,110.907778,0,\N,\N,\N,"airport","OurAirports"
-12049,"Sunchon Air Base","Sunchon","North Korea",\N,"ZKSC",39.415699,125.894997,141,\N,\N,\N,"airport","OurAirports"
-12050,"Huatugou Airport","Mengnai","China","HTT","ZLHX",38.201984,90.841495,2945,\N,\N,\N,"airport","OurAirports"
-12051,"Baruun Urt Airport","","Mongolia","UUN","ZMBU",46.660301208496094,113.28500366210938,3205,\N,\N,\N,"airport","OurAirports"
-12052,"Bengbu Airport","Bengbu","China","BFU","ZSBB",32.8477333333,117.320244444,100,\N,\N,\N,"airport","OurAirports"
-12053,"Rugao Air Base","Rugao","China","RUG","ZSRG",32.25788497924805,120.50165557861328,0,\N,\N,\N,"airport","OurAirports"
-12054,"Wuhu Air Base","Wuhu","China","WHU","ZSWU",31.3906,118.408997,0,\N,\N,\N,"airport","OurAirports"
-12055,"Shanshan Airport","Shanshan","China","SXJ","ZWSS",42.91170120239258,90.24749755859375,0,\N,\N,\N,"airport","OurAirports"
-12056,"Yingkou Lanqi Airport","Yingkou","China","YKH","ZYYK",40.542524,122.3586,0,\N,\N,\N,"airport","OurAirports"
-12057,"Shenyang Dongta Airport","Shenyang","China",\N,"ZYYY",41.784400939941406,123.49600219726562,0,\N,\N,\N,"airport","OurAirports"
+11743,"La Grande-4 Airport","La Grande-4","Canada","YAH","CYAH",53.754699707,-73.6753005981,1005,-5,\N,\N,"airport","OurAirports"
+11744,"Alert Bay Airport","Alert Bay","Canada","YAL","CYAL",50.58219909667969,-126.91600036621094,240,-8,\N,\N,"airport","OurAirports"
+11745,"Liverpool South Shore Regional Airport","Liverpool","Canada",\N,"CYAU",44.2303009033,-64.85610198970001,321,-4,\N,\N,"airport","OurAirports"
+11747,"Nipawin Airport","Nipawin","Canada",\N,"CYBU",53.33250045776367,-104.00800323486328,1220,-6,\N,\N,"airport","OurAirports"
+11748,"Centralia / James T. Field Memorial Aerodrome","Centralia","Canada","YCE","CYCE",43.285599,-81.508301,824,-5,\N,\N,"airport","OurAirports"
+11749,"Blue River Airport","Blue River","Canada",\N,"CYCP",52.11669921875,-119.28299713134766,2240,-7,\N,\N,"airport","OurAirports"
+11750,"Chetwynd Airport","Chetwynd","Canada","YCQ","CYCQ",55.687198638916016,-121.62699890136719,2000,-7.0,\N,\N,"airport","OurAirports",
+11751,"Ross River Airport","Ross River","Canada","XRR","CYDM",61.9706001282,-132.42300415,2314,-7,\N,\N,"airport","OurAirports"
+11752,"Dolbeau St Felicien Airport","Dolbeau-St-Félicien","Canada","YDO","CYDO",48.778499603271,-72.375,372,-5,\N,\N,"airport","OurAirports"
+11753,"Amos/Magny Airport","Amos","Canada","YEY","CYEY",48.563903,-78.249702,1068,-5,\N,\N,"airport","OurAirports"
+11754,"Goderich Airport","Goderich","Canada",\N,"CYGD",43.7668991089,-81.7106018066,712,-5,\N,\N,"airport","OurAirports"
+11755,"Hope Airport","Hope","Canada","YHE","CYHE",49.3683013916,-121.498001099,128,-6,\N,\N,"airport","OurAirports"
+11756,"Haines Junction Airport","Haines Junction","Canada","YHT","CYHT",60.78919982910156,-137.54600524902344,2150,-7,\N,\N,"airport","OurAirports"
+11757,"Digby / Annapolis Regional Airport","Digby","Canada","YDG","CYID",44.5458450365,-65.7854247093,499,-4,\N,\N,"airport","OurAirports"
+11758,"Fort Liard Airport","Fort Liard","Canada","YJF","CYJF",60.235801696799996,-123.46900177,708,-7,\N,\N,"airport","OurAirports"
+11759,"Key Lake Airport","Key Lake","Canada","YKJ","CYKJ",57.256099700927734,-105.61799621582031,1679,-6,\N,\N,"airport","OurAirports"
+11760,"Leaf Rapids Airport","Leaf Rapids","Canada","YLR","CYLR",56.513301849365234,-99.98529815673828,959,-6,\N,\N,"airport","OurAirports"
+11761,"Matane Airport","Matane","Canada","YME","CYME",48.85689926147461,-67.45330047607422,102,-5,\N,\N,"airport","OurAirports"
+11762,"Charlevoix Airport","Charlevoix","Canada","YML","CYML",47.59749984741211,-70.2238998413086,977,-5,\N,\N,"airport","OurAirports"
+11763,"Nejanilini Lake Airport","Nejanilini Lake","Canada",\N,"CYNN",59.4874992371,-97.78029632570001,1000,-6,\N,\N,"airport","OurAirports"
+11764,"Owen Sound / Billy Bishop Regional Airport","Owen Sound","Canada","YOS","CYOS",44.5903015137,-80.8375015259,1007,-5,\N,\N,"airport","OurAirports"
+11765,"Port Hawkesbury Airport","Port Hawkesbury","Canada","YPS","CYPD",45.6567001343,-61.3680992126,377,-4,\N,\N,"airport","OurAirports"
+11766,"St Thomas Municipal Airport","St Thomas","Canada","YQS","CYQS",42.77000045776367,-81.11080169677734,778,-5,\N,\N,"airport","OurAirports"
+11767,"Ottawa / Rockcliffe Airport","Ottawa","Canada","YRO","CYRO",45.4603004456,-75.64610290530001,188,-5,\N,\N,"airport","OurAirports"
+11768,"Ottawa / Carp Airport","Ottawa","Canada",\N,"CYRP",45.3191986084,-76.0222015381,382,-5,\N,\N,"airport","OurAirports"
+11769,"Smiths Falls-Montague (Russ Beach) Airport","Smiths Falls","Canada","YSH","CYSH",44.94580078125,-75.94059753417969,416,-5,\N,\N,"airport","OurAirports"
+11770,"St Leonard Airport","St Leonard","Canada","YSL","CYSL",47.157501220703125,-67.83470153808594,793,-5,\N,\N,"airport","OurAirports"
+11771,"Virden/R.J. (Bob) Andrew Field Regional Aerodrome","Virden","Canada",\N,"CYVD",49.8782997131,-100.917999268,1454,-6,\N,\N,"airport","OurAirports"
+11772,"Vernon Airport","Vernon","Canada","YVE","CYVK",50.24810028076172,-119.33100128173828,1140,-8,\N,\N,"airport","OurAirports"
+11773,"Beaver Creek Airport","Beaver Creek","Canada","YXQ","CYXQ",62.410301208496094,-140.86700439453125,2131,-7,\N,\N,"airport","OurAirports"
+11774,"Shuswap Regional Airport","Salmon Arm","Canada","YSN","CZAM",50.682802,-119.228996,1751,-8,\N,\N,"airport","OurAirports"
+11775,"Kelsey Airport","Kelsey","Canada","KES","CZEE",56.0374984741,-96.50969696039999,600,-6,\N,\N,"airport","OurAirports"
+11776,"Pukatawagan Airport","Pukatawagan","Canada","XPK","CZFG",55.7491989136,-101.26599884,958,-5,\N,\N,"airport","OurAirports"
+11777,"Grand Forks Airport","Grand Forks","Canada","ZGF","CZGF",49.01559829711914,-118.43099975585938,1720,-6,\N,\N,"airport","OurAirports"
+11778,"Jenpeg Airport","Jenpeg","Canada","ZJG","CZJG",54.51890182495117,-98.04609680175781,729,-5,\N,\N,"airport","OurAirports"
+11779,"Thicket Portage Airport","Thicket Portage","Canada","YTD","CZLQ",55.31890106201172,-97.70780181884766,678,-6,\N,\N,"airport","OurAirports"
+11780,"Pikwitonei Airport","Pikwitonei","Canada","PIW","CZMN",55.58890151977539,-97.16419982910156,630,-5,\N,\N,"airport","OurAirports"
+11781,"Poplar River Airport","Poplar River","Canada","XPP","CZNG",52.9965258788,-97.2741937637,728,-5,\N,\N,"airport","OurAirports"
+11782,"Pincher Creek Airport","Pincher Creek","Canada","WPC","CZPC",49.520599365200006,-113.997001648,3903,-6,\N,\N,"airport","OurAirports"
+11783,"Stewart Airport","Stewart","Canada","ZST","CZST",55.935410448,-129.982434511,24,-8,\N,\N,"airport","OurAirports"
+11784,"Ignace Municipal Airport","Ignace","Canada","ZUC","CZUC",49.4296989440918,-91.7177963256836,1435,-6,\N,\N,"airport","OurAirports"
+11785,"Neubrandenburg Airport","Neubrandenburg","Germany","FNB","EDBN",53.6022,13.306,228,1,\N,\N,"airport","OurAirports"
+11786,"Airport Bamberg-Breitenau","Bamberg","Germany",\N,"EDQA",49.920403,10.914233,811,1,\N,\N,"airport","OurAirports"
+11787,"Zerbst Airport","Zerbst/Anhalt","Germany",\N,"EDUZ",52.000832,12.148611,289,1,\N,\N,"airport","OurAirports"
+11788,"RAF Spadeadam","Spadeadam","United Kingdom",\N,"EGOM",55.0499992371,-2.54999995232,1066,0,\N,\N,"airport","OurAirports"
+11789,"RAF Kinloss","Kinloss","United Kingdom","FSS","EGQK",57.6493988037,-3.56064009666,22,0,\N,\N,"airport","OurAirports"
+11790,"Biała Podlaska Airfield","Biała Podlaska","Poland","BXP","EPBP",52.00078,23.1325278,485,1,\N,\N,"airport","OurAirports"
+11791,"Cewice Air Base","Lębork","Poland",\N,"EPCE",54.416,17.7633,495,1,\N,\N,"airport","OurAirports"
+11792,"Deblin Military Air Base","Dęblin","Poland",\N,"EPDE",51.551399231,21.8936004639,392,1,\N,\N,"airport","OurAirports"
+11793,"Leczyca Military Air Base","Leczyca","Poland",\N,"EPLY",52.004699707,19.1455993652,377,1,\N,\N,"airport","OurAirports"
+11794,"Minsk Mazowiecki Military Air Base","","Poland",\N,"EPMM",52.1954994202,21.6558990479,604,1,\N,\N,"airport","OurAirports"
+11795,"Powidz Military Air Base","","Poland",\N,"EPPW",52.379398,17.853901,371,1,\N,\N,"airport","OurAirports"
+11796,"Tomaszow Mazowiecki Military Air Base","Tomaszów Mazowiecki","Poland",\N,"EPTM",51.584400177,20.0977993011,571,1,\N,\N,"airport","OurAirports"
+11797,"Björkvik Air Base","Björkvik","Sweden",\N,"ESKX",58.79079818725586,16.571199417114258,0,1,\N,\N,"airport","OurAirports"
+11798,"Ljungbyhed Airport","Ljungbyhed","Sweden",\N,"ESTL",56.082801818847656,13.212499618530273,140,1,\N,\N,"airport","OurAirports"
+11799,"Daugavpils Intrenational Airport","Daugavpils","Latvia","DGP","EVDA",55.944721221900004,26.6650009155,398,2,\N,\N,"airport","OurAirports"
+11800,"Jēkabpils Air Base","Jēkabpils","Latvia",\N,"EVKA",56.534698,25.8925,289,2,\N,\N,"airport","OurAirports"
+11801,"Jūrmala Airport","Tukums","Latvia",\N,"EVTA",56.9422,23.2239,220,2,\N,\N,"airport","OurAirports"
+11802,"Kėdainiai Air Base","Kėdainiai","Lithuania",\N,"EYKD",55.31169891357422,23.95639991760254,171,2,\N,\N,"airport","OurAirports"
+11803,"Lime Acres Finsch Mine Airport","Lime Acres","South Africa","LMR","FALC",-28.36009979248047,23.43910026550293,4900,2,\N,\N,"airport","OurAirports"
+11804,"Sua Pan Airport","Sowa","Botswana","SXN","FBSN",-20.5534,26.115801,2985,2,\N,\N,"airport","OurAirports"
+11805,"Lusaka City Airport","Lusaka","Zambia",\N,"FLLC",-15.4138002396,28.3306999207,4200,2,\N,\N,"airport","OurAirports"
+11806,"Sumbe Airport","Sumbe","Angola","NDD","FNSU",-11.167900085449219,13.84749984741211,36,1,\N,\N,"airport","OurAirports"
+11807,"Mangochi Airport","Mangochi","Malawi","MAI","FWMG",-14.482999801635742,35.266998291015625,1580,2,\N,\N,"airport","OurAirports"
+11808,"Arandis Airport","Arandis","Namibia","ADI","FYAR",-22.462200164794922,14.979999542236328,1905,1,\N,\N,"airport","OurAirports"
+11809,"Mariental Airport","Mariental","Namibia",\N,"FYML",-24.60540008544922,17.925399780273438,3650,1,\N,\N,"airport","OurAirports"
+11810,"Almaza Air Force Base","Cairo","Egypt",\N,"HEAZ",30.091800689697266,31.360000610351562,300,2,\N,\N,"airport","OurAirports"
+11811,"Beni Suef Air Base","Beni Suef","Egypt",\N,"HEBS",29.20829963684082,31.016599655151367,108,2,\N,\N,"airport","OurAirports"
+11812,"Jiyanklis Air Base","Jiyanklis","Egypt",\N,"HEGS",30.819799423217773,30.191200256347656,49,2,\N,\N,"airport","OurAirports"
+11813,"Merowe New Airport","Merowe","Sudan","MWE","HSMN",18.4433333333,31.8433333333,897,3,\N,\N,"airport","OurAirports"
+11814,"St Louis Regional Airport","Alton/St Louis","United States","ALN","KALN",38.89030075069999,-90.0459976196,544,-6,\N,\N,"airport","OurAirports"
+11815,"Chandler Field","Alexandria","United States","AXN","KAXN",45.8662986755,-95.39469909670001,1425,-5,\N,\N,"airport","OurAirports"
+11816,"Columbus Municipal Airport","Columbus","United States","CLU","KBAK",39.2619018555,-85.8963012695,656,-5.0,\N,\N,"airport","OurAirports",
+11817,"Curtis Field","Brady","United States","BBD","KBBD",31.1793003082,-99.3238983154,1827,-6,\N,\N,"airport","OurAirports"
+11818,"Eastern Sierra Regional Airport","Bishop","United States","BIH","KBIH",37.3731002808,-118.363998413,4124,-8,\N,\N,"airport","OurAirports"
+11819,"Baker City Municipal Airport","Baker City","United States","BKE","KBKE",44.837299346900004,-117.808998108,3373,-8,\N,\N,"airport","OurAirports"
+11820,"Miley Memorial Field","Big Piney","United States","BPI","KBPI",42.58509827,-110.1110001,6990,-7,\N,\N,"airport","OurAirports"
+11821,"Ozark Regional Airport","Mountain Home","United States","WMH","KBPK",36.3689002991,-92.47049713130001,928,-7,\N,\N,"airport","OurAirports"
+11822,"W K Kellogg Airport","Battle Creek","United States","BTL","KBTL",42.307300567599995,-85.2515029907,952,-5,\N,\N,"airport","OurAirports"
+11823,"Burley Municipal Airport","Burley","United States","BYI","KBYI",42.542598724399994,-113.772003174,4150,-7,\N,\N,"airport","OurAirports"
+11824,"Northeast Iowa Regional Airport","Charles City","United States","CCY","KCCY",43.0726013184,-92.6108016968,1125,-5,\N,\N,"airport","OurAirports"
+11825,"Chanute Martin Johnson Airport","Chanute","United States","CNU","KCNU",37.668800354,-95.4850997925,1002,-6,\N,\N,"airport","OurAirports"
+11826,"Jacksonville Executive at Craig Airport","Jacksonville","United States","CRG","KCRG",30.3362998962,-81.51439666750001,41,-5,\N,\N,"airport","OurAirports"
+11827,"Crossville Memorial Whitson Field","Crossville","United States","CSV","KCSV",35.9513015747,-85.08499908450001,1881,-6,\N,\N,"airport","OurAirports"
+11828,"Davison Army Air Field","Fort Belvoir","United States","DAA","KDAA",38.715000152600005,-77.1809997559,73,-5,\N,\N,"airport","OurAirports"
+11829,"Barstow Daggett Airport","Daggett","United States","DAG","KDAG",34.85369873,-116.7870026,1930,-4.0,\N,\N,"airport","OurAirports",
+11830,"Deming Municipal Airport","Deming","United States","DMN","KDMN",32.262298584,-107.721000671,4314,-7.0,\N,\N,"airport","OurAirports",
+11831,"Desert Rock Airport","Mercury","United States","DRA","KDRA",36.6194,-116.032997,3314,-8.0,\N,\N,"airport","OurAirports",
+11832,"Needles Airport","Needles","United States","EED","KEED",34.7663002014,-114.623001099,983,-8.0,\N,\N,"airport","OurAirports",
+11833,"Duke Field","Crestview","United States","EGI","KEGI",30.65040016,-86.52290344,191,-6.0,\N,\N,"airport","OurAirports",
+11834,"Murray Field","Eureka","United States","EKA","KEKA",40.803398132299996,-124.112998962,7,-8.0,\N,\N,"airport","OurAirports",
+11835,"San Marcos Regional Airport","San Marcos","United States",\N,"KHYI",29.8927,-97.862999,597,-8,\N,\N,"airport","OurAirports",
+11836,"Sawyer County Airport","Hayward","United States","HYR","KHYR",46.025199890100005,-91.44429779050002,1216,-8.0,\N,\N,"airport","OurAirports",
+11837,"Kimble County Airport","Junction","United States","JCT","KJCT",30.5112991333,-99.7634963989,1749,-8.0,\N,\N,"airport","OurAirports",
+11838,"Monticello Municipal Ellis Field","Monticello","United States",\N,"KLLQ",33.6385994,-91.75099945,270,-5.0,\N,\N,"airport","OurAirports",
+11839,"Derby Field","Lovelock","United States","LOL","KLOL",40.0663986206,-118.565002441,3904,-8.0,\N,\N,"airport","OurAirports",
+11840,"Mobridge Municipal Airport","Mobridge","United States","MBG","KMBG",45.54650116,-100.4079971,1716,-6.0,\N,\N,"airport","OurAirports",
+11841,"Mc Comb/Pike County Airport/John E Lewis Field","Mc Comb","United States","MCB","KMCB",31.17849922,-90.47190094,413,-6,\N,\N,"airport","OurAirports",
+11842,"Southern Illinois Airport","Carbondale/Murphysboro","United States","MDH","KMDH",37.778099060058594,-89.25199890136719,411,-6.0,\N,\N,"airport","OurAirports",
+11843,"Mc Entire Joint National Guard Base","Eastover","United States","MMT","KMMT",33.92079926,-80.80130005,254,-5.0,\N,\N,"airport","OurAirports",
+11844,"Brunswick Executive Airport","Brunswick","United States","NHZ","KNHZ",43.89220047,-69.93859863,72,-5.0,\N,\N,"airport","OurAirports",
+11845,"Naval Station Mayport (Admiral David L. Mcdonald Field)","Mayport","United States","NRB","KNRB",30.39109993,-81.42469788,15,-5.0,\N,\N,"airport","OurAirports",
+11846,"Orangeburg Municipal Airport","Orangeburg","United States","OGB","KOGB",33.456798553467,-80.859497070312,195,-5.0,\N,\N,"airport","OurAirports",
+11847,"Columbus Municipal Airport","Columbus","United States",\N,"KOLU",41.44800186,-97.34259796,1447,-5.0,\N,\N,"airport","OurAirports",
+11848,"Ottumwa Regional Airport","Ottumwa","United States","OTM","KOTM",41.10660172,-92.44789886,845,-6.0,\N,\N,"airport","OurAirports",
+11849,"Cairns AAF (Fort Rucker) Air Field","Fort Rucker/Ozark","United States","OZR","KOZR",31.27569962,-85.71340179,301,-6,\N,\N,"airport","OurAirports",
+11850,"Ralph Wenz Field","Pinedale","United States","PWY","KPNA",42.79550171,-109.8069992,7102,-7.0,\N,\N,"airport","OurAirports",
+11851,"Dutchess County Airport","Poughkeepsie","United States","POU","KPOU",41.6265983581543,-73.88420104980469,165,-5.0,\N,\N,"airport","OurAirports",
+11852,"New Richmond Regional Airport","New Richmond","United States",\N,"KRNH",45.14830017,-92.5381012,998,-5,\N,\N,"airport","OurAirports",
+11853,"Russell Municipal Airport","Russell","United States","RSL","KRSL",38.872100830078,-98.811798095703,1862,-5.0,\N,\N,"airport","OurAirports",
+11854,"Redwood Falls Municipal Airport","Redwood Falls","United States","RWF","KRWF",44.54719925,-95.08229828,1024,-6,\N,\N,"airport","OurAirports",
+11855,"Salinas Municipal Airport","Salinas","United States","SNS","KSNS",36.662799835205,-121.60600280762,85,-8.0,\N,\N,"airport","OurAirports",
+11856,"Sonora Municipal Airport","Sonora","United States",\N,"KSOA",30.585699081421,-100.6490020752,2140,-8.0,\N,\N,"airport","OurAirports",
+11857,"Saline County Regional Airport","Benton","United States",\N,"KSUZ",34.59059906,-92.47940063,390,-5.0,\N,\N,"airport","OurAirports",
+11858,"Tonopah Airport","Tonopah","United States","TPH","KTPH",38.06019974,-117.086998,5430,-8.0,\N,\N,"airport","OurAirports",
+11859,"Aurora State Airport","Aurora","United States",\N,"KUAO",45.247100830078125,-122.7699966430664,200,-6.0,\N,\N,"airport","OurAirports",
+11860,"Ukiah Municipal Airport","Ukiah","United States","UKI","KUKI",39.125999450684,-123.20099639893,614,-8.0,\N,\N,"airport","OurAirports",
+11861,"University Oxford Airport","Oxford","United States","UOX","KUOX",34.384300231934,-89.536796569824,452,-6.0,\N,\N,"airport","OurAirports",
+11862,"Huntsville Regional Airport","Huntsville","United States","HTV","KUTS",30.7469005585,-95.5871963501,363,-6.0,\N,\N,"airport","OurAirports",
+11863,"Miller Field","Valentine","United States","VTN","KVTN",42.85779953,-100.5479965,2596,-6.0,\N,\N,"airport","OurAirports",
+11864,"Winnemucca Municipal Airport","Winnemucca","United States","WMC","KWMC",40.8965988159,-117.805999756,4308,-8.0,\N,\N,"airport","OurAirports",
+11865,"West Woodward Airport","Woodward","United States","WWR","KWWR",36.438,-99.5226667,2189,-6.0,\N,\N,"airport","OurAirports",
+11866,"Cape Canaveral AFS Skid Strip","Cocoa Beach","United States",\N,"KXMR",28.4675998688,-80.56659698490002,10,-5,\N,\N,"airport","OurAirports",
+11867,"Homey (Area 51) Airport","Groom Lake","United States",\N,"KXTA",37.23500061035156,-115.81099700927734,4462,-8,\N,\N,"airport","OurAirports",
+11868,"Zanesville Municipal Airport","Zanesville","United States","ZZV","KZZV",39.9444007874,-81.89209747310001,900,-5.0,\N,\N,"airport","OurAirports",
+11869,"Gjadër Air Base","Gjadër","Albania",\N,"LAGJ",41.895199,19.5987,23,1,\N,\N,"airport","OurAirports"
+11870,"Kukës Airport","Kukës","Albania",\N,"LAKU",42.033699035599994,20.4158992767,1120,1,\N,\N,"airport","OurAirports"
+11871,"Kuçovë Air Base","Kuçovë","Albania",\N,"LAKV",40.77190017700195,19.901899337768555,135,1,\N,\N,"airport","OurAirports"
+11872,"Vlorë Air Base","Vlorë","Albania",\N,"LAVL",40.47610092163086,19.474199295043945,3,1,\N,\N,"airport","OurAirports"
+11873,"Haskovo Malevo Airport","Haskovo","Bulgaria",\N,"LBHS",41.976398,25.5898,160,2,\N,\N,"airport","OurAirports"
+11874,"Gabrovnitsa Air Base","Gabrovnitsa","Bulgaria",\N,"LBMG",43.5443000793457,23.272499084472656,626,2,\N,\N,"airport","OurAirports"
+11875,"Graf Ignatievo Air Base","Graf Ignatievo","Bulgaria",\N,"LBPG",42.290401458740234,24.714000701904297,190,2,\N,\N,"airport","OurAirports"
+11876,"Dolna Mitropoliya Air Base","Dolna Mitropoliya","Bulgaria",\N,"LBPL",43.451401,24.5028,330,2,\N,\N,"airport","OurAirports"
+11877,"Balchik Air Base","Balchik","Bulgaria",\N,"LBWB",43.42380142211914,28.181299209594727,660,2,\N,\N,"airport","OurAirports"
+11878,"Cuatro Vientos Airport","Madrid","Spain","ECV","LECU",40.370701,-3.78514,2269,1,\N,\N,"airport","OurAirports"
+11879,"Castellón-Costa Azahar Airport","Castellón de la Plana","Spain","CDT","LEDS",40.213889,0.073333,1145,1,\N,\N,"airport","OurAirports"
+11880,"Teruel Airport","Teruel","Spain","TEV","LETL",40.403,-1.2183,3380,1,\N,\N,"airport","OurAirports"
+11881,"Blois-Le Breuil Airport","Blois/Le Breuil","France",\N,"LFOQ",47.678502,1.20884,398,1,\N,\N,"airport","OurAirports"
+11882,"Trento-Mattarello Airport","Trento (TN)","Italy",\N,"LIDT",46.0214,11.1242,610,1,\N,\N,"airport","OurAirports"
+11883,"Alessandria Airport","Alessandria","Italy",\N,"LILA",44.925201,8.62513,299,1,\N,\N,"airport","OurAirports"
+11884,"Biella-Cerrione Airport","Biella (BI)","Italy",\N,"LILE",45.4953,8.10278,920,1,\N,\N,"airport","OurAirports"
+11885,"Vercelli Airport","Vercelli","Italy",\N,"LILI",45.310233,8.417935,417,1,\N,\N,"airport","OurAirports"
+11886,"Casale Monferrato Airport","Casale Monferrato","Italy",\N,"LILM",45.111198,8.45603,377,1,\N,\N,"airport","OurAirports"
+11887,"Varese-Venegono Airport","Varese","Italy",\N,"LILN",45.742199,8.888233,1050,1,\N,\N,"airport","OurAirports"
+11888,"Novi Ligure Airport","Novi Ligure","Italy",\N,"LIMR",44.779999,8.78639,607,1,\N,\N,"airport","OurAirports"
+11889,"Sarzana-Luni Air Base","Sarzana (SP)","Italy","QLP","LIQW",44.088001,9.98795,45,1,\N,\N,"airport","OurAirports"
+11890,"Câmpia Turzii Air Base","Câmpia Turzii","Romania",\N,"LRCT",46.50230026245117,23.885900497436523,1083,2,\N,\N,"airport","OurAirports"
+11891,"Mărculeşti International Airport","Mărculeşti","Moldova",\N,"LUBM",47.862701416015625,28.212799072265625,312,2,\N,\N,"airport","OurAirports"
+11892,"Cahul International Airport","Cahul","Moldova",\N,"LUCH",45.8437995911,28.263700485199998,652,2,\N,\N,"airport","OurAirports"
+11893,"Tiraspol Airport","Tiraspol","Moldova",\N,"LUTR",46.868099212646484,29.590599060058594,141,2,\N,\N,"airport","OurAirports"
+11894,"Batajnica Air Base","Batajnica","Serbia","BJY","LYBT",44.935299,20.2575,265,1,\N,\N,"airport","OurAirports"
+11895,"Rubelsanto Airport","Rubelsanto","Guatemala","RUV","MGRB",15.991999626159668,-90.44529724121094,426,-6,\N,\N,"airport","OurAirports"
+11896,"Coronel Enrique Soto Cano Air Base","Comayagua","Honduras","XPL","MHSC",14.3824,-87.621201,2061,-6,\N,\N,"airport","OurAirports"
+11897,"Upala Airport","Upala","Costa Rica","UPL","MRUP",10.8922,-85.016197,184,-6.0,\N,\N,"airport","OurAirports",
+11898,"San Nicolas De Bari Airport","San Nicolás","Cuba","QSN","MUNB",22.756099700927734,-81.9208984375,49,5,\N,\N,"airport","OurAirports"
+11899,"San Julian Air Base","Pinar Del Rio","Cuba","SNJ","MUSJ",22.095300674438477,-84.1520004272461,98,5,\N,\N,"airport","OurAirports"
+11900,"King Salman Abdulaziz Airport","","Saudi Arabia","DWD","OEDM",24.4499,44.121201,3026,3,\N,\N,"airport","OurAirports"
+11901,"King Khaled Air Base","","Saudi Arabia","KMX","OEKM",18.297300338745117,42.80350112915039,6778,6,\N,\N,"airport","OurAirports"
+11902,"Riyadh Air Base","Riyadh","Saudi Arabia","XXN","OERY",24.709800720214844,46.72520065307617,2082,6,\N,\N,"airport","OurAirports"
+11903,"Jam Airport","Kangan","Iran","KNR","OIBJ",27.820499420166016,52.35219955444336,2173,3.5,\N,\N,"airport","OurAirports"
+11904,"Hamadan Air Base","Hamadan","Iran",\N,"OIHS",35.21160125732422,48.65340042114258,5609,3.5,\N,\N,"airport","OurAirports"
+11905,"Payam International Airport","Karaj","Iran","PYK","OIIP",35.776100158691,50.826698303223,4170,3.5,\N,\N,"airport","OurAirports"
+11906,"Ahmed Al Jaber Air Base","Ahmed Al Jaber AB","Kuwait","XIJ","OKAJ",28.9347991943,47.791900634799994,409,3,\N,\N,"airport","OurAirports"
+11907,"Rayak Air Base","Rayak","Lebanon",\N,"OLRA",33.850799560546875,35.987701416015625,3018,2.0,\N,\N,"airport","OurAirports",
+11908,"Mirpur Khas Air Base","Mirpur Khas","Pakistan",\N,"OPMK",25.682501,69.0728,180,5,\N,\N,"airport","OurAirports"
+11909,"Minhas Air Base","Kamra","Pakistan","ATG","OPMS",33.8690986633,72.4009017944,1023,5,\N,\N,"airport","OurAirports"
+11910,"Rafiqui Air Base","Shorkot","Pakistan",\N,"OPRQ",30.758100509643555,72.28250122070312,492,5,\N,\N,"airport","OurAirports"
+11911,"Faisal Air Base","Karachi","Pakistan",\N,"OPSF",24.87420082092285,67.11849975585938,29,5,\N,\N,"airport","OurAirports"
+11912,"Mushaf Air Base","Sargodha","Pakistan","SGI","OPSR",32.04859924316406,72.66500091552734,614,5,\N,\N,"airport","OurAirports"
+11913,"Qayyarah West Airport","Qayyarah","Iraq","RQW","ORQW",35.76720047,43.125099182099994,749,3,\N,\N,"airport","OurAirports"
+11914,"Al Sahra Army Air Field","Tikrit","Iraq",\N,"ORSH",34.67319869995117,43.542999267578125,451,3,\N,\N,"airport","OurAirports"
+11915,"Tall Afar Army Air Field","Tall Afar","Iraq",\N,"ORTF",36.28310012817383,42.40299987792969,996,3,\N,\N,"airport","OurAirports"
+11916,"Al Taji Army Air Field","Taji","Iraq",\N,"ORTI",33.52389907836914,44.25669860839844,121,3,\N,\N,"airport","OurAirports"
+11917,"Ubaydah Bin Al Jarrah Airport","Al Cut","Iraq",\N,"ORUB",32.481998443603516,45.75709915161133,68,3,\N,\N,"airport","OurAirports"
+11918,"Nenana Municipal Airport","Nenana","United States","ENN","PANN",64.54730224609375,-149.07400512695312,362,-9.0,\N,\N,"airport","OurAirports",
+11919,"Wasilla Airport","Wasilla","United States","WWA","PAWS",61.5717010498,-149.539993286,354,-9.0,\N,\N,"airport","OurAirports",
+11920,"Gangshan Air Force Base","Gangshan","Taiwan",\N,"RCAY",22.782499313354492,120.26300048828125,34,8.0,\N,\N,"airport","OurAirports",
+11921,"Asahikawa Airfield","","Japan",\N,"RJCA",43.794734,142.365432,377,9,\N,\N,"airport","OurAirports"
+11922,"Iwakuni Marine Corps Air Station","Iwakuni","Japan","IWK","RJOI",34.143902,132.235992,7,9,\N,\N,"airport","OurAirports"
+11923,"Utsunomiya Airport","","Japan",\N,"RJTU",36.5145,139.87101,334,9,\N,\N,"airport","OurAirports"
+11924,"Jungwon Air Base/Chungju Airport","","South Korea",\N,"RKTI",37.03024,127.886353,281,9,\N,\N,"airport","OurAirports"
+11925,"Ie Jima Airport","Ie","Japan","IEJ","RORE",26.7220001221,127.785003662,246,9,\N,\N,"airport","OurAirports"
+11926,"Allah Valley Airport","Surallah","Philippines","AAV","RPMA",6.366819858551025,124.7509994506836,659,8.0,\N,\N,"airport","OurAirports",
+11927,"Bislig Airport","","Philippines","BPH","RPMF",8.19594955444336,126.3219985961914,12,8.0,\N,\N,"airport","OurAirports",
+11928,"Mati National Airport","","Philippines","MXI","RPMQ",6.949091,126.27368,156,8.0,\N,\N,"airport","OurAirports",
+11929,"Presidente Néstor Kirchner Regionsl Airport","Villa Maria","Argentina",\N,"SAOV",-32.3201,-63.22663,670,-3,\N,\N,"airport","OurAirports",
+11930,"Chafei Amsei Airport","Barretos","Brazil","BAT","SBBT",-20.584499359131,-48.594100952148,1898,-3.0,\N,\N,"airport","OurAirports",
+11931,"Base de Aviação de Taubaté Airport","Taubaté","Brazil","QHP","SBTA",-23.04010009765625,-45.51599884033203,1908,-3.0,\N,\N,"airport","OurAirports",
+11932,"Barriles Airport","Tocopilla","Chile","TOQ","SCBE",-22.14109992980957,-70.06289672851562,3475,-3.0,\N,\N,"airport","OurAirports",
+11933,"Schroeder's field","Cochrane","Chile",\N,"SCHR",35.071718,-91.738801,0,-3.0,\N,\N,"airport","OurAirports",
+11934,"Chañaral Airport","Chañaral","Chile","CNR","SCRA",-26.332500457763672,-70.6072998046875,97,-3.0,\N,\N,"airport","OurAirports",
+11935,"Panguilemo Airport","Talca","Chile","TLX","SCTL",-35.37779998779297,-71.60169982910156,371,-3.0,\N,\N,"airport","OurAirports",
+11936,"Victoria Airport - Chile","Victoria","Chile","ZIC","SCTO",-38.245601654052734,-72.34860229492188,1148,-3.0,\N,\N,"airport","OurAirports",
+11937,"Las Breas Airport","Taltal","Chile","TTC","SCTT",-25.564300537109375,-70.37590026855469,2580,-3.0,\N,\N,"airport","OurAirports",
+11938,"Gomez Nino Apiay Air Base","Apiay","Colombia","API","SKAP",4.07607,-73.5627,1207,-5.0,\N,\N,"airport","OurAirports",
+11939,"Coveñas Airport","Coveñas","Colombia","CVE","SKCV",9.40092,-75.6913,31,-5.0,\N,\N,"airport","OurAirports",
+11940,"German Olano Air Base","La Dorada","Colombia","PAL","SKPQ",5.48361,-74.6574,566,-3,\N,\N,"airport","OurAirports",
+11941,"Paz De Ariporo Airport","Paz De Ariporo","Colombia","PZA","SKPZ",5.87615,-71.8866,900,-3,\N,\N,"airport","OurAirports",
+11942,"Tunja Airport","Tunja","Colombia",\N,"SKTJ",5.54138,-73.3445,8940,-5.0,\N,\N,"airport","OurAirports",
+11943,"Tres Esquinas Air Base","Tres Esquinas","Colombia","TQS","SKTQ",0.7459,-75.234,585,-3,\N,\N,"airport","OurAirports",
+11944,"Marandúa Air Base","Marandúa","Colombia",\N,"SKUA",5.52448,-68.6856,285,-5.0,\N,\N,"airport","OurAirports",
+11945,"Juan Simons Vela Airport","Rioja","Peru","RIJ","SPJA",-6.067860126495361,-77.16000366210938,2707,-5.0,\N,\N,"airport","OurAirports",
+11946,"Shumba Airport","Jaén","Peru","JAE","SPJE",-5.59248,-78.774002,2477,-5.0,\N,\N,"airport","OurAirports",
+11947,"Metropolitano Airport","","Venezuela",\N,"SVMP",10.133169174194336,-66.78782653808594,574,-4.0,\N,\N,"airport","OurAirports",
+11948,"Issyk-Kul International Airport","Tamchy","Kyrgyzstan","IKU","UAFL",42.58792,76.713046,5425,6.0,\N,\N,"airport","OurAirports",
+11949,"Kant Air Base","Kant","Kyrgyzstan",\N,"UAFW",42.85319900512695,74.84649658203125,2549,6.0,\N,\N,"airport","OurAirports",
+11950,"Ayaguz Airport","Ayaguz","Kazakhstan",\N,"UASA",47.91859817504883,80.45279693603516,2119,6.0,\N,\N,"airport","OurAirports",
+11951,"Chelkar Airport","Chelkar","Kazakhstan",\N,"UATR",47.904998779296875,59.619998931884766,0,5.0,\N,\N,"airport","OurAirports",
+11952,"Kyzyl-Syr Airport","Kyzyl-Syr","Russia",\N,"UENK",63.8849983215332,122.7770004272461,331,9.0,\N,\N,"airport","OurAirports",
+11953,"Vilyuisk Airport","Vilyuisk","Russia","VYI","UENW",63.75666809082,121.69333648682,361,9.0,\N,\N,"airport","OurAirports",
+11954,"Belaya Gora Airport","","Russia","BGN","UESG",68.556602,146.231506,118,3.0,\N,\N,"airport","OurAirports",
+11955,"Dzhermuk Airport","Dzhermuk","Armenia",\N,"UGEJ",39.8240013123,45.673999786399996,0,4.0,\N,\N,"airport","OurAirports",
+11956,"Kamenny Ruchey Naval Air Base","Sovetskaya Gavan","Russia",\N,"UHKG",49.23570251464844,140.19309997558594,659,3,\N,\N,"airport","OurAirports",
+11957,"Maygatka Airport.","Sovetskaya Gavan","Russia","GVN","UHKM",48.926998138399995,140.033996582,768,3,\N,\N,"airport","OurAirports",
+11958,"Omsukchan Airport","Omsukchan","Russia",\N,"UHMF",62.457000732421875,155.7449951171875,1732,11.0,\N,\N,"airport","OurAirports",
+11959,"Chaybukha Airport","Chaybukha","Russia",\N,"UHMG",61.834999084472656,160.54800415039062,207,11.0,\N,\N,"airport","OurAirports",
+11960,"Keperveem Airport","Keperveem","Russia",\N,"UHMK",67.8450012207,166.13999939,623,12.0,\N,\N,"airport","OurAirports",
+11961,"Magadan-13 Airport","Magadan","Russia",\N,"UHMT",59.62329864501953,150.9219970703125,164,11.0,\N,\N,"airport","OurAirports",
+11962,"Nikolayevsk-na-Amure Airport","Nikolayevsk-na-Amure Airport","Russia","NLI","UHNN",53.154999,140.649994,170,3,\N,\N,"airport","OurAirports",
+11963,"Palana Airport","Palana","Russia",\N,"UHPL",59.08169937133789,159.88800048828125,112,12.0,\N,\N,"airport","OurAirports",
+11964,"Zheleznogorsk Airport","Zheleznogorsk-Ilimsky","Russia",\N,"UIBV",56.487701416015625,104.10600280761719,1946,8.0,\N,\N,"airport","OurAirports",
+11965,"Gvardeyskoe Air Base","Sarabuz","Ukraine",\N,"UKFG",45.1150016784668,33.97700119018555,721,3.0,\N,\N,"airport","OurAirports",
+11966,"Saki Air Base","Saki","Ukraine",\N,"UKFI",45.09299850463867,33.595001220703125,36,3.0,\N,\N,"airport","OurAirports",
+11967,"Dzhankoy Airport","Dzhankoy","Ukraine",\N,"UKFY",45.70090103149414,34.41889953613281,75,3.0,\N,\N,"airport","OurAirports",
+11968,"Ozerne Air Base","Zhytomyr","Ukraine",\N,"UKKO",50.158298,28.7383,761,2.0,\N,\N,"airport","OurAirports",
+11969,"Severomorsk-1 Naval Air Base","Severomorsk","Russia",\N,"ULAK",69.03166961669922,33.418331146240234,239,3.0,\N,\N,"airport","OurAirports",
+11970,"Pushkin Airport","St. Petersburg","Russia",\N,"ULLP",59.685001,30.338301,230,3,\N,\N,"airport","OurAirports",
+11971,"Siversky Air Base","Siversky","Russia",\N,"ULLS",59.3567008972168,30.036699295043945,341,3.0,\N,\N,"airport","OurAirports",
+11972,"Staraya Russa Air Base","Staraya Russa","Russia",\N,"ULNR",57.961399,31.384399,52,3,\N,\N,"airport","OurAirports",
+11973,"Peski Airport","Petrozavodsk","Russia",\N,"ULPP",61.83194351196289,34.295555114746094,0,3.0,\N,\N,"airport","OurAirports",
+11974,"Baranavichi Air Base","Baranavichi","Belarus",\N,"UMMA",53.099998474121094,26.049999237060547,0,3.0,\N,\N,"airport","OurAirports",
+11975,"Babruisk Air Base","Babruisk","Belarus",\N,"UMNB",53.105,29.205,502,3.0,\N,\N,"airport","OurAirports",
+11976,"Severo-Eniseysk Airport","Severo-Eniseysk","Russia",\N,"UNIS",60.37329864501953,93.01170349121094,1706,7.0,\N,\N,"airport","OurAirports",
+11977,"Sharypovo Airport","Sharypovo","Russia",\N,"UNKO",55.454914093,89.1738815308,1099,7.0,\N,\N,"airport","OurAirports",
+11978,"Omsk Severny Airport","Omsk","Russia",\N,"UNOS",54.9749984741,73.5550003052,0,6.0,\N,\N,"airport","OurAirports",
+11979,"Nagurskoye","Murmansk","Russia",\N,"UODN",80.803207,47.663586,59,3.0,\N,\N,"airport","OurAirports",
+11980,"Svetlogorsk Airport","Svetlogorsk","Russia",\N,"UOIG",66.83999633789062,88.40333557128906,394,2.0,\N,\N,"airport","OurAirports",
+11981,"Valek Airport","Valek","Russia",\N,"UOOW",69.39690399169922,88.35368347167969,108,7.0,\N,\N,"airport","OurAirports",
+11982,"Khanskaya Air Base","Maykop","Russia",\N,"URKH",44.68,40.035,600,3.0,\N,\N,"airport","OurAirports",
+11983,"Dudinka Airport","Dudinka","Russia",\N,"UROD",69.375,86.15666961669922,82,7.0,\N,\N,"airport","OurAirports",
+11984,"Volgodonsk Airport","Volgodonsk","Russia","VLK","URRY",47.682098388671875,42.07279968261719,276,3.0,\N,\N,"airport","OurAirports",
+11985,"Tashkent East Airport","Tashkent","Uzbekistan",\N,"UTTP",41.31269836425781,69.39140319824219,1574,5.0,\N,\N,"airport","OurAirports",
+11986,"Myachkovo Airport","Moscow","Russia",\N,"UUBM",55.5600013733,37.9850006104,410,3.0,\N,\N,"airport","OurAirports",
+11987,"Tretyakovo Airport","Lukhovitsy","Russia",\N,"UUMT",54.904998779299994,39.02666854859999,515,3.0,\N,\N,"airport","OurAirports",
+11988,"Yermolino Airport","Balabanovo","Russia",\N,"UUWE",55.2283325195,36.6083335876,640,3.0,\N,\N,"airport","OurAirports",
+11989,"Inta Airport","Inta","Russia","INA","UUYI",66.0548324584961,60.110321044921875,184,3.0,\N,\N,"airport","OurAirports",
+11990,"Izhma Airport","Izhma","Russia",\N,"UUYV",65.03170013427734,53.970001220703125,230,3.0,\N,\N,"airport","OurAirports",
+11991,"Borisoglebskoye Airport","Kazan","Russia",\N,"UWKG",55.86669921875,49.13330078125,213,3.0,\N,\N,"airport","OurAirports",
+11992,"Zhigansk Airport","Zhigansk","Russia","ZIX","UWKV",66.7965011597,123.361000061,292,9.0,\N,\N,"airport","OurAirports",
+11993,"Maksimovka Airport","Ufa","Russia",\N,"UWUM",54.83000183105469,56.16830062866211,325,5.0,\N,\N,"airport","OurAirports",
+11994,"Buguruslan Severny Airport","Buguruslan","Russia",\N,"UWWB",53.71839904789999,52.3718986511,728,5.0,\N,\N,"airport","OurAirports",
+11995,"Bezymyanka Airfield","Samara","Russia",\N,"UWWG",53.220001220703125,50.32500076293945,135,4.0,\N,\N,"airport","OurAirports",
+11996,"Ratnagiri Airport","Ratnagiri","India","RTC","VARG",17.013599,73.327797,305,5.5,\N,\N,"airport","OurAirports",
+11997,"Hingurakgoda Air Force Base","Polonnaruwa Town","Sri Lanka","HIM","VCCH",8.04981,80.9814,170,5.5,\N,\N,"airport","OurAirports",
+11998,"Kazi Nazrul Islam Airport","Durgapur","India","RDP","VEDG",23.6225,87.243,300,5.5,\N,\N,"airport","OurAirports",
+11999,"Ambala Air Force Station","","India",\N,"VIAM",30.368099212646484,76.81670379638672,909,5.5,\N,\N,"airport","OurAirports",
+12000,"Sirsa Air Force Station","","India",\N,"VISA",29.56060028076172,75.006103515625,650,5.5,\N,\N,"airport","OurAirports",
+12001,"Udhampur Air Force Station","","India",\N,"VIUX",32.902198791503906,75.15619659423828,2066,5.5,\N,\N,"airport","OurAirports",
+12002,"Sri Sathya Sai Airport","Puttaparthi","India","PUT","VOPN",14.1492996216,77.7910995483,1558,5.5,\N,\N,"airport","OurAirports",
+12003,"Meiktila Air Base","Meiktila","Burma",\N,"VYML",20.88640022277832,95.89279174804688,699,6.5,\N,\N,"airport","OurAirports",
+12004,"Changi Air Base (East)","Singapore","Singapore",\N,"WSAC",1.3441400528,104.009002686,22,8.0,\N,\N,"airport","OurAirports",
+12005,"Soltsy-2 Air Base","Soltsy","Russia",\N,"XLLL",58.139545,30.33042,266,3.0,\N,\N,"airport","OurAirports",
+12006,"Severomorsk-3 Naval Air Base","Severomorsk","Russia",\N,"XLMV",68.866669,33.716667,564,3.0,\N,\N,"airport","OurAirports",
+12007,"Fedotovo Naval Air Base","Kipelovo","Russia",\N,"XLWF",59.193031,39.129411,574,3.0,\N,\N,"airport","OurAirports",
+12008,"Lebyazhye Air Base","Kamyshin","Russia",\N,"XRWL",50.201698303200004,45.2083015442,381,3.0,\N,\N,"airport","OurAirports",
+12009,"Smolensk North Airport","Smolensk","Russia","LNX","XUBS",54.824,32.025,820,3.0,\N,\N,"airport","OurAirports",
+12010,"Rtishchevo Air Base","Rtishchevo","Russia",\N,"XWPR",52.297317,43.7241,673,4.0,\N,\N,"airport","OurAirports",
+12011,"Alpha Airport","Alpha","Australia","ABH","YAPH",-23.646099,146.584,1255,10.0,\N,\N,"airport","OurAirports",
+12012,"Ararat Airport","Ararat","Australia","ARY","YARA",-37.30939865112305,142.98899841308594,1008,11.0,\N,\N,"airport","OurAirports",
+12013,"Benalla Airport","Benalla","Australia","BLN","YBLA",-36.55189895629883,146.0070037841797,569,11.0,\N,\N,"airport","OurAirports",
+12014,"Balranald Airport","Balranald","Australia","BZD","YBRN",-34.623600006103516,143.5780029296875,210,11.0,\N,\N,"airport","OurAirports",
+12015,"Brewarrina Airport","Brewarrina","Australia","BWQ","YBRW",-29.973899841308594,146.81700134277344,414,11.0,\N,\N,"airport","OurAirports",
+12016,"Cleve Airport","Cleve","Australia","CVC","YCEE",-33.70970153808594,136.5050048828125,589,11.0,\N,\N,"airport","OurAirports",
+12017,"Corowa Airport","Corowa","Australia","CWW","YCOR",-35.99470138549805,146.35699462890625,469,11.0,\N,\N,"airport","OurAirports",
+12018,"Corryong Airport","Corryong","Australia","CYG","YCRG",-36.18280029296875,147.88800048828125,963,11.0,\N,\N,"airport","OurAirports",
+12019,"Cootamundra Airport","Cootamundra","Australia","CMD","YCTM",-34.6239013671875,148.0279998779297,1110,11.0,\N,\N,"airport","OurAirports",
+12020,"Dirranbandi Airport","Dirranbandi","Australia","DRN","YDBI",-28.591699600219727,148.2169952392578,567,11.0,\N,\N,"airport","OurAirports",
+12021,"Deniliquin Airport","Deniliquin","Australia","DNQ","YDLQ",-35.5593986511,144.945999146,316,11.0,\N,\N,"airport","OurAirports",
+12022,"Dysart Airport","Dysart","Australia","DYA","YDYS",-22.62220001220703,148.36399841308594,670,11.0,\N,\N,"airport","OurAirports",
+12023,"Echuca Airport","Echuca","Australia","ECH","YECH",-36.15719985961914,144.76199340820312,323,11.0,\N,\N,"airport","OurAirports",
+12024,"Forbes Airport","Forbes","Australia","FRB","YFBS",-33.363602,147.934998,760,11.0,\N,\N,"airport","OurAirports",
+12025,"Gunnedah Airport","Gunnedah","Australia","GUH","YGDH",-30.96109962463379,150.25100708007812,863,11.0,\N,\N,"airport","OurAirports",
+12026,"Hay Airport","Hay","Australia","HXX","YHAY",-34.53139877319336,144.8300018310547,305,11.0,\N,\N,"airport","OurAirports",
+12027,"Hopetoun Airport","Hopetoun","Australia","HTU","YHPN",-35.715301513671875,142.36000061035156,256,11.0,\N,\N,"airport","OurAirports",
+12028,"Kerang Airport","Kerang","Australia","KRA","YKER",-35.751399993896484,143.93899536132812,254,11.0,\N,\N,"airport","OurAirports",
+12029,"Kempsey Airport","Kempsey","Australia","KPS","YKMP",-31.074399948120117,152.77000427246094,54,11.0,\N,\N,"airport","OurAirports",
+12030,"Kingaroy Airport","Kingaroy","Australia","KGY","YKRY",-26.580799102783203,151.84100341796875,1492,11.0,\N,\N,"airport","OurAirports",
+12031,"Latrobe Valley Airport","Morwell","Australia","TGN","YLTV",-38.207199,146.470001,180,11.0,\N,\N,"airport","OurAirports",
+12032,"Mareeba Airport","Mareeba","Australia","MRG","YMBA",-17.06920051574707,145.41900634765625,1560,11.0,\N,\N,"airport","OurAirports",
+12033,"Ngukurr Airport","Ngukurr","Australia","RPM","YNGU",-14.722800254821777,134.7469940185547,45,11.0,\N,\N,"airport","OurAirports",
+12034,"Narromine Airport","Narromine","Australia","QRM","YNRM",-32.214698791503906,148.22500610351562,782,11.0,\N,\N,"airport","OurAirports",
+12035,"Port Pirie Airport","Port Pirie","Australia","PPI","YPIR",-33.23889923095703,137.9949951171875,40,11.0,\N,\N,"airport","OurAirports",
+12036,"Smithton Airport","Smithton","Australia","SIO","YSMI",-40.834999084472656,145.08399963378906,31,11.0,\N,\N,"airport","OurAirports",
+12037,"Snake Bay Airport","Snake Bay","Australia","SNB","YSNB",-11.422800064086914,130.6540069580078,173,11.0,\N,\N,"airport","OurAirports",
+12038,"Stawell Airport","Stawell","Australia","SWC","YSWL",-37.07170104980469,142.74099731445312,807,11.0,\N,\N,"airport","OurAirports",
+12039,"Tibooburra Airport","Tibooburra","Australia","TYB","YTIB",-29.451099395751953,142.05799865722656,584,11.0,\N,\N,"airport","OurAirports",
+12040,"Tumut Airport","Tumut","Australia","TUM","YTMU",-35.26279830932617,148.24099731445312,878,11.0,\N,\N,"airport","OurAirports",
+12041,"Wangaratta Airport","Wangaratta","Australia","WGT","YWGT",-36.41579818725586,146.3070068359375,504,11.0,\N,\N,"airport","OurAirports",
+12042,"Warracknabeal Airport","Warracknabeal","Australia","WKB","YWKB",-36.32109832763672,142.41900634765625,397,11.0,\N,\N,"airport","OurAirports",
+12043,"Warren Airport","Warren","Australia","QRR","YWRN",-31.733299255371094,147.80299377441406,669,11.0,\N,\N,"airport","OurAirports",
+12044,"West Sale Airport","Sale","Australia","SXE","YWSL",-38.090827,146.965335,72,11.0,\N,\N,"airport","OurAirports",
+12045,"West Wyalong Airport","West Wyalong","Australia","WWY","YWWL",-33.9371986389,147.190994263,859,11,\N,\N,"airport","OurAirports",
+12046,"Young Airport","Young","Australia","NGA","YYNG",-34.25559997558594,148.2480010986328,1267,11.0,\N,\N,"airport","OurAirports",
+12047,"Guangzhou MR Air Base","Guanghua","China","LHK","ZHGH",32.389400482177734,111.69499969482422,0,8.0,\N,\N,"airport","OurAirports",
+12048,"Shiyan Wudangshan Airport","Shiyan","China","WDS","ZHSY",32.591667,110.907778,0,8.0,\N,\N,"airport","OurAirports",
+12049,"Sunchon Air Base","Sunchon","North Korea",\N,"ZKSC",39.415699,125.894997,141,9.0,\N,\N,"airport","OurAirports",
+12050,"Huatugou Airport","Mengnai","China","HTT","ZLHX",38.201984,90.841495,2945,8.0,\N,\N,"airport","OurAirports",
+12051,"Baruun Urt Airport","Baruun Urt","Mongolia","UUN","ZMBU",46.660301208496094,113.28500366210938,3205,8.0,\N,\N,"airport","OurAirports",
+12052,"Bengbu Airport","Bengbu","China","BFU","ZSBB",32.8477333333,117.320244444,100,8.0,\N,\N,"airport","OurAirports",
+12053,"Rugao Air Base","Rugao","China","RUG","ZSRG",32.25788497924805,120.50165557861328,0,8.0,\N,\N,"airport","OurAirports",
+12054,"Wuhu Air Base","Wuhu","China","WHU","ZSWU",31.3906,118.408997,0,8.0,\N,\N,"airport","OurAirports",
+12055,"Shanshan Airport","Shanshan","China","SXJ","ZWSS",42.91170120239258,90.24749755859375,0,8.0,\N,\N,"airport","OurAirports",
+12056,"Yingkou Lanqi Airport","Yingkou","China","YKH","ZYYK",40.542524,122.3586,0,8.0,\N,\N,"airport","OurAirports",
+12057,"Shenyang Dongta Airport","Shenyang","China",\N,"ZYYY",41.784400939941406,123.49600219726562,0,8.0,\N,\N,"airport","OurAirports",
 12058,"Bogorodskoye Airport","Bogorodskoe","Russia","BQG","UHNB",52.38,140.448,0,11,"U",\N,"airport","OurAirports"
 12059,"Itapiranga Airport","Itapiranga","Brazil",\N,"SSYT",-27.142499923706055,-53.68579864501953,1247,-3,"S",\N,"airport","OurAirports"
 12069,"Aguas Calientes Airport","Aguas Calientes","Peru",\N,"SPAT",-8.833330154418945,-74.68329620361328,9840,-6,"U",\N,"airport","OurAirports"
@@ -7356,7 +7356,6 @@
 13004,"Nypari Airport","Angatja Homeland","Australia",\N,"YNYP",-26.200000762939453,130.23300170898438,0,9.5,"O",\N,"airport","OurAirports"
 13006,"Ihtiman Airfield","Ihtiman","Bulgaria",\N,"LBHT",42.42189,23.767221,2113,2,"E",\N,"airport","OurAirports"
 13009,"Vogtareuth Airport","Vogtareuth","Germany",\N,"EDNV",47.946109771728516,12.20472240447998,1535,1,"E",\N,"airport","OurAirports"
-13011,"[Duplicate] Illertissen see EDMI - ED-0425 location moved out-of-the way","Not Specified","New Zealand",\N,"XXXX",89.5,0.0001,0,0,"U",\N,"airport","OurAirports"
 13016,"New Smyrna Beach Municipal Airport","New Smyrna Beach","United States",\N,"KEVB",29.055700302124023,-80.94889831542969,10,-5,"A",\N,"airport","OurAirports"
 13018,"Las Vegas Helicopters Heliport","Las vegas","United States",\N,"NV03",36.10810089111328,-115.17400360107422,2133,-8,"A",\N,"airport","OurAirports"
 13019,"Delta Camp Airport","Delta Camp","Botswana",\N,"FBDT",-19.5323,23.0925,3140,2,"N",\N,"airport","OurAirports"
@@ -7629,22 +7628,22 @@
 13695,"Sunchales Aeroclub Airport","Sunchales","Argentina","NCJ","SAFS",-30.9575,-61.5283,311,-3,"N",\N,"airport","OurAirports"
 13696,"Istanbul Airport","Istanbul","Turkey","IST","LTFM",41.275278,28.751944,325,3,"E",\N,"airport","OurAirports"
 13707,"Seldovia Airport","Seldovia","United States","SOV","PASO",59.442401885986,-151.70399475098,29,-9,"A",\N,"airport","OurAirports"
-13711,"Lutselk'e Airport","Lutselk'e","Canada","YSG","CYLK",62.418303,-110.681998,596,\N,\N,\N,"airport","OurAirports"
-13712,"Engeløy Airport","Engeløy","Norway",\N,"ENEN",67.967222,14.9925,0,\N,\N,\N,"airport","OurAirports"
-13713,"Dwangwa Airport","Dwangwa","Malawi","DWA","FWDW",-12.5183,34.131901,1605,\N,\N,\N,"airport","OurAirports"
-13714,"Paloich Airport, Heliport","Higleig","South Sudan","HGI","HSFA",10.529167,32.500556,1290,\N,\N,\N,"airport","OurAirports"
-13715,"Julian Carroll Airport","Jackson","United States",\N,"KJKL",37.59389877319336,-83.31729888916016,1381,\N,\N,\N,"airport","OurAirports"
-13716,"Beaufort MCAS - Merritt Field","Beaufort","United States",\N,"KNBC",32.4774017334,-80.723197937,37,\N,\N,\N,"airport","OurAirports"
-13717,"Camp Pendleton MCAS (Munn Field) Airport","Oceanside","United States",\N,"KNFG",33.30130005,-117.3550034,78,\N,\N,\N,"airport","OurAirports"
-13718,"Aerodromo de Castelo Branco","Castelo Branco","Portugal",\N,"LPCB",39.847022,-7.44111,1300,\N,\N,\N,"airport","OurAirports"
-13719,"Ponte de Sor Airport","Ponte de Sôr","Portugal",\N,"LPSO",39.211559,-8.056542,0,\N,\N,\N,"airport","OurAirports"
-13720,"Vilar de Luz Airfield","Maia","Portugal",\N,"LPVL",41.27729,-8.516209,762,\N,\N,\N,"airport","OurAirports"
-13721,"Hard Bargain Airport","","Bahamas",\N,"MYLR",23.011194,-74.905889,0,\N,\N,\N,"airport","OurAirports"
-13722,"Kenebetsu JASDF Airfield","Kenebetsu","Japan",\N,"RJCS",43.425154,144.741354,0,\N,\N,\N,"airport","OurAirports"
-13723,"Augusto Severo Airport","Natal","Brazil",\N,"SBNT",-5.91141986847,-35.2476997375,169,\N,\N,\N,"airport","OurAirports"
-13724,"Kishangarh Airport","Ajmer","India","KQH","VIKG",26.601473,74.814147,0,\N,\N,\N,"airport","OurAirports"
-13725,"Kannur International Airport","Kannur","India","CNN","VOKN",11.918614,75.547211,330,\N,\N,\N,"airport","OurAirports"
-13726,"Beijing Xijiao Airport","Beijing","China",\N,"ZBBB",39.9608,116.257004,0,\N,\N,\N,"airport","OurAirports"
+13711,"Lutselk'e Airport","Lutselk'e","Canada","YSG","CYLK",62.418303,-110.681998,596,-7.0,\N,\N,"airport","OurAirports",
+13712,"Engeløy Airport","Engeløy","Norway",\N,"ENEN",67.967222,14.9925,0,1.0,\N,\N,"airport","OurAirports",
+13713,"Dwangwa Airport","Dwangwa","Malawi","DWA","FWDW",-12.5183,34.131901,1605,2.0,\N,\N,"airport","OurAirports",
+13714,"Paloich Airport, Heliport","Higleig","South Sudan","HGI","HSFA",10.529167,32.500556,2.0,+2,\N,\N,"airport","OurAirports",
+13715,"Julian Carroll Airport","Jackson","United States",\N,"KJKL",37.59389877319336,-83.31729888916016,1381,-6.0,\N,\N,"airport","OurAirports",
+13716,"Beaufort MCAS - Merritt Field","Beaufort","United States",\N,"KNBC",32.4774017334,-80.723197937,37,-5.0,\N,\N,"airport","OurAirports",
+13717,"Camp Pendleton MCAS (Munn Field) Airport","Oceanside","United States",\N,"KNFG",33.30130005,-117.3550034,78,-8.0,\N,\N,"airport","OurAirports",
+13718,"Aerodromo de Castelo Branco","Castelo Branco","Portugal",\N,"LPCB",39.847022,-7.44111,1300,0,\N,\N,"airport","OurAirports",
+13719,"Ponte de Sor Airport","Ponte de Sôr","Portugal",\N,"LPSO",39.211559,-8.056542,0,0,\N,\N,"airport","OurAirports",
+13720,"Vilar de Luz Airfield","Maia","Portugal",\N,"LPVL",41.27729,-8.516209,762,0.0,\N,\N,"airport","OurAirports",
+13721,"Hard Bargain Airport","Hard Bargain","Bahamas",\N,"MYLR",23.011194,-74.905889,0,-5.0,\N,\N,"airport","OurAirports",
+13722,"Kenebetsu JASDF Airfield","Kenebetsu","Japan",\N,"RJCS",43.425154,144.741354,0,9.0,\N,\N,"airport","OurAirports",
+13723,"Augusto Severo Airport","Natal","Brazil",\N,"SBNT",-5.91141986847,-35.2476997375,169,-3.0,\N,\N,"airport","OurAirports",
+13724,"Kishangarh Airport","Ajmer","India","KQH","VIKG",26.601473,74.814147,0,5.5,\N,\N,"airport","OurAirports",
+13725,"Kannur International Airport","Kannur","India","CNN","VOKN",11.918614,75.547211,330,5.5,\N,\N,"airport","OurAirports",
+13726,"Beijing Xijiao Airport","Beijing","China",\N,"ZBBB",39.9608,116.257004,0,8.0,\N,\N,"airport","OurAirports",
 13735,"Flores Airport","MANAUS","Brazil",\N,"SWFN",-3.0727779865264893,-60.02111053466797,203,-4,"S",\N,"airport","OurAirports"
 13752,"Umuwa Airport","Umuwa","Australia",\N,"YUMU",-26.4867000579834,132.0399932861328,0,9.5,"O",\N,"airport","OurAirports"
 13754,"La Araucanía Airport","Temuco","Chile","ZCO","SCQP",-38.9259,-72.6515,333,-3,"S",\N,"airport","OurAirports"
@@ -7659,7 +7658,7 @@
 13771,"Kirkjubæjarklaustur Airport","Kirkjubaejarklaustur ","Iceland",\N,"BIKL",63.79079818725586,-18.001399993896484,66,0,"N",\N,"airport","OurAirports"
 13772,"Fazenda Uiapuru Airport","COMODORO","Brazil",\N,"SWVJ",-13.663888931274414,-56.002220153808594,1519,-4,"S",\N,"airport","OurAirports"
 13773,"Whitehorse Seaplane Base","Whitehorse","Canada",\N,"CEZ5",60.69110107421875,-135.03700256347656,2138,-8,"A",\N,"airport","OurAirports"
-13777,"Pertominsk Airport","Pertominsk","Russia",\N,"ULAT",64.7900009155,38.4199981689,56,4,"N",\N,"airport","OurAirports"
+13777,"Pertominsk Airport","Pertominsk","Russia",HYL,"UHYL",64.7900009155,38.4199981689,56,4,"N",\N,"airport","OurAirports"
 13792,"Mount Weld Airport","Laverton","Australia",\N,"YMNW",-28.771699905395508,122.44000244140625,0,8,"N",\N,"airport","OurAirports"
 13793,"Kidston Airport","Kidston","Australia",\N,"YKID",-18.8700008392334,144.17300415039062,494,10,"U",\N,"airport","OurAirports"
 13802,"Klaksvik Heliport","Klaksvik","Faroe Islands",\N,"EKKV",62.2178497314,-6.5764546394300005,263,0,"E",\N,"airport","OurAirports"
@@ -7673,28 +7672,26 @@
 13881,"Costa Marques Airport","COSTA MARQUES","Brazil","CQS","SWCQ",-12.421099662780762,-64.25160217285156,555,-4,"S",\N,"airport","OurAirports"
 13891,"Mangalore Airport","Mangalore","Australia",\N,"YMNG",-36.888301849365234,145.1840057373047,467,10,"O",\N,"airport","OurAirports"
 14086,"San Isidro del General Airport","San Isidro","Costa Rica",\N,"MRSI",9.352620124816895,-83.71309661865234,2100,-6,"N",\N,"airport","OurAirports"
-14087,"Zabrat Airport","Baku","Azerbaijan","ZXT","UBTT",40.4955422161,49.9768066406,36,\N,\N,\N,"airport","OurAirports"
-14088,"Bezmer Air Base","Yambol","Bulgaria","JAM","LBIA",42.4548988342,26.3521995544,509,\N,\N,\N,"airport","OurAirports"
-14089,"Osovtsy Air Base","Byaroza","Belarus",\N,"UMMO",52.5569992065,24.884000778199997,0,\N,\N,\N,"airport","OurAirports"
-14090,"Yuanmou Air Base","Yuanmou","China","YUA","ZPYM",25.737499237061,101.88200378418,3810,\N,\N,\N,"airport","OurAirports"
-14091,"Changsha Datuopu Airport/AFB","Changsha","China",\N,"ZGCS",28.0688991547,112.958000183,170,\N,\N,\N,"airport","OurAirports"
-14092,"Xingcheng Air Base","","China","XEN","ZYXC",40.580299377399996,120.697998047,30,\N,\N,\N,"airport","OurAirports"
-14093,"Lefkoniko Airport","Geçitkale","Cyprus","GEC","LCGK",35.235947,33.724358,146,\N,\N,\N,"airport","OurAirports"
-14095,"Songwe Airport","Mbeya","Tanzania","MBI","HTGW",-8.919942,33.273981,4412,\N,\N,\N,"airport","OurAirports"
-14096,"Kalocsa/Foktő Airport","Kalocsa/Foktő","Hungary",\N,"LHKA",46.549613,18.942421,284,\N,\N,\N,"airport","OurAirports"
-14097,"Bilogai-Sugapa Airport","Sugapa-Papua Island","Indonesia","UGU","WABV",-3.73956,137.031998,7348,\N,\N,\N,"airport","OurAirports"
-14098,"Jakkur Aerodrome","Bengaluru","India",\N,"VOJK",13.07674,77.597645,3013,\N,\N,\N,"airport","OurAirports"
-14099,"Jalal-Abad Airport","Jalal-Abad","Kyrgyzstan",\N,"UAFJ",40.944401,72.977798,2591,\N,\N,\N,"airport","OurAirports"
-14100,"Ramon Airport","Eilat","Israel","ETM","LLER",29.723694,35.011416,288,\N,\N,\N,"airport","OurAirports"
-14101,"Rustaq Airport","Al Masna'ah","Oman","MNH","OORQ",23.640556,57.4875,349,\N,\N,\N,"airport","OurAirports"
-14102,"Laguindingan Airport","Cagayan de Oro City","Philippines","CGY","RPMY",8.612203,124.456496,190,\N,\N,\N,"airport","OurAirports"
-14103,"Kostomuksha Airport","Kostomuksha","Russia",\N,"ULPM",64.61799621579999,30.687000274699997,681,\N,\N,\N,"airport","OurAirports"
-14104,"Privolzhskiy Air Base","Astrakhan","Russia",\N,"XRAP",46.396,47.893,-66,\N,\N,\N,"airport","OurAirports"
-14105,"Kubinka Air Base","Kubinka","Russia",\N,"UUMB",55.611695,36.650002,614,\N,\N,\N,"airport","OurAirports"
-14106,"Rogachyovo Air Base","Belaya","Russia",\N,"ULDA",71.61669921880001,52.4782981873,272,\N,\N,\N,"airport","OurAirports"
-14107,"Ulan-Ude East Airport","Ulan Ude","Russia",\N,"XIUW",51.849998474121094,107.73799896240234,1670,\N,\N,\N,"airport","OurAirports"
-14108,"Krechevitsy Air Base","Novgorod","Russia",\N,"ULLK",58.625,31.385000228881836,85,\N,\N,\N,"airport","OurAirports"
-14109,"Desierto de Atacama Airport","Copiapo","Chile","CPO","SCAT",-27.2611999512,-70.7791976929,670,\N,\N,\N,"airport","OurAirports"
-14110,"Melitopol Air Base","Melitopol","Ukraine",\N,"UKDM",46.880001,35.305,0,\N,\N,\N,"airport","OurAirports"
-14111,"Tczew International","Tczew","Poland","HYL","UHYL",54.080001,18.7775,0,\N,\N,\N,"airport","OurAirports"
-14112,"Oświęcim Airport","Oświęcim","Poland","CGA","UNTG",50.0300311,19.2275,0,\N,\N,\N,"airport","OurAirports"
+14087,"Zabrat Airport","Baku","Azerbaijan","ZXT","UBTT",40.4955422161,49.9768066406,36,4,\N,\N,"airport","OurAirports"
+14088,"Bezmer Air Base","Yambol","Bulgaria","JAM","LBIA",42.4548988342,26.3521995544,509,2,\N,\N,"airport","OurAirports"
+14089,"Osovtsy Air Base","Byaroza","Belarus",\N,"UMMO",52.5569992065,24.884000778199997,0,3,\N,\N,"airport","OurAirports"
+14090,"Yuanmou Air Base","Yuanmou","China","YUA","ZPYM",25.737499237061,101.88200378418,3810,8,\N,\N,"airport","OurAirports"
+14091,"Changsha Datuopu Airport/AFB","Changsha","China",\N,"ZGCS",28.0688991547,112.958000183,170,8,\N,\N,"airport","OurAirports"
+14092,"Xingcheng Air Base","","China","XEN","ZYXC",40.580299377399996,120.697998047,30,8,\N,\N,"airport","OurAirports"
+14093,"Lefkoniko Airport","Geçitkale","Cyprus","GEC","LCGK",35.235947,33.724358,146,2,\N,\N,"airport","OurAirports"
+14095,"Songwe Airport","Mbeya","Tanzania","MBI","HTGW",-8.919942,33.273981,4412,3,\N,\N,"airport","OurAirports"
+14096,"Kalocsa/Foktő Airport","Kalocsa/Foktő","Hungary",\N,"LHKA",46.549613,18.942421,284,1,\N,\N,"airport","OurAirports"
+14097,"Bilogai-Sugapa Airport","Sugapa-Papua Island","Indonesia","UGU","WABV",-3.73956,137.031998,7348,7,\N,\N,"airport","OurAirports"
+14098,"Jakkur Aerodrome","Bengaluru","India",\N,"VOJK",13.07674,77.597645,3013,5.5,\N,\N,"airport","OurAirports"
+14099,"Jalal-Abad Airport","Jalal-Abad","Kyrgyzstan",\N,"UAFJ",40.944401,72.977798,2591,6,\N,\N,"airport","OurAirports"
+14100,"Ramon Airport","Eilat","Israel","ETM","LLER",29.723694,35.011416,288,2,\N,\N,"airport","OurAirports"
+14101,"Rustaq Airport","Al Masna'ah","Oman","MNH","OORQ",23.640556,57.4875,349,4,\N,\N,"airport","OurAirports"
+14102,"Laguindingan Airport","Cagayan de Oro City","Philippines","CGY","RPMY",8.612203,124.456496,190,8,\N,\N,"airport","OurAirports"
+14103,"Kostomuksha Airport","Kostomuksha","Russia",\N,"ULPM",64.61799621579999,30.687000274699997,681,3,\N,\N,"airport","OurAirports"
+14104,"Privolzhskiy Air Base","Astrakhan","Russia",\N,"XRAP",46.396,47.893,-66,4,\N,\N,"airport","OurAirports"
+14105,"Kubinka Air Base","Kubinka","Russia",CGA,"UNTG",55.611695,36.650002,614,3,\N,\N,"airport","OurAirports"
+14106,"Rogachyovo Air Base","Belaya","Russia",\N,"ULDA",71.61669921880001,52.4782981873,272,1,\N,\N,"airport","OurAirports"
+14107,"Ulan-Ude East Airport","Ulan Ude","Russia",\N,"XIUW",51.849998474121094,107.73799896240234,1670,8,\N,\N,"airport","OurAirports"
+14108,"Krechevitsy Air Base","Novgorod","Russia",\N,"ULLK",58.625,31.385000228881836,85,+3,\N,\N,"airport","OurAirports"
+14109,"Desierto de Atacama Airport","Copiapo","Chile","CPO","SCAT",-27.2611999512,-70.7791976929,670,-3,\N,\N,"airport","OurAirports"
+14110,"Melitopol Air Base","Melitopol","Ukraine",\N,"UKDM",46.880001,35.305,300,1,\N,\N,"airport","OurAirports"
