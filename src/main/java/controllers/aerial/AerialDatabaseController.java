@@ -9,6 +9,8 @@ import static utilities.ResourcesIndex.*;
 
 public class AerialDatabaseController {
 
+    private static final int CITY_POSITION = 2;
+
     public static List<String[]> getCountriesFromDatabase() {
         return getItemsFromDatabase(COUNTRIES_DATABASE_FILE);
     }
@@ -30,9 +32,6 @@ public class AerialDatabaseController {
         List<String[]> allItems = new ArrayList<String[]>();
         while (scanner.hasNextLine()) {
             String item = scanner.nextLine();
-
-//            String[] splitedItem = item.replace("\"", "").split(",(?=(?:[^\"]*\"[^\"]*\")*[^\"]*$)");
-
             String[] splitedItem = item.split(",(?=(?:[^\"]*\"[^\"]*\")*[^\"]*$)");
             String[] splitedItemWithoutQuotes = removeQuotes(splitedItem);
             allItems.add(splitedItemWithoutQuotes);
@@ -40,7 +39,20 @@ public class AerialDatabaseController {
         return allItems;
     }
 
-    private static String[] removeQuotes(String[] strings) {
+
+    public static List<String> getCitiesFromDatabase() {
+        Scanner scanner = loadDatabaseIntoScanner(AIRPORTS_DATABASE_FILE);
+        List<String> allItems = new ArrayList<>();
+        while (scanner.hasNextLine()) {
+            String item = scanner.nextLine();
+            String[] splitedItem = item.split(",(?=(?:[^\"]*\"[^\"]*\")*[^\"]*$)");
+            String[] splitedItemWithoutQuotes = removeQuotes(splitedItem);
+            allItems.add(splitedItemWithoutQuotes[CITY_POSITION]);
+        }
+        return allItems;
+    }
+
+    public static String[] removeQuotes(String[] strings) {
         String[] stringsWithoutQuotes = new String[strings.length];
         for (int i = 0; i < strings.length; i++) {
             stringsWithoutQuotes[i] = strings[i].replace("\"", "");

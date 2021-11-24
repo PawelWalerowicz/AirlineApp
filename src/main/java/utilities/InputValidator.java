@@ -31,7 +31,6 @@ public class InputValidator {
 //        }
     }
 
-
     public static boolean isPasswordValid(String password) {
         return true;    //todo: create valid regex for passwords
     }
@@ -49,4 +48,12 @@ public class InputValidator {
         return !string.toLowerCase().equals("q");
     }
 
+
+    public static boolean isDateValid(String date) {
+        if(date.matches("^[0-3][0-9]-[0-1][0-9]-\\d{4}$")) {
+            return true;
+        } else {
+            return false;
+        }
+    }
 }

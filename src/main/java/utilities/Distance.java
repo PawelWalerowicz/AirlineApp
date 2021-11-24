@@ -13,7 +13,7 @@ public class Distance {
         this.distance = calculateDistance(geolocation1, geolocation2);
     }
 
-    //calucaltes orthodromic distance in kilometers
+    //calculates orthodromic distance in kilometers
     public static double calculateDistance(Geolocation point1, Geolocation point2) {
         double earthRadius = 6371; //km
         double latitude1 = Math.toRadians(point1.getLatitude());

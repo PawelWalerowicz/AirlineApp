@@ -3,6 +3,7 @@ package model;
 
 import java.util.List;
 
+import static controllers.aerial.AerialDatabaseController.getCitiesFromDatabase;
 import static controllers.aerial.AerialDatabaseController.getCountriesFromDatabase;
 
 public class Country {
@@ -51,7 +52,6 @@ public class Country {
     public static boolean isCountry(String input) {
         List<String[]> countriesList = getCountriesFromDatabase();
         boolean answer= false;
-        String name="";
         for(String[] country: countriesList) {
             if(country[NAME_POSITION].equalsIgnoreCase(input)) {
                 answer = true;
@@ -59,6 +59,20 @@ public class Country {
         }
         return answer;
     }
+
+
+    public static boolean isCity(String input) {
+        List<String> citiesList = getCitiesFromDatabase();
+        boolean answer= false;
+        for(String city: citiesList) {
+            if(city.equalsIgnoreCase(input)) {
+                answer = true;
+            }
+        }
+        return answer;
+    }
+
+
 
     public String getName() {
         return name;

@@ -4,9 +4,11 @@ import utilities.Distance;
 import utilities.JourneyTime;
 import utilities.Price;
 
+import java.util.Calendar;
 import java.util.List;
 
 import static controllers.aerial.AerialDatabaseController.getRoutesFromDatabase;
+import static utilities.Distance.calculateDistance;
 import static utilities.createFakeData.createFakeJourneyTime;
 import static utilities.createFakeData.createFakePrice;
 
@@ -16,10 +18,12 @@ public class Route {
     Airport destinationAirport;
     Distance distance;
     JourneyTime journeyTime;
+    Price price;
 
-    private final int AIRLINE_POSITION = 0;
-    private final int SOURCE_AIRPORT_IATA_POSITION = 2;
-    private final int DESTINATION_AIRPORT_IATA_POSITION = 4;
+
+    public static final int AIRLINE_POSITION = 0;
+    public static final int SOURCE_AIRPORT_IATA_POSITION = 2;
+    public static final int DESTINATION_AIRPORT_IATA_POSITION = 4;
 
     public Route(Airline airline, Airport sourceAirport, Airport destinationAirport) {
         this.airline = airline;
@@ -32,23 +36,38 @@ public class Route {
     public Route(Airport sourceAirport, Airport destinationAirport) {
         this.sourceAirport = sourceAirport;
         this.destinationAirport = destinationAirport;
+        addRouteData();
     }
 
     public boolean exist() {
         List<String[]> allRoutes = getRoutesFromDatabase();
         String sourceAirportIATA = sourceAirport.getIATA().toString();
         String destinationAirportIATA = destinationAirport.getIATA().toString();
-        for(String[] route:allRoutes) {
-            if(route[SOURCE_AIRPORT_IATA_POSITION].equals(sourceAirportIATA) && route[DESTINATION_AIRPORT_IATA_POSITION].equals(destinationAirportIATA)) {
-                Airline currentAirline = new Airline(route[AIRLINE_POSITION]);
-                Airport currentSourceAirport = new Airport(route[SOURCE_AIRPORT_IATA_POSITION]);
-                Airport currentDestinationAirport = new Airport(route[DESTINATION_AIRPORT_IATA_POSITION]);
-                Route currentRoute = new Route(currentAirline,currentSourceAirport,currentDestinationAirport);
-                System.out.println(currentRoute.toString() + " Price: " + createFakePrice(currentRoute.getDistance()).toString());
+        boolean routeExist = false;
+        for (String[] route : allRoutes) {
+            if (route[SOURCE_AIRPORT_IATA_POSITION].equals(sourceAirportIATA) && route[DESTINATION_AIRPORT_IATA_POSITION].equals(destinationAirportIATA)) {
+                routeExist = true;
             }
         }
+        return routeExist;
+    }
 
-        return true;
+    public void addRouteData() {
+        List<String[]> allRoutes = getRoutesFromDatabase();
+        String sourceAirportIATA = sourceAirport.getIATA().toString();
+        String destinationAirportIATA = destinationAirport.getIATA().toString();
+        for (String[] route : allRoutes) {
+            if (route[SOURCE_AIRPORT_IATA_POSITION].equals(sourceAirportIATA) && route[DESTINATION_AIRPORT_IATA_POSITION].equals(destinationAirportIATA)) {
+                this.airline = new Airline(route[AIRLINE_POSITION]);
+                this.distance = new Distance(sourceAirport.getGeolocation(),destinationAirport.getGeolocation());
+                this.price = createFakePrice(distance);
+                this.journeyTime = createFakeJourneyTime(distance);
+            }
+        }
+    }
+
+    private void addCalendarAndPriceDetails(Calendar earliestDate, Calendar latestDate) {
+
     }
 
     public Airline getAirline() {
@@ -79,10 +98,11 @@ public class Route {
         return distance;
     }
 
+
     @Override
     public String toString() {
-        String ending="";
-        if(airline.toString().contains("irline") || airline.toString().contains("irways") || airline.toString().contains("Air")) {
+        String ending = "";
+        if (airline.toString().contains("irline") || airline.toString().contains("irways") || airline.toString().contains("Air")) {
             ending = ".";
         } else {
             ending = " airline.";
@@ -92,6 +112,5 @@ public class Route {
                 + " (" + distance.toString() + ", "
                 + journeyTime.toString() + ")"
                 + " with " + airline.toString() + ending;
-
     }
 }

@@ -1,16 +1,9 @@
 package model;
 
-import javax.print.attribute.standard.MediaSize;
-import java.io.FileWriter;
-import java.io.IOException;
-import java.io.PrintWriter;
 import java.util.*;
 
 import static controllers.aerial.AerialDatabaseController.getAirportsFromDatabase;
 import static java.lang.Double.parseDouble;
-import static utilities.InputOutputTools.loadDatabaseIntoScanner;
-import static utilities.ResourcesIndex.AIRPORTS_DATABASE_FILE;
-import static utilities.ResourcesIndex.USER_DATABASE_FILE;
 
 public class Airport {
     private String name;
@@ -23,7 +16,7 @@ public class Airport {
     private double altitude;
 
     private static final int NAME_POSITION = 1;
-    private final int CITY_POSITION = 2;
+    private static final int CITY_POSITION = 2;
     private static final int COUNTRY_POSITION = 3;
     private final int IATA_POSITION = 4;
     private final int ICAO_POSITION = 5;
@@ -34,6 +27,9 @@ public class Airport {
 
     private final int IATA_LENGTH = 3;
     private final int ICAO_LENGTH = 4;
+
+    public Airport() {
+    }
 
     public Airport(String nameOrIATA) {
         if (isInputAName(nameOrIATA)) {
@@ -50,6 +46,14 @@ public class Airport {
             getOtherParametersByName(name);
         }
     }
+
+    public static Airport createAirportByName(String name) {
+        Airport airport = new Airport();
+        airport.setName(name);
+        airport.getOtherParametersByName(name);
+        return airport;
+    }
+
 
     private boolean isInputAName(String input) {
         return input.length() > ICAO_LENGTH;
@@ -114,18 +118,33 @@ public class Airport {
     }
 
 
-    public static List<Airport> reciteAirportsInCountry(String countryName) {
+    public static List<Airport> getAirportsInCountry(String countryName) {
         Country country = new Country(countryName);
         List<String[]> allAirports = getAirportsFromDatabase();
         List<Airport> airportsInCountry = new ArrayList<>();
         for (String[] airport : allAirports) {
             if (airport[COUNTRY_POSITION].equalsIgnoreCase(country.getName())) {
-                Airport currentAirport = new Airport(airport[NAME_POSITION]);
+                Airport currentAirport = createAirportByName(airport[NAME_POSITION]);
                 airportsInCountry.add(currentAirport);
             }
         }
         return airportsInCountry;
     }
+
+
+    public static List<Airport> getAirportsInCity(String cityName) {
+        List<String[]> allAirports = getAirportsFromDatabase();
+        List<Airport> airportsInCity = new ArrayList<>();
+        for (String[] airport : allAirports) {
+            if (airport[CITY_POSITION].equalsIgnoreCase(cityName)) {
+                Airport currentAirport = createAirportByName(airport[NAME_POSITION]);
+                airportsInCity.add(currentAirport);
+            }
+        }
+        return airportsInCity;
+    }
+
+
 
 
     public String getName() {
