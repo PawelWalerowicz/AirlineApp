@@ -1,24 +1,19 @@
 package model;
 
 import utilities.Distance;
-import utilities.JourneyTime;
-import utilities.Price;
+import utilities.TimeInterval;
 
 import java.util.Calendar;
 import java.util.List;
 
 import static controllers.aerial.AerialDatabaseController.getRoutesFromDatabase;
-import static utilities.Distance.calculateDistance;
-import static utilities.createFakeData.createFakeJourneyTime;
-import static utilities.createFakeData.createFakePrice;
 
 public class Route {
     Airline airline;
     Airport sourceAirport;
     Airport destinationAirport;
     Distance distance;
-    JourneyTime journeyTime;
-    Price price;
+    TimeInterval timeZoneDifference;
 
 
     public static final int AIRLINE_POSITION = 0;
@@ -30,7 +25,7 @@ public class Route {
         this.sourceAirport = sourceAirport;
         this.destinationAirport = destinationAirport;
         this.distance = new Distance(sourceAirport.getGeolocation(), destinationAirport.getGeolocation());
-        this.journeyTime = createFakeJourneyTime(distance);
+        this.timeZoneDifference = getTimeZoneDifference();
     }
 
     public Route(Airport sourceAirport, Airport destinationAirport) {
@@ -60,8 +55,7 @@ public class Route {
             if (route[SOURCE_AIRPORT_IATA_POSITION].equals(sourceAirportIATA) && route[DESTINATION_AIRPORT_IATA_POSITION].equals(destinationAirportIATA)) {
                 this.airline = new Airline(route[AIRLINE_POSITION]);
                 this.distance = new Distance(sourceAirport.getGeolocation(),destinationAirport.getGeolocation());
-                this.price = createFakePrice(distance);
-                this.journeyTime = createFakeJourneyTime(distance);
+                this.timeZoneDifference = getTimeZoneDifference();
             }
         }
     }
@@ -98,19 +92,54 @@ public class Route {
         return distance;
     }
 
+    public TimeInterval getTimeZoneDifference() {
+        double sourceAirportOffset = sourceAirport.getTimeZoneOffset();
+        double destinationAirportOffset = destinationAirport.getTimeZoneOffset();
+        double timeDifferenceDecimal;
+        if(sameHemisphere()) {
+            timeDifferenceDecimal = Math.abs(sourceAirportOffset - destinationAirportOffset);
+        } else {
+            timeDifferenceDecimal = Math.abs(sourceAirportOffset) + Math.abs(destinationAirportOffset);
+        }
+        if(!isWestward()) {
+            timeDifferenceDecimal = -timeDifferenceDecimal;
+        }
+        TimeInterval  timeDifference = new TimeInterval(timeDifferenceDecimal);
+        return timeDifference;
+    }
+
+    private boolean sameHemisphere() {
+        double sourceAirportOffset = sourceAirport.getTimeZoneOffset();
+        double destinationAirportOffset = destinationAirport.getTimeZoneOffset();
+        if(sourceAirportOffset*destinationAirportOffset>0) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    private boolean isWestward() {
+        double sourceLongitude = sourceAirport.getGeolocation().getLongitude();
+        double finalLongitude = destinationAirport.getGeolocation().getLongitude();
+        if(finalLongitude>sourceLongitude) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
 
     @Override
     public String toString() {
         String ending = "";
         if (airline.toString().contains("irline") || airline.toString().contains("irways") || airline.toString().contains("Air")) {
-            ending = ".";
+            ending = "";
         } else {
-            ending = " airline.";
+            ending = " airline";
         }
         return "Route: " + sourceAirport.toString()
                 + " - " + destinationAirport.toString()
-                + " (" + distance.toString() + ", "
-                + journeyTime.toString() + ")"
+                + " (" + distance.toString() + ")"
                 + " with " + airline.toString() + ending;
     }
 }

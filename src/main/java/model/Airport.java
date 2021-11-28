@@ -144,8 +144,13 @@ public class Airport {
         return airportsInCity;
     }
 
+    public double getTimeZoneOffset() {
+        return timeZoneOffset;
+    }
 
-
+    public void setTimeZoneOffset(double timeZoneOffset) {
+        this.timeZoneOffset = timeZoneOffset;
+    }
 
     public String getName() {
         return name;
@@ -185,6 +190,14 @@ public class Airport {
 
     public void setAltitude(double altitude) {
         this.altitude = altitude;
+    }
+
+    public City getCity() {
+        return city;
+    }
+
+    public void setCity(City city) {
+        this.city = city;
     }
 
     @Override

@@ -13,6 +13,10 @@ public class Distance {
         this.distance = calculateDistance(geolocation1, geolocation2);
     }
 
+    public Distance(double distanceInKm) {
+        this.distance = distanceInKm;
+    }
+
     //calculates orthodromic distance in kilometers
     public static double calculateDistance(Geolocation point1, Geolocation point2) {
         double earthRadius = 6371; //km

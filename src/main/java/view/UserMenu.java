@@ -11,7 +11,6 @@ public class UserMenu {
 
     public UserMenu(Account account) {
         this.account = account;
-
     }
 
     public void viewMenu() {

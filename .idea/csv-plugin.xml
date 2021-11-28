@@ -3,17 +3,24 @@
   <component name="CsvFileAttributes">
     <option name="attributeMap">
       <map>
-        <entry key="\src\main\resources\LoggedInUserOptions.csv">
+        <entry key="\src\main\resources\ViewData\SearchFlightOptions.csv">
           <value>
             <Attribute>
               <option name="separator" value="," />
             </Attribute>
           </value>
         </entry>
-        <entry key="\src\main\resources\MainMenuOptions.csv">
+        <entry key="\src\main\resources\ViewData\WelcomeMessage.csv">
           <value>
             <Attribute>
-              <option name="separator" value="," />
+              <option name="separator" value=":" />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\target\classes\ViewData\WelcomeMessage.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value=":" />
             </Attribute>
           </value>
         </entry>

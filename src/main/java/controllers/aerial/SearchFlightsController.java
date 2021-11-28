@@ -1,6 +1,7 @@
 package controllers.aerial;
 
 import model.Airport;
+import model.Flight;
 import model.Route;
 
 import java.text.SimpleDateFormat;
@@ -14,39 +15,51 @@ import static model.Country.isCountry;
 import static model.Route.DESTINATION_AIRPORT_IATA_POSITION;
 import static model.Route.SOURCE_AIRPORT_IATA_POSITION;
 import static utilities.InputValidator.*;
+import static utilities.createFakeData.createFakeDate;
+
+
 
 public class SearchFlightsController {
     boolean proceed = true;
     Scanner scanner;
 
     SimpleDateFormat sdf = new SimpleDateFormat("E, dd-MM-yyyy, HH:mm");
-    SimpleDateFormat sdf2 = new SimpleDateFormat("E, dd-MM-yyyy, HH:mm:ss:SS");
 
     public SearchFlightsController() {
         searchFlights();
     }
 
     public void searchFlights() {
-        List<Airport> startAirports = askForAirports("Departure"); //todo: later extend a tool to search by country and list all airports
+        List<Airport> startAirports = askForAirports("Departure");
         List<Airport> endAirports = askForAirports("Landing");
         System.out.println("Searching for connections.");
         List<Route> availableRoutes = searchForFlightsInDatabase(startAirports, endAirports);
-        if (availableRoutes.size() > 0) {
-            System.out.println("Listing all " + availableRoutes.size() + " connections:");
-            for (Route route : availableRoutes) {
-                System.out.println(route.toString());
+//        if (availableRoutes.size() > 0) {
+//            System.out.println("Listing all " + availableRoutes.size() + " connections:");
+//            for (Route route : availableRoutes) {
+//                System.out.println(route.toString());
+//
+//            }
+//        }
 
-            }
+
+        Calendar earliestDate = askForEarliestDate();
+        Calendar latestDate = askForLatestDate(earliestDate);
+
+        List<Flight> allFlights = new ArrayList<>();
+        for(Route route:availableRoutes) {
+            Calendar randomDate = createFakeDate(earliestDate, latestDate);
+            Flight flight = new Flight(route,randomDate);
+            allFlights.add(flight);
         }
 
-
-//        Calendar earliestDate = askForEarliestDate();
-//        Calendar latestDate = askForLatestDate(earliestDate);
-
+        System.out.println("All available flights between " + sdf.format(earliestDate.getTime()) + " and " + sdf.format(latestDate.getTime()) + ":");
+        for(Flight flight:allFlights) {
+            System.out.println(flight.toString());
+        }
 //        Calendar randomDate = createFakeDate(earliestDate, latestDate);
 //        System.out.println(sdf.format(randomDate.getTime()));
 
-        //todo: create specific class for route with price and time of departure/landing
 
     }
 
@@ -159,18 +172,20 @@ public class SearchFlightsController {
         }
         if (proceed) {
             if (isCountry(input) || isCity(input)) {
-                System.out.println("Listing all airports in " + input + ", it may take a while, please be patient.");
                 if(isCountry(input)) {
+                    System.out.println("Listing all airports in " + input + ", it may take a while, please be patient.");
                     airports = getAirportsInCountry(input);
+                    System.out.println(airports.size() + " airports found in " + input);
                 } else {
                     airports = getAirportsInCity(input);
+                    System.out.println(airports.size() + " airports found in " + input);
                 }
             } else {
                 Airport airport = new Airport(input);
                 airports.add(airport);
             }
         }
-        System.out.println(airports.size() + " airports found in " + input);
+
         return airports;
     }
 
