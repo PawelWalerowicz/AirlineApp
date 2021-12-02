@@ -37,6 +37,13 @@ public class Flight {
         return landingDate;
     }
 
+    public Calendar getDepartureDate() {
+        return departureDate;
+    }
+
+    public void setDepartureDate(Calendar departureDate) {
+        this.departureDate = departureDate;
+    }
 
     @Override
     public String toString() {

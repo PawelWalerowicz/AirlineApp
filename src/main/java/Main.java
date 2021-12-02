@@ -5,10 +5,10 @@ public class Main {
     public static void main(String[] args) {
         System.out.println();
 //        MainMenu mainMenu = new MainMenu();
-//        mainMenu.viewMenu();
+        mainMenu.viewMenu();
 
-        SearchFlightsMenu searchFlightsMenu = new SearchFlightsMenu();
-        searchFlightsMenu.viewMenu();
+//        SearchFlightsMenu searchFlightsMenu = new SearchFlightsMenu();
+//        searchFlightsMenu.viewMenu();
 
     }
 }

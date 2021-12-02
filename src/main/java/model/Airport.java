@@ -67,7 +67,7 @@ public class Airport {
         return input.length() == ICAO_LENGTH;
     }
 
-    private boolean airportExist() {
+    public boolean airportExist() {
         List<String[]> allAirports = getAirportsFromDatabase();
         for (String[] airport : allAirports) {
             if (airport[NAME_POSITION].equalsIgnoreCase(this.name)) {

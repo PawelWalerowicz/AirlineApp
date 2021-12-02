@@ -50,10 +50,11 @@ public class InputValidator {
 
 
     public static boolean isDateValid(String date) {
-        if(date.matches("^[0-3][0-9]-[0-1][0-9]-\\d{4}$")) {
-            return true;
-        } else {
-            return false;
+        boolean isValid=false;
+        if(date.matches("^[0-3][0-9][-\\.]{1}[0-1][0-9][-\\.]{1}\\d{4}$")) {
+            isValid = true;
         }
+
+        return isValid;
     }
 }
