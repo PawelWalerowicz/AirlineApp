@@ -10,6 +10,7 @@ import static model.Airport.getAirportsInCity;
 import static model.Airport.getAirportsInCountry;
 import static model.Country.isCity;
 import static model.Country.isCountry;
+import static utilities.InputOutputTools.capitaliseFirstLetter;
 import static utilities.InputValidator.checkForQuit;
 import static utilities.InputValidator.isAirportOrCountryValid;
 
@@ -24,6 +25,7 @@ public class AirportSearchController {
             do {
                 System.out.print(departureOrLanding + " airport (name or IATA code), or " + departureOrLanding.toLowerCase() + " city or country (or Q to quit): ");
                 input = scanner.nextLine();
+                input = capitaliseFirstLetter(input);
                 proceed = checkForQuit(input);
             } while (proceed && !isAirportOrCountryValid(input));
         }
@@ -36,7 +38,7 @@ public class AirportSearchController {
                 } else {
                     airports = getAirportsInCity(input);
                 }
-                System.out.println(airports.size() + " airports found in " + input);
+                System.out.println(airports.size() + " airports found in " + input + ".");
             } else {
                 Airport airport = new Airport(input);
                 if(airport.airportExist()) {

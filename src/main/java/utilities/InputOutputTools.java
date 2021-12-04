@@ -70,4 +70,9 @@ public class InputOutputTools {
         return scanner;
     }
 
+    public static String capitaliseFirstLetter(String string) {
+        String convertedString = string.substring(0,1).toUpperCase() + string.substring(1,string.length()).toLowerCase();
+        return convertedString;
+    }
+
 }

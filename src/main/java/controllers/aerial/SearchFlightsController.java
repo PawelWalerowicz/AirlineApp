@@ -81,10 +81,10 @@ public class SearchFlightsController {
             for(int i=1;i< flightList.size();i++) {
                 System.out.println(i + ". " + flightList.get(i).toString());
             }
+            System.out.println("Please choose flight number to reserve ticket.");
+            int chosenOption = readUserIntegerInput(flightList.size());
+            System.out.println("Thank you, ticket has been added to your account."); //todo: No, it's not, should add that up. Also give user an option to quit or search again
         }
-        System.out.println("Please choose flight number to reserve ticket.");
-        int chosenOption = readUserIntegerInput(flightList.size());
-        System.out.println("Thank you, ticket has been added to your account."); //todo: No, it's not, should add that up. Also give user an option to quit or search again
     }
 
 
