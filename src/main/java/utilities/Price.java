@@ -4,10 +4,10 @@ public class Price {
     double price;
 
     public Price(double price) {
-        this.price = roundPricetoCents(price);
+        this.price = roundPriceToCents(price);
     }
 
-    public static double roundPricetoCents(double price) {
+    public static double roundPriceToCents(double price) {
         int numberOfDecimalPlaces = 2;
         double decimalOperator = Math.pow(10, numberOfDecimalPlaces);
         return (Math.round(price * decimalOperator)) / decimalOperator;

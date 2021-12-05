@@ -2,8 +2,6 @@ package model;
 
 import utilities.Distance;
 import utilities.TimeInterval;
-
-import java.util.Calendar;
 import java.util.List;
 
 import static controllers.aerial.AerialDatabaseController.getRoutesFromDatabase;
@@ -36,12 +34,13 @@ public class Route {
 
     public boolean exist() {
         List<String[]> allRoutes = getRoutesFromDatabase();
-        String sourceAirportIATA = sourceAirport.getIATA().toString();
-        String destinationAirportIATA = destinationAirport.getIATA().toString();
+        String sourceAirportIATA = sourceAirport.getIATA();
+        String destinationAirportIATA = destinationAirport.getIATA();
         boolean routeExist = false;
         for (String[] route : allRoutes) {
             if (route[SOURCE_AIRPORT_IATA_POSITION].equals(sourceAirportIATA) && route[DESTINATION_AIRPORT_IATA_POSITION].equals(destinationAirportIATA)) {
                 routeExist = true;
+                break;
             }
         }
         return routeExist;
@@ -49,8 +48,8 @@ public class Route {
 
     public void addRouteData() {
         List<String[]> allRoutes = getRoutesFromDatabase();
-        String sourceAirportIATA = sourceAirport.getIATA().toString();
-        String destinationAirportIATA = destinationAirport.getIATA().toString();
+        String sourceAirportIATA = sourceAirport.getIATA();
+        String destinationAirportIATA = destinationAirport.getIATA();
         for (String[] route : allRoutes) {
             if (route[SOURCE_AIRPORT_IATA_POSITION].equals(sourceAirportIATA) && route[DESTINATION_AIRPORT_IATA_POSITION].equals(destinationAirportIATA)) {
                 this.airline = new Airline(route[AIRLINE_POSITION]);
@@ -58,10 +57,6 @@ public class Route {
                 this.timeZoneDifference = getTimeZoneDifference();
             }
         }
-    }
-
-    private void addCalendarAndPriceDetails(Calendar earliestDate, Calendar latestDate) {
-
     }
 
     public Airline getAirline() {
@@ -104,35 +99,26 @@ public class Route {
         if(!isWestward()) {
             timeDifferenceDecimal = -timeDifferenceDecimal;
         }
-        TimeInterval  timeDifference = new TimeInterval(timeDifferenceDecimal);
-        return timeDifference;
+        return new TimeInterval(timeDifferenceDecimal);
     }
 
     private boolean sameHemisphere() {
         double sourceAirportOffset = sourceAirport.getTimeZoneOffset();
         double destinationAirportOffset = destinationAirport.getTimeZoneOffset();
-        if(sourceAirportOffset*destinationAirportOffset>0) {
-            return true;
-        } else {
-            return false;
-        }
+        return sourceAirportOffset * destinationAirportOffset > 0;
     }
 
     private boolean isWestward() {
         double sourceLongitude = sourceAirport.getGeolocation().getLongitude();
         double finalLongitude = destinationAirport.getGeolocation().getLongitude();
-        if(finalLongitude>sourceLongitude) {
-            return true;
-        } else {
-            return false;
-        }
+        return finalLongitude > sourceLongitude;
     }
 
 
 
     @Override
     public String toString() {
-        String ending = "";
+        String ending;
         if (airline.toString().contains("irline") || airline.toString().contains("irways") || airline.toString().contains("Air")) {
             ending = "";
         } else {

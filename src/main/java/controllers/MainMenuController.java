@@ -1,6 +1,5 @@
 package controllers;
 
-import controllers.aerial.SearchFlightsController;
 import view.CreateAccountMenu;
 import view.LoginMenu;
 import view.MainMenu;

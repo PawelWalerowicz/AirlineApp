@@ -53,8 +53,9 @@ public class Country {
         List<String[]> countriesList = getCountriesFromDatabase();
         boolean answer= false;
         for(String[] country: countriesList) {
-            if(country[NAME_POSITION].equalsIgnoreCase(input)) {
+            if (country[NAME_POSITION].equalsIgnoreCase(input)) {
                 answer = true;
+                break;
             }
         }
         return answer;
@@ -67,6 +68,7 @@ public class Country {
         for(String city: citiesList) {
             if(city.equalsIgnoreCase(input)) {
                 answer = true;
+                break;
             }
         }
         return answer;

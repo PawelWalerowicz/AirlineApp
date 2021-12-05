@@ -7,12 +7,6 @@ public class Main {
     public static void main(String[] args) {
         MainMenu mainMenu = new MainMenu();
         mainMenu.viewMenu();
-
-//          for testing purposes:
-//        SearchFlightsMenu searchFlightsMenu = new SearchFlightsMenu();
-//        searchFlightsMenu.viewMenu();
-
-
     }
 
 

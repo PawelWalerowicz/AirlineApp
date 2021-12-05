@@ -39,12 +39,10 @@ public class Airport {
             this.name = getNameByIATA();
         }
 
-        if (airportExist()) {
-            getOtherParametersByName(name);
-        } else {
+        if (!airportExist()) {
             getNameByInvalidICAO(nameOrIATA);
-            getOtherParametersByName(name);
         }
+        getOtherParametersByName(name);
     }
 
     public static Airport createAirportByName(String name) {
@@ -203,7 +201,7 @@ public class Airport {
     @Override
     public String toString() {
         String toString;
-        if (IATA.toString().equals("\\N")) {
+        if (IATA.equals("\\N")) {
             toString = name + " (" + country.getName() + ", " + ICAO + ")";
         } else {
             toString = name + " (" + country.getName() + ", " + IATA + ")";

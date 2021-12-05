@@ -55,7 +55,7 @@ public class AirportSearchController {
 
 
     public static boolean isAirportOrCountryValid(String name) {
-        boolean isCorrect=false;
+        boolean isCorrect;
         if (isCountry(name)) {
             isCorrect = true;
         } else if (isCity(name)) {

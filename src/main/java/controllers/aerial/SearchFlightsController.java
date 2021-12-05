@@ -15,7 +15,6 @@ import static controllers.aerial.AerialDatabaseController.getRoutesFromDatabase;
 import static model.Route.DESTINATION_AIRPORT_IATA_POSITION;
 import static model.Route.SOURCE_AIRPORT_IATA_POSITION;
 import static utilities.ClearConsole.cleanConsole;
-import static utilities.InputOutputTools.isOptionValid;
 import static utilities.InputOutputTools.isValidFlightOption;
 import static utilities.createFakeData.*;
 
@@ -190,7 +189,7 @@ public class SearchFlightsController {
         List<String[]> allRoutesStartingInDepartureAirports = new ArrayList<>();
         for (Airport airport : departureAirports) {
             List<String[]> allRoutes = getRoutesFromDatabase();
-            String startAirportIATA = airport.getIATA().toString();
+            String startAirportIATA = airport.getIATA();
             for (String[] route : allRoutes) {
                 if (route[SOURCE_AIRPORT_IATA_POSITION].equals(startAirportIATA)) {
                     allRoutesStartingInDepartureAirports.add(route);
@@ -201,10 +200,10 @@ public class SearchFlightsController {
     }
 
     private List<Route> getAllRoutesOnPath(List<String[]>
-                                                   allRoutestWithSetDepartureAirports, List<Airport> landingAirports) {
+                                                   allRoutesWithSetDepartureAirports, List<Airport> landingAirports) {
         List<Route> allRoutesOnPath = new ArrayList<>();
         for (Airport endAirport : landingAirports) {
-            for (String[] route : allRoutestWithSetDepartureAirports) {
+            for (String[] route : allRoutesWithSetDepartureAirports) {
                 String endAirportIATA = endAirport.getIATA();
                 if (route[DESTINATION_AIRPORT_IATA_POSITION].equals(endAirportIATA)) {
                     Airport startAirport = new Airport(route[SOURCE_AIRPORT_IATA_POSITION]);

@@ -5,20 +5,20 @@ import java.util.Scanner;
 
 public class InputOutputTools {
 
-    public static int readUserIntegerInput(int amountOfOptions) throws NumberFormatException{
+    public static int readUserIntegerInput(int amountOfOptions) throws NumberFormatException {
         Scanner userInput = new Scanner(System.in);
         int answer;
         boolean validOption;
         do {
-                answer = Integer.parseInt(userInput.nextLine());
-                validOption = isOptionValid(answer, amountOfOptions);
-        } while(!validOption);
+            answer = Integer.parseInt(userInput.nextLine());
+            validOption = isOptionValid(answer, amountOfOptions);
+        } while (!validOption);
 
         return answer;
     }
 
     public static boolean isValidFlightOption(int answer, int amountOfFlights) {
-        if(answer>=1 && answer<=amountOfFlights) {
+        if (answer >= 1 && answer <= amountOfFlights) {
             return true;
         } else {
             System.out.println("Invalid input, please try again.");
@@ -27,7 +27,7 @@ public class InputOutputTools {
     }
 
     public static boolean isOptionValid(int answer, int amountOfOptions) {
-        if(answer>=0 && answer<=amountOfOptions-1) {
+        if (answer >= 0 && answer <= amountOfOptions - 1) {
             return true;
         } else {
             System.out.println("Invalid input, please try again.");
@@ -37,28 +37,30 @@ public class InputOutputTools {
     }
 
     public static void printTextFromFile(String path) {
-        Scanner inputFile = null;
+        Scanner inputFile;
         try {
-            inputFile = new Scanner(new FileInputStream(path)); //todo: find a way to load file with relative path
+            inputFile = new Scanner(new FileInputStream(path));
+
+            while (inputFile.hasNextLine()) {
+                System.out.println(inputFile.nextLine());
+            }
         } catch (FileNotFoundException e) {
-            e.getMessage();
-        }
-        while(inputFile.hasNextLine()) {
-            System.out.println(inputFile.nextLine());
+            System.out.println("File not found at " + path);
         }
     }
 
     public static int printMenuOptions(String path) {
-        Scanner inputFile = null;
-        int amountOfOptions=0;
+        Scanner inputFile;
+        int amountOfOptions = 0;
         try {
-            inputFile = new Scanner(new FileInputStream(path)); //todo: find a way to load file with relative path
+            inputFile = new Scanner(new FileInputStream(path));
+
+            while (inputFile.hasNextLine()) {
+                System.out.println(inputFile.nextLine());
+                amountOfOptions++;
+            }
         } catch (FileNotFoundException e) {
-            e.getMessage();
-        }
-        while(inputFile.hasNextLine()) {
-            System.out.println(inputFile.nextLine());
-            amountOfOptions++;
+            System.out.println("Menu options not found at " + path);
         }
         return amountOfOptions;
     }
@@ -80,9 +82,8 @@ public class InputOutputTools {
     }
 
     public static String capitaliseFirstLetter(String string) {
-        if(!string.isEmpty()) {
-            String convertedString = string.substring(0,1).toUpperCase() + string.substring(1,string.length()).toLowerCase();
-            return convertedString;
+        if (!string.isEmpty()) {
+            return string.substring(0, 1).toUpperCase() + string.substring(1).toLowerCase();
         } else return string;
     }
 

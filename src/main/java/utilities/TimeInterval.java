@@ -1,10 +1,7 @@
 package utilities;
 
-import java.text.DecimalFormat;
-
 public class TimeInterval {
     int[] hoursMinutes;
-    DecimalFormat decimalFormat = new DecimalFormat("##");
 
     public TimeInterval(int[] hoursMinutes) {
         this.hoursMinutes = hoursMinutes;

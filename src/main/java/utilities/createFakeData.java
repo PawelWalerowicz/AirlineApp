@@ -9,12 +9,12 @@ public class createFakeData {
 
     public static Calendar createFakeDate(Calendar earliestDate, Calendar latestDate) {
         Calendar fakeDate = new GregorianCalendar();
-        long earliestDateMiliseconds = earliestDate.getTime().getTime();
-        long latestDateMiliseconds = latestDate.getTime().getTime();
-        long randomDateMiliseconds = randomLongInRange(earliestDateMiliseconds, latestDateMiliseconds);
-        fakeDate.setTime(new Date(randomDateMiliseconds));
-        int unRoundedMintes = fakeDate.get(Calendar.MINUTE);
-        fakeDate.add(Calendar.MINUTE, additionalMinutesToRoundUpToFive(unRoundedMintes));
+        long earliestDateMilliseconds = earliestDate.getTime().getTime();
+        long latestDateMilliseconds = latestDate.getTime().getTime();
+        long randomDateMilliseconds = randomLongInRange(earliestDateMilliseconds, latestDateMilliseconds);
+        fakeDate.setTime(new Date(randomDateMilliseconds));
+        int unRoundedMinutes = fakeDate.get(Calendar.MINUTE);
+        fakeDate.add(Calendar.MINUTE, additionalMinutesToRoundUpToFive(unRoundedMinutes));
         return fakeDate;
     }
 
@@ -64,7 +64,7 @@ public class createFakeData {
 
     public static TimeInterval createFakeJourneyTime(Distance distance) {
         int averageSpeed = 500;
-        double hoursMinutesDecimal = distance.getDistance() / 500 * randomDoubleInRange(0.85, 1.15);
+        double hoursMinutesDecimal = distance.getDistance() / averageSpeed * randomDoubleInRange(0.85, 1.15);
         return new TimeInterval(hoursMinutesDecimal);
     }
 

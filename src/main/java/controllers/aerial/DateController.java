@@ -82,14 +82,7 @@ public class DateController {
     }
 
     private boolean earliestDateExist() {
-        boolean earliestDateExist;
-        try {
-            earliestDate.toString();
-            earliestDateExist=true;
-        } catch (NullPointerException exc) {
-            earliestDateExist=false;
-        }
-        return earliestDateExist;
+        return earliestDate != null;
     }
 
     private boolean correctDateFormat(String date) {

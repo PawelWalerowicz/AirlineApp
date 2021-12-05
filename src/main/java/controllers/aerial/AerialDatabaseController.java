@@ -29,12 +29,12 @@ public class AerialDatabaseController {
 
     private static List<String[]> getItemsFromDatabase(String databasePath) {
         Scanner scanner = loadDatabaseIntoScanner(databasePath);
-        List<String[]> allItems = new ArrayList<String[]>();
+        List<String[]> allItems = new ArrayList<>();
         while (scanner.hasNextLine()) {
             String item = scanner.nextLine();
-            String[] splitedItem = item.split(",(?=(?:[^\"]*\"[^\"]*\")*[^\"]*$)");
-            String[] splitedItemWithoutQuotes = removeQuotes(splitedItem);
-            allItems.add(splitedItemWithoutQuotes);
+            String[] partedItem = item.split(",(?=(?:[^\"]*\"[^\"]*\")*[^\"]*$)");
+            String[] partedItemWithoutQuotes = removeQuotes(partedItem);
+            allItems.add(partedItemWithoutQuotes);
         }
         return allItems;
     }
@@ -44,9 +44,9 @@ public class AerialDatabaseController {
         List<String> allItems = new ArrayList<>();
         while (scanner.hasNextLine()) {
             String item = scanner.nextLine();
-            String[] splitedItem = item.split(",(?=(?:[^\"]*\"[^\"]*\")*[^\"]*$)");
-            String[] splitedItemWithoutQuotes = removeQuotes(splitedItem);
-            allItems.add(splitedItemWithoutQuotes[CITY_POSITION]);
+            String[] partedItem = item.split(",(?=(?:[^\"]*\"[^\"]*\")*[^\"]*$)");
+            String[] partedItemWithoutQuotes = removeQuotes(partedItem);
+            allItems.add(partedItemWithoutQuotes[CITY_POSITION]);
         }
         return allItems;
     }

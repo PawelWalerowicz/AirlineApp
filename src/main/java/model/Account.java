@@ -1,8 +1,6 @@
 package model;
 
-import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
 public class Account {
@@ -78,15 +76,15 @@ public class Account {
     }
 
     private int getNextFreeIndex() {
-        return reservedFlights.size()+1;
+        return reservedFlights.size() + 1;
     }
 
-    public Map<Integer,Flight> getAllReservedFlights() {
+    public Map<Integer, Flight> getAllReservedFlights() {
         return reservedFlights;
     }
 
     public void printAllReservedFlights() {
-        if(reservedFlights.isEmpty()) {
+        if (reservedFlights.isEmpty()) {
             System.out.println("No flights reserved with this account");
         } else {
             reservedFlights.forEach((index, flight) -> System.out.println(index + ". " + flight));

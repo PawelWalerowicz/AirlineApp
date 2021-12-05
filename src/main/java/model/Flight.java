@@ -5,7 +5,6 @@ import utilities.Price;
 
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
-import java.util.GregorianCalendar;
 
 import static utilities.createFakeData.createFakeJourneyTime;
 import static utilities.createFakeData.createFakePrice;
