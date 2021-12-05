@@ -39,7 +39,6 @@ public class AerialDatabaseController {
         return allItems;
     }
 
-
     public static List<String> getCitiesFromDatabase() {
         Scanner scanner = loadDatabaseIntoScanner(AIRPORTS_DATABASE_FILE);
         List<String> allItems = new ArrayList<>();

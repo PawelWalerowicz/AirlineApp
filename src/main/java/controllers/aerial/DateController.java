@@ -26,8 +26,6 @@ public class DateController {
     }
 
     public Calendar askForLatestDate(Calendar earliestDate) {
-        Calendar latestDate = null;
-
         if(proceed) {
             System.out.print("Please enter latest possible date for departure (date format DD-MM-YYYY), or \"Q\" to quit, or enter to choose a week after earliest date: ");
             do {
@@ -37,7 +35,7 @@ public class DateController {
                 if (proceed && latestDate.before(earliestDate)) {
                     System.out.println("Latest date cannot be set before earliest date (" + sdfWithTime.format(earliestDate.getTime()) + "). Please try again.");
                 }
-            } while (proceed && latestDate.after(earliestDate));
+            } while (proceed && latestDate.after(earliestDate.getTime()));
         }
         return latestDate;
     }
@@ -70,8 +68,10 @@ public class DateController {
 
     private Calendar chooseDefaultDate() {
         if(earliestDateExist()) {
-            Calendar weekAfterEarliestDate = earliestDate;
+            Calendar weekAfterEarliestDate = (Calendar) earliestDate.clone();
             weekAfterEarliestDate.add(Calendar.DAY_OF_YEAR,7);
+            weekAfterEarliestDate.set(Calendar.HOUR_OF_DAY,23);
+            weekAfterEarliestDate.set(Calendar.MINUTE,59);
             System.out.println("Date set for week after earliest date: " + sdfWithoutTime.format(weekAfterEarliestDate.getTime()));
             return weekAfterEarliestDate;
         } else {
