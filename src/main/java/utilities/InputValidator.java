@@ -1,5 +1,10 @@
 package utilities;
 
+import model.Airport;
+
+import static model.Country.isCity;
+import static model.Country.isCountry;
+
 public class InputValidator {
 
     public static boolean isNameValid(String name) {
@@ -21,15 +26,6 @@ public class InputValidator {
     }
 
 
-    public static boolean isAirportOrCountryValid(String name) {
-        return true;  //todo: create valid regex for Airport or Country Name or IATA
-//        if(name.matches("[^\\s]")) {
-//            return true;
-//        } else {
-//            System.out.println("Please write correct Airport or Country name/code.");
-//            return false;
-//        }
-    }
 
     public static boolean isPasswordValid(String password) {
         return true;    //todo: create valid regex for passwords

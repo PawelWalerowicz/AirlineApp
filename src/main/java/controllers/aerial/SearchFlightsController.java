@@ -9,21 +9,18 @@ import java.util.*;
 import java.util.stream.Collectors;
 
 import static controllers.aerial.AerialDatabaseController.getRoutesFromDatabase;
-import static model.Airport.getAirportsInCity;
-import static model.Airport.getAirportsInCountry;
-import static model.Country.isCity;
-import static model.Country.isCountry;
+
 import static model.Route.DESTINATION_AIRPORT_IATA_POSITION;
 import static model.Route.SOURCE_AIRPORT_IATA_POSITION;
+import static utilities.ClearConsole.cleanConsole;
+import static utilities.InputOutputTools.clearFile;
 import static utilities.InputOutputTools.readUserIntegerInput;
-import static utilities.InputValidator.*;
 import static utilities.createFakeData.createFakeDate;
 
 
 
 public class SearchFlightsController {
     boolean proceed = true;
-    Scanner scanner;
     List<Route> availableRoutes;
     Calendar earliestDate;
     Calendar latestDate;
@@ -36,17 +33,22 @@ public class SearchFlightsController {
     }
 
     public void searchFlights() {
-        AirportSearchController asc = new AirportSearchController();
-        List<Airport> startAirports = asc.askForAirports("Departure");
-        List<Airport> endAirports = asc.askForAirports("Landing");
-        proceed = asc.getProceed();
+        AirportSearchController airportSearchController = new AirportSearchController();
+
+        List<Airport> startAirports = airportSearchController.askForAirports("Departure");
+        List<Airport> endAirports = airportSearchController.askForAirports("Landing");
+        proceed = airportSearchController.getProceed();
+
         availableRoutes = searchForFlightsInDatabase(startAirports, endAirports);
 
-        DateController dc = new DateController();
-        dc.setProceed(proceed);
-        this.earliestDate = dc.askForEarliestDate();
-        this.latestDate = dc.askForLatestDate(earliestDate);
-        proceed = dc.getProceed();
+        DateController dateController = new DateController();
+        dateController.setProceed(proceed);
+        this.earliestDate = dateController.askForEarliestDate();
+        this.latestDate = dateController.askForLatestDate(earliestDate);
+        proceed = dateController.getProceed();
+
+        cleanConsole();
+
         List<Flight> allFlights = generateFlights();
         Map<Integer,Flight> sortedFlights = sortFlightsByDate(allFlights);
         printFlights(sortedFlights);
@@ -117,7 +119,7 @@ public class SearchFlightsController {
 
             if(allRoutesOnPath.size()==0) {
                 System.out.println("No direct flights found on this route. Please try again.");
-                proceed=false;  //todo:here it get some NumberFormatExpception, not sure what i get to next
+                proceed=false;  //todo:here it gets some NumberFormatExpception, check it
             } else {
                 System.out.println("Found " + allRoutesOnPath.size() + " direct connetions.");
             }

@@ -12,7 +12,6 @@ import static model.Country.isCity;
 import static model.Country.isCountry;
 import static utilities.InputOutputTools.capitaliseFirstLetter;
 import static utilities.InputValidator.checkForQuit;
-import static utilities.InputValidator.isAirportOrCountryValid;
 
 public class AirportSearchController {
     private boolean proceed=true;
@@ -29,6 +28,7 @@ public class AirportSearchController {
                 proceed = checkForQuit(input);
             } while (proceed && !isAirportOrCountryValid(input));
         }
+
         if (proceed) {
             if (isCountry(input) || isCity(input)) {
                 if(isCountry(input)) {
@@ -52,6 +52,24 @@ public class AirportSearchController {
 
         return airports;
     }
+
+
+    public static boolean isAirportOrCountryValid(String name) {
+        boolean isCorrect=false;
+        if (isCountry(name)) {
+            isCorrect = true;
+        } else if (isCity(name)) {
+            isCorrect = true;
+        } else {
+            Airport airport = new Airport(name);
+            isCorrect = airport.airportExist();
+        }
+        if(!isCorrect) {
+            System.out.println("Airport/City/Country not found, please try again.");
+        }
+        return isCorrect;
+    }
+
 
     public boolean getProceed() {
         return proceed;

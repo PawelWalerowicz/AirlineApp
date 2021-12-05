@@ -71,8 +71,10 @@ public class InputOutputTools {
     }
 
     public static String capitaliseFirstLetter(String string) {
-        String convertedString = string.substring(0,1).toUpperCase() + string.substring(1,string.length()).toLowerCase();
-        return convertedString;
+        if(!string.isEmpty()) {
+            String convertedString = string.substring(0,1).toUpperCase() + string.substring(1,string.length()).toLowerCase();
+            return convertedString;
+        } else return string;
     }
 
 }
