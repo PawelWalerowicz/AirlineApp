@@ -17,7 +17,16 @@ public class InputOutputTools {
         return answer;
     }
 
-    private static boolean isOptionValid(int answer, int amountOfOptions) {
+    public static boolean isValidFlightOption(int answer, int amountOfFlights) {
+        if(answer>=1 && answer<=amountOfFlights) {
+            return true;
+        } else {
+            System.out.println("Invalid input, please try again.");
+            return false;
+        }
+    }
+
+    public static boolean isOptionValid(int answer, int amountOfOptions) {
         if(answer>=0 && answer<=amountOfOptions-1) {
             return true;
         } else {

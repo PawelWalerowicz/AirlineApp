@@ -1,8 +1,10 @@
 package controllers;
 
+import controllers.aerial.SearchFlightsController;
 import view.CreateAccountMenu;
 import view.LoginMenu;
 import view.MainMenu;
+import view.SearchFlightsMenu;
 
 import static utilities.InputOutputTools.readUserIntegerInput;
 import static utilities.InputOutputTools.printMenuOptions;
@@ -38,6 +40,10 @@ public class MainMenuController {
                 loginMenu.viewMenu();
                 break;
             case 2:
+                SearchFlightsMenu searchFlightsMenu = new SearchFlightsMenu();
+                searchFlightsMenu.viewMenu();
+                break;
+            case 3:
                 System.out.println("Goodbye!");
                 break;
             default:

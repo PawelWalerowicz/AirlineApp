@@ -1,9 +1,9 @@
 package utilities;
 
-import java.util.Calendar;
-import java.util.Date;
-import java.util.GregorianCalendar;
-import java.util.Random;
+import model.Route;
+
+import java.time.Duration;
+import java.util.*;
 
 public class createFakeData {
 
@@ -19,7 +19,7 @@ public class createFakeData {
     }
 
     private static int additionalMinutesToRoundUpToFive(int unRoundedMinutes) {
-        return 5-unRoundedMinutes%5;
+        return 5 - unRoundedMinutes % 5;
     }
 
     public static Price createFakePrice(Distance distance) {
@@ -40,6 +40,27 @@ public class createFakeData {
         return new Price(distance.getDistance() * randomDoubleInRange(rangeMin, rangeMax));
     }
 
+    public static int createProbableAmountOfFlightsInTimePeriod(Calendar earliestDate, Calendar latestDate) {
+        int daysAvailable = (int) Duration.between(earliestDate.toInstant(), latestDate.toInstant()).toDays();
+        if (daysAvailable < 3) {
+            return (int) randomLongInRange(1, 2);
+        } else if (daysAvailable < 7) {
+            return (int) randomLongInRange(2, 5);
+        } else if (daysAvailable < 10) {
+            return (int) randomLongInRange(3, 8);
+        } else if (daysAvailable < 30) {
+            return (int) randomLongInRange(8, 12);
+        } else if (daysAvailable < 90) {
+            return (int) randomLongInRange(10, 30);
+        } else {
+            return (int) randomLongInRange(20, 100);
+        }
+    }
+
+    public static Route chooseRandomRoute(List<Route> availableRoutes) {
+        int randomIndex = (int) randomLongInRange(0,availableRoutes.size());
+        return availableRoutes.get(randomIndex);
+    }
 
     public static TimeInterval createFakeJourneyTime(Distance distance) {
         int averageSpeed = 500;

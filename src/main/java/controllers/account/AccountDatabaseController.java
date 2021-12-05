@@ -28,16 +28,17 @@ public class AccountDatabaseController {
     }
 
     private static int getNumberOfAccountsInDatabase() {
-        Scanner scanner = null;
+        Scanner scanner;
         int accountsInDatabase = 0;
         try {
             scanner = new Scanner(new FileInputStream(USER_DATABASE_FILE));
+
+            while (scanner.hasNextLine()) {
+                scanner.nextLine();
+                accountsInDatabase++;
+            }
         } catch (FileNotFoundException e) {
             e.printStackTrace();
-        }
-        while (scanner.hasNextLine()) {
-            scanner.nextLine();
-            accountsInDatabase++;
         }
         return accountsInDatabase;
     }
@@ -63,7 +64,7 @@ public class AccountDatabaseController {
             }
         }
 
-        handleIncorrectLoginInput(accountFound,passwordCorrect);
+        handleIncorrectLoginInput(accountFound, passwordCorrect);
 
         return account;
     }
@@ -76,7 +77,7 @@ public class AccountDatabaseController {
         while (scanner.hasNextLine()) {
             String user = scanner.nextLine();
             Account currentAccount = convertDatabaseStringToAccount(user);
-            if(currentAccount.getId()==id) {
+            if (currentAccount.getId() == id) {
                 Account changedAccount = new Account(
                         id,
                         account.getName(),
@@ -94,24 +95,24 @@ public class AccountDatabaseController {
 
 
     public static void deleteAccountFromDatabase(Account account) {
-        Scanner scanner = null;
+        Scanner scanner;
         List<String> allAccounts = new ArrayList<>();
         int id = account.getId();
 
         try {
             scanner = new Scanner(new FileInputStream(USER_DATABASE_FILE));
+            int currentId = 0;
+            while (scanner.hasNextLine()) {
+                String user = scanner.nextLine();
+                Account currentAccount = convertDatabaseStringToAccount(user);
+                if (currentAccount.getId() != id) {
+                    currentId++;
+                    currentAccount.setId(currentId);
+                    allAccounts.add(currentAccount.toString());
+                }
+            }
         } catch (FileNotFoundException e) {
             e.printStackTrace();
-        }
-        int currentId=0;
-        while (scanner.hasNextLine()) {
-            String user = scanner.nextLine();
-            Account currentAccount = convertDatabaseStringToAccount(user);
-            if(currentAccount.getId()!=id) {
-                currentId++;
-                currentAccount.setId(currentId);
-                allAccounts.add(currentAccount.toString());
-            }
         }
 
         rewriteDatabase(allAccounts);
@@ -123,10 +124,10 @@ public class AccountDatabaseController {
     }
 
     private static String[] getUserAttributesFromDatabaseString(String userAsString) {
-        String[] parameters =  userAsString
+        String[] parameters = userAsString
                 .replace(",", "")
                 .split(" ");
-        parameters[0] = parameters[0].substring(0,parameters[0].length()-1);
+        parameters[0] = parameters[0].substring(0, parameters[0].length() - 1);
         return parameters;
     }
 
@@ -155,21 +156,21 @@ public class AccountDatabaseController {
     }
 
     public static boolean isInDatabase(String email) {
-        Scanner scanner = null;
+        Scanner scanner;
         boolean isInDatabase = false;
         try {
             scanner = new Scanner(new FileInputStream(USER_DATABASE_FILE));
+
+            while (scanner.hasNextLine()) {
+                String user = scanner.nextLine();
+                Account currentAccount = convertDatabaseStringToAccount(user);
+                if (currentAccount.getEmail().equals(email.toLowerCase())) {
+                    isInDatabase = true;
+                    break;
+                }
+            }
         } catch (FileNotFoundException e) {
             e.printStackTrace();
-        }
-        while (scanner.hasNextLine()) {
-            String user = scanner.nextLine();
-            Account currentAccount = convertDatabaseStringToAccount(user);
-            if (currentAccount.getEmail().equals(email.toLowerCase())) {
-                isInDatabase=true;
-                break;
-            }
-
         }
         return isInDatabase;
 
@@ -199,5 +200,6 @@ public class AccountDatabaseController {
             mainMenu.viewMenu();
         }
     }
+
 
 }

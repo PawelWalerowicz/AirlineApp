@@ -12,7 +12,7 @@ import static utilities.InputOutputTools.readUserIntegerInput;
 import static utilities.InputValidator.*;
 import static utilities.ResourcesIndex.LIST_OF_EDIT_ACCOUNT_MENU_OPTIONS;
 
-//TODO: add option to change prefered currency
+//TODO: add option to change preferred currency
 public class EditAccountController {
     Account account;
     UserMenu userMenu;
@@ -73,13 +73,12 @@ public class EditAccountController {
         Scanner scanner = new Scanner(System.in);
         String name = account.getName();
         System.out.print("Current name is " + name + ", please enter new name or \"Q\" to discard changes: ");
-        boolean proceed = true;
-        if (proceed) {
+        boolean proceed;
             do {
                 name = scanner.nextLine();
                 proceed = checkForQuit(name);
             } while (proceed && !isNameValid(name));
-        }
+
         if (!proceed) {
             editAccountMenu = new EditAccountMenu(account);
         } else {
@@ -92,7 +91,7 @@ public class EditAccountController {
     private void changeSurname() {
         Scanner scanner = new Scanner(System.in);
         String surname = account.getSurname();
-        boolean proceed = true;
+        boolean proceed;
         System.out.print("Current surname is " + surname + ", please enter new surname or \"Q\" to discard changes: ");
         do {
             surname = scanner.nextLine();
@@ -111,7 +110,7 @@ public class EditAccountController {
     private void changeEmail() {
         Scanner scanner = new Scanner(System.in);
         String email = account.getEmail();
-        boolean proceed = true;
+        boolean proceed;
         System.out.print("Current email is " + email + ", please enter new email or \"Q\" to discard changes: ");
         do {
             email = scanner.nextLine();
@@ -131,13 +130,13 @@ public class EditAccountController {
     private void changePassword() {
         Scanner scanner = new Scanner(System.in);
         String password;
-        boolean proceed = true;
+        boolean proceed;
         System.out.print("Please enter new password or \"Q\" to discard changes: ");
         do {
             password = scanner.nextLine();
             proceed = checkForQuit(password);
         } while (!isPasswordValid(password));
-        String confirmPassword = null;
+        String confirmPassword;
         if (proceed) {
             do {
                 System.out.print("Repeat password: ");
@@ -159,7 +158,7 @@ public class EditAccountController {
         Scanner scanner = new Scanner(System.in);
         String password;
         System.out.print("You are about to delete your account. If you really want to do that enter your password or \"Q\" to quit: ");
-        boolean proceed = true;
+        boolean proceed;
         do {
             password = scanner.nextLine();
             proceed = checkForQuit(password);

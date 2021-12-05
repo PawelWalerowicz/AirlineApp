@@ -30,7 +30,7 @@ public class DateController {
             System.out.print("Please enter latest possible date for departure (date format DD-MM-YYYY), or \"Q\" to quit, or enter to choose a week after earliest date: ");
             do {
                 latestDate = askForDate();
-                latestDate.set(Calendar.HOUR,23);
+                latestDate.set(Calendar.HOUR_OF_DAY,23);
                 latestDate.set(Calendar.MINUTE,59);
                 if (proceed && latestDate.before(earliestDate)) {
                     System.out.println("Latest date cannot be set before earliest date (" + sdfWithTime.format(earliestDate.getTime()) + "). Please try again.");
