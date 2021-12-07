@@ -13,7 +13,7 @@ public class ResourcesIndex {
     public static final String COUNTRIES_DATABASE_FILE = convertRelativePathToUnrelative("../AerialData/Countries");
     public static final String AIRPORTS_DATABASE_FILE = convertRelativePathToUnrelative("../AerialData/Airports");
     public static final String ROUTES_DATABASE_FILE = convertRelativePathToUnrelative("../AerialData/Routes");
-
+    public static final String FLIGHTS_DATABASE_FILE = convertRelativePathToUnrelative("../AerialData/GeneratedFlights");
 
     private static String convertRelativePathToUnrelative(String relativePath) {
         String unreliativeFileReference="";

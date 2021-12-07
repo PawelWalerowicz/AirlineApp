@@ -120,14 +120,15 @@ public class AccountDatabaseController {
     }
 
     private static Account convertDatabaseStringToAccount(String userAsString) {
-        return getAccountFromAttributes(getUserAttributesFromDatabaseString(userAsString));
+        String[] userAttributes = getUserAttributesFromDatabaseString(userAsString);
+        return getAccountFromAttributes(userAttributes);
     }
 
     private static String[] getUserAttributesFromDatabaseString(String userAsString) {
         String[] parameters = userAsString
                 .replace(",", "")
                 .split(" ");
-        parameters[0] = parameters[0].substring(0, parameters[0].length() - 1);
+        parameters[0] = parameters[0].replace(".","");
         return parameters;
     }
 

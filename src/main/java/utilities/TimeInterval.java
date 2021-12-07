@@ -6,9 +6,11 @@ public class TimeInterval {
     public TimeInterval(int[] hoursMinutes) {
         this.hoursMinutes = hoursMinutes;
     }
+
     public TimeInterval (double hoursAndMinutesDecimal) {
         this.hoursMinutes = convertDecimalToHoursAndMinutes(hoursAndMinutesDecimal);
     }
+
 
 
     public static int[] convertDecimalToHoursAndMinutes(double hoursAndMinutesDecimal) {

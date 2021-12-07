@@ -134,7 +134,7 @@ public class SearchFlightsController {
         return allRoutesOnPath;
     }
 
-    private void chooseFlight() {
+    private void chooseFlight() {     //TODO: add option to purchase multiple tickets
         boolean validOption;
         int chosenOption = -1;
         Scanner scanner = new Scanner(System.in);
@@ -162,7 +162,8 @@ public class SearchFlightsController {
     }
 
     private void addFlightToAccount(Flight flight) {
-        account.addFlightToAccount(flight);
+        FlightDatabaseController flightDatabaseController = new FlightDatabaseController(account, flight);
+        flightDatabaseController.saveFlightToDatabase();
     }
 
     private void returnToMainMenu() {

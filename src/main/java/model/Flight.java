@@ -27,6 +27,14 @@ public class Flight {
         this.landingDate = calculateLandingDate();
     }
 
+    public Flight(Route route, Calendar departureDate, TimeInterval flightTime, Calendar landingDate, Price price) {
+        this.route = route;
+        this.price = price;
+        this.departureDate = departureDate;
+        this.flightTime = flightTime;
+        this.landingDate = calculateLandingDate();
+    }
+
     private Calendar calculateLandingDate() {
         Calendar landingDate = (Calendar) this.departureDate.clone();
         landingDate.add(Calendar.HOUR,this.flightTime.getHours());
@@ -40,8 +48,24 @@ public class Flight {
         return departureDate;
     }
 
+    public Calendar getLandingDate() {
+        return landingDate;
+    }
+
+    public Price getPrice() {
+        return price;
+    }
+
     public void setDepartureDate(Calendar departureDate) {
         this.departureDate = departureDate;
+    }
+
+    public TimeInterval getFlightTime() {
+        return flightTime;
+    }
+
+    public Route getRoute() {
+        return route;
     }
 
     @Override
@@ -52,4 +76,6 @@ public class Flight {
                 + " (" + flightTime.toString()
                 +"), price: " + price.toString() + "\n" ;
     }
+
+
 }

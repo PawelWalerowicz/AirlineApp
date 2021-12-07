@@ -82,6 +82,8 @@ public class InputOutputTools {
     }
 
     public static String capitaliseFirstLetter(String string) {
+
+        //todo: add funcionality for multi-word names like New York
         if (!string.isEmpty()) {
             return string.substring(0, 1).toUpperCase() + string.substring(1).toLowerCase();
         } else return string;

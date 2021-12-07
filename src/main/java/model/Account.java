@@ -9,7 +9,6 @@ public class Account {
     private String surname;
     private String email;
     private String password;
-    private Map<Integer, Flight> reservedFlights = new HashMap();
 
     public Account(int id, String name, String surname, String email, String password) {
         this.id = id;
@@ -69,26 +68,6 @@ public class Account {
 
     public boolean hasId() {
         return getId() != 0;
-    }
-
-    public void addFlightToAccount(Flight flight) {
-        reservedFlights.put(getNextFreeIndex(), flight);    //todo: create flightsDatabase for account, with file creation, import and export to store reserved flights permanently
-    }
-
-    private int getNextFreeIndex() {
-        return reservedFlights.size() + 1;
-    }
-
-    public Map<Integer, Flight> getAllReservedFlights() {
-        return reservedFlights;
-    }
-
-    public void printAllReservedFlights() {
-        if (reservedFlights.isEmpty()) {
-            System.out.println("No flights reserved with this account");
-        } else {
-            reservedFlights.forEach((index, flight) -> System.out.println(index + ". " + flight));
-        }
     }
 
     public String toString() {

@@ -9,12 +9,12 @@ public class Airline {
     String IATA;
     String ICAO;
 
-    private final int NAME_POSITION = 1;
-    private final int IATA_POSITION = 3;
-    private final int ICAO_POSITION = 4;
+    private static final int NAME_POSITION = 1;
+    private static final int IATA_POSITION = 3;
+    private static final int ICAO_POSITION = 4;
 
-    private final int IATA_LENGTH = 2;
-    private final int ICAO_LENGTH = 3;
+    private static final int IATA_LENGTH = 2;
+    private static final int ICAO_LENGTH = 3;
 
 
     public Airline(String name, String IATA, String ICAO) {
@@ -23,53 +23,49 @@ public class Airline {
         this.ICAO = ICAO;
     }
 
-    public Airline(String NAMEorIATAorICAO) {
-        createAirline(NAMEorIATAorICAO);
-    }
-
-    public Airline createAirline(String input) {
+    public static Airline createAirline(String NAMEorIATAorICAO) {
         Airline airline=null;
-        if(isInputAName(input)) {
-            airline = createAirlineFromName(input);
-        } else if(isInputAIATA(input)) {
-            airline = createAirlineFromIATA(input);
-        } else if(isInputAICAO(input)) {
-            airline = createAirlineFromICAO(input);
+        if(isInputAName(NAMEorIATAorICAO)) {
+            airline = createAirlineFromName(NAMEorIATAorICAO);
+        } else if(isInputAIATA(NAMEorIATAorICAO)) {
+            airline = createAirlineFromIATA(NAMEorIATAorICAO);
+        } else if(isInputAICAO(NAMEorIATAorICAO)) {
+            airline = createAirlineFromICAO(NAMEorIATAorICAO);
         }
         return airline;
     }
 
-    private boolean isInputAName(String input) {
+    private static boolean isInputAName(String input) {
         return input.length() > ICAO_LENGTH;
     }
 
-    private boolean isInputAIATA(String input) {
+    private static boolean isInputAIATA(String input) {
         return input.length() == IATA_LENGTH;
     }
 
-    private boolean isInputAICAO(String input) {
+    private static boolean isInputAICAO(String input) {
         return input.length() == ICAO_LENGTH;
     }
 
-    private Airline createAirlineFromName(String name) {
-        IATA = getIATAFromName(name);
-        ICAO = getICAOFromName(name);
+    private static Airline createAirlineFromName(String name) {
+        String IATA = getIATAFromName(name);
+        String ICAO = getICAOFromName(name);
         return new Airline(name, IATA, ICAO);
     }
 
-    private Airline createAirlineFromIATA(String IATA) {
-        name = getNameFromIATA(IATA);
-        ICAO = getICAOFromName(name);
+    private static Airline createAirlineFromIATA(String IATA) {
+        String name = getNameFromIATA(IATA);
+        String ICAO = getICAOFromName(name);
         return new Airline(name, IATA, ICAO);
     }
 
-    private Airline createAirlineFromICAO(String ICAO) {
-        name = getNameFromICAO(ICAO);
-        IATA = getIATAFromName(name);
+    private static Airline createAirlineFromICAO(String ICAO) {
+        String name = getNameFromICAO(ICAO);
+        String IATA = getIATAFromName(name);
         return new Airline(name, IATA, ICAO);
     }
 
-    private String getIATAFromName(String name) {
+    private static String getIATAFromName(String name) {
         List<String[]> allAirlines = getAirlinesFromDatabase();
         String IATA = null;
         for (String[] airline : allAirlines) {
@@ -80,7 +76,7 @@ public class Airline {
         return IATA;
     }
 
-    private String getICAOFromName(String name) {
+    private static String getICAOFromName(String name) {
         List<String[]> allAirlines = getAirlinesFromDatabase();
         String ICAO = null;
         for (String[] airline : allAirlines) {
@@ -91,7 +87,7 @@ public class Airline {
         return ICAO;
     }
 
-    private String getNameFromIATA(String IATA) {
+    private static String getNameFromIATA(String IATA) {
         List<String[]> allAirlines = getAirlinesFromDatabase();
         String name = "";
         for (String[] airline : allAirlines) {
@@ -102,7 +98,7 @@ public class Airline {
         return name;
     }
 
-    private String getNameFromICAO(String ICAO) {
+    private static String getNameFromICAO(String ICAO) {
         List<String[]> allAirlines = getAirlinesFromDatabase();
         String name = "";
         for (String[] airline : allAirlines) {

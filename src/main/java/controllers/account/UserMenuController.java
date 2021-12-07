@@ -1,5 +1,7 @@
 package controllers.account;
 
+import controllers.aerial.FlightDatabaseController;
+import controllers.aerial.SearchFlightsController;
 import model.Account;
 import view.EditAccountMenu;
 import view.MainMenu;
@@ -38,8 +40,8 @@ public class UserMenuController {
                 editAccountMenu.viewMenu();
                 break;
             case 1:
-                System.out.println("All your reserved flights: ");
-                account.printAllReservedFlights();
+                FlightDatabaseController flightDatabaseController = new FlightDatabaseController(account);
+                flightDatabaseController.printAllFlights();     //todo: create EditYourFlightsMenu
                 break;
             case 2:
                 SearchFlightsMenu searchFlightsMenu = new SearchFlightsMenu(account);
