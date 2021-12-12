@@ -1,12 +1,11 @@
-package controllers.account;
+package menus.userMenu;
 
-import controllers.aerial.FlightDatabaseController;
-import controllers.aerial.SearchFlightsController;
+import database.aerial.FlightDatabaseController;
+import menus.TerminalMenu;
 import model.Account;
-import view.EditAccountMenu;
-import view.MainMenu;
-import view.SearchFlightsMenu;
-import view.UserMenu;
+import menus.editAccountMenu.EditAccountMenu;
+import menus.mainMenu.MainMenu;
+import menus.searchFlightMenu.SearchFlightsMenu;
 
 import static utilities.ClearConsole.cleanConsole;
 import static utilities.InputOutputTools.readUserIntegerInput;
@@ -28,7 +27,7 @@ public class UserMenuController {
             changeView(option);
         } catch (NumberFormatException exc) {
             System.out.println("Wrong input, please try again.\n");
-            UserMenu userMenu = new UserMenu(account);
+            TerminalMenu userMenu = UserMenu.getInstance(account);
             userMenu.viewMenu();
         }
     }
@@ -36,7 +35,7 @@ public class UserMenuController {
     public void changeView(int option) {
         switch(option) {
             case 0:
-                EditAccountMenu editAccountMenu = new EditAccountMenu(account);
+                TerminalMenu editAccountMenu = EditAccountMenu.getInstance(account);
                 editAccountMenu.viewMenu();
                 break;
             case 1:
@@ -44,12 +43,12 @@ public class UserMenuController {
                 flightDatabaseController.printAllFlights();     //todo: create EditYourFlightsMenu
                 break;
             case 2:
-                SearchFlightsMenu searchFlightsMenu = new SearchFlightsMenu(account);
+                TerminalMenu searchFlightsMenu = SearchFlightsMenu.getInstance(account);
                 searchFlightsMenu.viewMenu();
                 break;
             case 3:
                 cleanConsole();
-                MainMenu mainMenu = new MainMenu();
+                TerminalMenu mainMenu = MainMenu.getInstance();
                 mainMenu.viewMenu();
                 break;
             case 4:

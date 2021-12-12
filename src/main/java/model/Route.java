@@ -1,10 +1,8 @@
 package model;
 
-import utilities.Distance;
-import utilities.TimeInterval;
 import java.util.List;
 
-import static controllers.aerial.AerialDatabaseController.getRoutesFromDatabase;
+import static database.aerial.AerialDatabaseController.getRoutesFromDatabase;
 
 public class Route {
     Airline airline;

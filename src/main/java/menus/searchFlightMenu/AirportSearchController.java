@@ -1,4 +1,4 @@
-package controllers.aerial;
+package menus.searchFlightMenu;
 
 import model.Airport;
 

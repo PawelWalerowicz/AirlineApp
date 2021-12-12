@@ -2,7 +2,7 @@ package model;
 
 import java.util.*;
 
-import static controllers.aerial.AerialDatabaseController.getAirportsFromDatabase;
+import static database.aerial.AerialDatabaseController.getAirportsFromDatabase;
 import static java.lang.Double.parseDouble;
 
 public class Airport {

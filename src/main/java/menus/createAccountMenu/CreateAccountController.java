@@ -1,12 +1,12 @@
-package controllers.account;
+package menus.createAccountMenu;
 
 import model.Account;
-import view.MainMenu;
+import menus.mainMenu.MainMenu;
 
 import java.util.Scanner;
 
-import static controllers.account.AccountDatabaseController.isInDatabase;
-import static controllers.account.AccountDatabaseController.saveAccountToDatabase;
+import static database.account.AccountDatabaseController.isInDatabase;
+import static database.account.AccountDatabaseController.saveAccountToDatabase;
 import static utilities.ClearConsole.cleanConsole;
 import static utilities.InputValidator.*;
 
@@ -26,8 +26,7 @@ public class CreateAccountController {
         String password = askForPasswordWithConfirmation();
         createAccountAndSaveToDatabase(name,surname,email,password);
         cleanConsole();
-        MainMenu mainMenu = new MainMenu();
-        mainMenu.viewMenu();
+        MainMenu.getInstance().viewMenu();
     }
 
     private String askForName() {

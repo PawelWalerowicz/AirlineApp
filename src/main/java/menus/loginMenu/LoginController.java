@@ -1,12 +1,13 @@
-package controllers;
+package menus.loginMenu;
 
+import menus.TerminalMenu;
 import model.Account;
-import view.MainMenu;
-import view.UserMenu;
+import menus.mainMenu.MainMenu;
+import menus.userMenu.UserMenu;
 
 import java.util.Scanner;
 
-import static controllers.account.AccountDatabaseController.getAccountFromDatabase;
+import static database.account.AccountDatabaseController.getAccountFromDatabase;
 import static utilities.ClearConsole.cleanConsole;
 import static utilities.InputValidator.*;
 
@@ -15,22 +16,21 @@ public class LoginController {
     boolean proceed = true;
 
     public LoginController() {
-        scanner = new Scanner(System.in);
         login();
     }
 
     public void login() {
-
+        scanner = new Scanner(System.in);
         String email = askForEmail();
         String password = askForPassword();
 
         if (proceed) {
             Account account = getAccountFromDatabase(email, password);
-            UserMenu userMenu = new UserMenu(account);
+            TerminalMenu userMenu = UserMenu.getInstance(account);
             userMenu.viewMenu();
         } else {
             cleanConsole();
-            MainMenu mainMenu = new MainMenu();
+            TerminalMenu mainMenu = MainMenu.getInstance();
             mainMenu.viewMenu();
         }
     }

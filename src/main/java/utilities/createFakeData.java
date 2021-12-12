@@ -1,6 +1,9 @@
 package utilities;
 
+import model.Distance;
+import model.Price;
 import model.Route;
+import model.TimeInterval;
 
 import java.time.Duration;
 import java.util.*;

@@ -1,9 +1,10 @@
-package controllers.account;
+package menus.editAccountMenu;
 
+import database.account.AccountDatabaseController;
+import menus.TerminalMenu;
 import model.Account;
-import view.EditAccountMenu;
-import view.MainMenu;
-import view.UserMenu;
+import menus.mainMenu.MainMenu;
+import menus.userMenu.UserMenu;
 
 import java.util.Scanner;
 
@@ -15,9 +16,7 @@ import static utilities.ResourcesIndex.LIST_OF_EDIT_ACCOUNT_MENU_OPTIONS;
 //TODO: add option to change preferred currency
 public class EditAccountController {
     Account account;
-    UserMenu userMenu;
-    EditAccountMenu editAccountMenu;
-    MainMenu mainMenu = new MainMenu();
+    TerminalMenu editAccountMenu;
 
     public EditAccountController(Account account) {
         this.account = account;
@@ -37,7 +36,7 @@ public class EditAccountController {
     }
 
     public void changeView(int option) {
-        userMenu = new UserMenu(account);
+        TerminalMenu userMenu = UserMenu.getInstance(account);
         switch (option) {
             case 0:
                 changeName();
@@ -57,7 +56,7 @@ public class EditAccountController {
                 break;
             case 4:
                 deleteAccount();
-                mainMenu.viewMenu();
+                MainMenu.getInstance().viewMenu();
                 break;
             case 5:
                 userMenu.viewMenu();
@@ -80,7 +79,7 @@ public class EditAccountController {
             } while (proceed && !isNameValid(name));
 
         if (!proceed) {
-            editAccountMenu = new EditAccountMenu(account);
+            editAccountMenu = EditAccountMenu.getInstance(account);
         } else {
             account.setName(name);
             AccountDatabaseController.editAccountInDatabase(account.getId(), account);
@@ -99,7 +98,7 @@ public class EditAccountController {
         } while (proceed && !isNameValid(surname));
 
         if (!proceed) {
-            editAccountMenu = new EditAccountMenu(account);
+            editAccountMenu = EditAccountMenu.getInstance(account);
         } else {
             account.setSurname(surname);
             AccountDatabaseController.editAccountInDatabase(account.getId(), account);
@@ -118,7 +117,7 @@ public class EditAccountController {
         } while (proceed && !isEmailValid(email));
 
         if (!proceed) {
-            editAccountMenu = new EditAccountMenu(account);
+            editAccountMenu = EditAccountMenu.getInstance(account);
         } else {
             account.setEmail(email);
             AccountDatabaseController.editAccountInDatabase(account.getId(), account);
@@ -146,7 +145,7 @@ public class EditAccountController {
         }
 
         if (!proceed) {
-            editAccountMenu = new EditAccountMenu(account);
+            editAccountMenu = EditAccountMenu.getInstance(account);
         } else {
             account.setPassword(password);
             AccountDatabaseController.editAccountInDatabase(account.getId(), account);
@@ -165,7 +164,7 @@ public class EditAccountController {
         } while (!isPasswordValid(password));
 
         if (!proceed) {
-            mainMenu.viewMenu();
+            MainMenu.getInstance().viewMenu();
         } else {
             AccountDatabaseController.deleteAccountFromDatabase(account);
             System.out.println("Account deleted. Goodbye.");

@@ -1,4 +1,4 @@
-package utilities;
+package model;
 
 public class TimeInterval {
     int[] hoursMinutes;

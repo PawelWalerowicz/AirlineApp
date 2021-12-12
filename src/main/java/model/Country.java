@@ -3,8 +3,8 @@ package model;
 
 import java.util.List;
 
-import static controllers.aerial.AerialDatabaseController.getCitiesFromDatabase;
-import static controllers.aerial.AerialDatabaseController.getCountriesFromDatabase;
+import static database.aerial.AerialDatabaseController.getCitiesFromDatabase;
+import static database.aerial.AerialDatabaseController.getCountriesFromDatabase;
 
 public class Country {
     String name;

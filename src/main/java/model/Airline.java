@@ -2,7 +2,7 @@ package model;
 
 import java.util.List;
 
-import static controllers.aerial.AerialDatabaseController.getAirlinesFromDatabase;
+import static database.aerial.AerialDatabaseController.getAirlinesFromDatabase;
 
 public class Airline {
     String name;

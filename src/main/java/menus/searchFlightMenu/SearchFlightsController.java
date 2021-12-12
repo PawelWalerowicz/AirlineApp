@@ -1,17 +1,18 @@
-package controllers.aerial;
+package menus.searchFlightMenu;
 
+import database.aerial.FlightDatabaseController;
 import model.Account;
 import model.Airport;
 import model.Flight;
 import model.Route;
-import view.MainMenu;
-import view.UserMenu;
+import menus.mainMenu.MainMenu;
+import menus.userMenu.UserMenu;
 
 import java.text.SimpleDateFormat;
 import java.util.*;
 import java.util.stream.Collectors;
 
-import static controllers.aerial.AerialDatabaseController.getRoutesFromDatabase;
+import static database.aerial.AerialDatabaseController.getRoutesFromDatabase;
 import static model.Route.DESTINATION_AIRPORT_IATA_POSITION;
 import static model.Route.SOURCE_AIRPORT_IATA_POSITION;
 import static utilities.ClearConsole.cleanConsole;
@@ -170,17 +171,14 @@ public class SearchFlightsController {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Press 'enter' to return to Main Menu. If you would like to reserve a ticket, please login to your account.");
         scanner.nextLine();
-        MainMenu mainMenu = new MainMenu();
-        mainMenu.viewMenu();
+        MainMenu.getInstance().viewMenu();
     }
 
     private void quit() {
         if (account == null) {
-            MainMenu mainMenu = new MainMenu();
-            mainMenu.viewMenu();
+            MainMenu.getInstance().viewMenu();
         } else {
-            UserMenu userMenu = new UserMenu(account);
-            userMenu.viewMenu();
+            UserMenu.getInstance(account).viewMenu();
         }
     }
 

@@ -7,11 +7,17 @@ public class InputOutputTools {
 
     public static int readUserIntegerInput(int amountOfOptions) throws NumberFormatException {
         Scanner userInput = new Scanner(System.in);
-        int answer;
+        int answer = -1;
         boolean validOption;
+
         do {
-            answer = Integer.parseInt(userInput.nextLine());
-            validOption = isOptionValid(answer, amountOfOptions);
+            try {
+                answer = Integer.parseInt(userInput.nextLine());
+                validOption = isOptionValid(answer, amountOfOptions);
+            } catch(NumberFormatException exc ) {
+                System.out.println("Invalid input, please try again.");
+                validOption=false;
+            }
         } while (!validOption);
 
         return answer;

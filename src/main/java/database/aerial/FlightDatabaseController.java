@@ -1,8 +1,8 @@
-package controllers.aerial;
+package database.aerial;
 
 import model.*;
-import utilities.Price;
-import utilities.TimeInterval;
+import model.Price;
+import model.TimeInterval;
 
 import java.io.FileWriter;
 import java.io.IOException;

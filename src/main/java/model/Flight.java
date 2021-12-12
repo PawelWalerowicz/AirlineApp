@@ -1,8 +1,5 @@
 package model;
 
-import utilities.TimeInterval;
-import utilities.Price;
-
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 

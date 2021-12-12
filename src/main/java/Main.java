@@ -1,8 +1,9 @@
-import view.MainMenu;
+import menus.TerminalMenu;
+import menus.mainMenu.MainMenu;
 
 public class Main {
     public static void main(String[] args) {
-        MainMenu mainMenu = new MainMenu();
+        TerminalMenu mainMenu = MainMenu.getInstance();
         mainMenu.viewMenu();
     }
 

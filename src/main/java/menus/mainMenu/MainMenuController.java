@@ -1,9 +1,9 @@
-package controllers;
+package menus.mainMenu;
 
-import view.CreateAccountMenu;
-import view.LoginMenu;
-import view.MainMenu;
-import view.SearchFlightsMenu;
+import menus.TerminalMenu;
+import menus.createAccountMenu.CreateAccountMenu;
+import menus.loginMenu.LoginMenu;
+import menus.searchFlightMenu.SearchFlightsMenu;
 
 import static utilities.InputOutputTools.readUserIntegerInput;
 import static utilities.InputOutputTools.printMenuOptions;
@@ -23,7 +23,7 @@ public class MainMenuController {
             changeView(option);
         } catch (NumberFormatException exc) {
             System.out.println("Wrong input, please try again.\n");
-            MainMenu mainMenu = new MainMenu();
+            TerminalMenu mainMenu = MainMenu.getInstance();
             mainMenu.viewMenu();
         }
     }
@@ -31,15 +31,15 @@ public class MainMenuController {
     public void changeView(int option) {
         switch (option) {
             case 0:
-                CreateAccountMenu createAccountMenu = new CreateAccountMenu();
+                TerminalMenu createAccountMenu = CreateAccountMenu.getInstance();
                 createAccountMenu.viewMenu();
                 break;
             case 1:
-                LoginMenu loginMenu = new LoginMenu();
+                TerminalMenu loginMenu = LoginMenu.getInstance();
                 loginMenu.viewMenu();
                 break;
             case 2:
-                SearchFlightsMenu searchFlightsMenu = new SearchFlightsMenu();
+                TerminalMenu searchFlightsMenu = SearchFlightsMenu.getInstance();
                 searchFlightsMenu.viewMenu();
                 break;
             case 3:

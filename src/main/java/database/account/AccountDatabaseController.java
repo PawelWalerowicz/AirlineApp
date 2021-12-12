@@ -1,7 +1,8 @@
-package controllers.account;
+package database.account;
 
+import menus.TerminalMenu;
 import model.Account;
-import view.MainMenu;
+import menus.mainMenu.MainMenu;
 
 import java.io.*;
 import java.util.ArrayList;
@@ -178,7 +179,7 @@ public class AccountDatabaseController {
     }
 
     private static void handleIncorrectLoginInput(boolean accountFound, boolean passwordCorrect) {
-        MainMenu mainMenu = new MainMenu();
+        TerminalMenu mainMenu = MainMenu.getInstance();
         if (!accountFound) {
             System.out.println("Account not found.");
             try {
