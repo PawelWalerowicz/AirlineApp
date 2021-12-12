@@ -1,5 +1,6 @@
 package database.aerial;
 
+import menus.Singleton;
 import model.*;
 import model.Price;
 import model.TimeInterval;
@@ -30,7 +31,6 @@ public class FlightDatabaseController {
         this.account = account;
         this.flight = flight;
     }
-
 
     public FlightDatabaseController(Account account) {
         this.account = account;

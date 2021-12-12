@@ -1,6 +1,9 @@
 package menus.searchFlightMenu;
 
 import database.aerial.FlightDatabaseController;
+import menus.Singleton;
+import menus.TerminalMenu;
+import menus.userMenu.UserMenuController;
 import model.Account;
 import model.Airport;
 import model.Flight;
@@ -20,27 +23,40 @@ import static utilities.InputOutputTools.isValidFlightOption;
 import static utilities.createFakeData.*;
 
 
-public class SearchFlightsController {
+public class SearchFlightsController implements Singleton {
     boolean proceed = true;
     Calendar earliestDate;
     Calendar latestDate;
     List<Route> availableRoutes;
     Map<Integer, Flight> availableFlights;
     Account account;
+    private static SearchFlightsController searchFlightsControllerInstance;
 
     SimpleDateFormat sdfWithTime = new SimpleDateFormat("E dd-MM-yyyy, HH:mm");
     SimpleDateFormat sdfWithoutTime = new SimpleDateFormat("E dd-MM-yyyy");
 
-    public SearchFlightsController() {
-        searchFlights();
+
+    public static SearchFlightsController getInstance() {
+        if(searchFlightsControllerInstance==null) {
+            searchFlightsControllerInstance = new SearchFlightsController();
+        }
+        return searchFlightsControllerInstance;
     }
 
-    public SearchFlightsController(Account account) {
-        this.account = account;
-        searchFlights();
-    }
+
+    private SearchFlightsController() {
+            }
 
     public void searchFlights() {
+        this.account=null;
+        searchForRoutes();
+        askForDates();
+        generateFlights();
+        printFlights(availableFlights);
+    }
+
+    public void searchFlights(Account account) {
+        this.account=account;
         searchForRoutes();
         askForDates();
         generateFlights();
@@ -48,7 +64,7 @@ public class SearchFlightsController {
     }
 
     private void searchForRoutes() {
-        AirportSearchController airportSearchController = new AirportSearchController();
+        AirportSearchController airportSearchController = AirportSearchController.getInstance();
         List<Airport> departureAirport = null;
         List<Airport> landingAirport = null;
         if (proceed) {
@@ -62,7 +78,7 @@ public class SearchFlightsController {
     }
 
     private void askForDates() {
-        DateController dateController = new DateController();
+        DateController dateController = DateController.getInstance();
         dateController.setProceed(proceed);
         if (proceed) {
             earliestDate = dateController.askForEarliestDate();
@@ -178,10 +194,9 @@ public class SearchFlightsController {
         if (account == null) {
             MainMenu.getInstance().viewMenu();
         } else {
-            UserMenu.getInstance(account).viewMenu();
+            UserMenu.getInstance().viewMenu(account);
         }
     }
-
 
     //todo: refactor these methods into RouteController class:
     private List<String[]> getAllRoutesStartingOnAirport(List<Airport> departureAirports) {

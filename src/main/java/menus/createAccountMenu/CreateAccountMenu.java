@@ -1,12 +1,13 @@
 package menus.createAccountMenu;
 
+import menus.Singleton;
 import menus.TerminalMenu;
 import menus.editAccountMenu.EditAccountMenu;
 import model.Account;
 
 import static utilities.ClearConsole.cleanConsole;
 
-public class CreateAccountMenu implements TerminalMenu {
+public class CreateAccountMenu implements TerminalMenu, Singleton {
     static TerminalMenu createAccountMenuInstance;
 
     public static TerminalMenu getInstance() {
@@ -24,6 +25,7 @@ public class CreateAccountMenu implements TerminalMenu {
     public void viewMenu() {
         cleanConsole();
         System.out.println("Please enter following information to create an account (or press \"Q\" to quit):");
-        CreateAccountController createAccountController = new CreateAccountController();
+        CreateAccountController createAccountController = CreateAccountController.getInstance();
+        createAccountController.createAccount();
     }
 }

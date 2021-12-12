@@ -1,5 +1,6 @@
 package menus.createAccountMenu;
 
+import menus.editAccountMenu.EditAccountController;
 import model.Account;
 import menus.mainMenu.MainMenu;
 
@@ -13,9 +14,17 @@ import static utilities.InputValidator.*;
 public class CreateAccountController {
     boolean proceed = true;
     Scanner scanner;
+    private static CreateAccountController createAccountControllerInstance;
 
-    public CreateAccountController() {
-        createAccount();
+    public static CreateAccountController getInstance() {
+        if(createAccountControllerInstance==null) {
+            createAccountControllerInstance = new CreateAccountController();
+        }
+        return createAccountControllerInstance;
+    }
+
+
+    private CreateAccountController() {
     }
 
     public void createAccount() {

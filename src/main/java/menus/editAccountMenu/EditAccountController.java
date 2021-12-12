@@ -1,7 +1,10 @@
 package menus.editAccountMenu;
 
 import database.account.AccountDatabaseController;
+import menus.Singleton;
 import menus.TerminalMenu;
+import menus.TerminalMenuWithUser;
+import menus.loginMenu.LoginController;
 import model.Account;
 import menus.mainMenu.MainMenu;
 import menus.userMenu.UserMenu;
@@ -14,16 +17,23 @@ import static utilities.InputValidator.*;
 import static utilities.ResourcesIndex.LIST_OF_EDIT_ACCOUNT_MENU_OPTIONS;
 
 //TODO: add option to change preferred currency
-public class EditAccountController {
+public class EditAccountController implements Singleton {
     Account account;
-    TerminalMenu editAccountMenu;
+    private TerminalMenuWithUser editAccountMenu;
+    private static EditAccountController editAccountControllerInstance;
 
-    public EditAccountController(Account account) {
-        this.account = account;
-        viewOptions();
+    public static EditAccountController getInstance() {
+        if(editAccountControllerInstance==null) {
+            editAccountControllerInstance = new EditAccountController();
+        }
+        return editAccountControllerInstance;
     }
 
-    public void viewOptions() {
+    private EditAccountController() {
+    }
+
+    public void viewOptions(Account account) {
+        this.account=account;
         int amountOfOptions = printMenuOptions(LIST_OF_EDIT_ACCOUNT_MENU_OPTIONS);
         try {
             int option = readUserIntegerInput(amountOfOptions);
@@ -36,30 +46,30 @@ public class EditAccountController {
     }
 
     public void changeView(int option) {
-        TerminalMenu userMenu = UserMenu.getInstance(account);
+        TerminalMenuWithUser userMenu = UserMenu.getInstance();
         switch (option) {
             case 0:
                 changeName();
-                userMenu.viewMenu();
+                userMenu.viewMenu(account);
                 break;
             case 1:
                 changeSurname();
-                userMenu.viewMenu();
+                userMenu.viewMenu(account);
                 break;
             case 2:
                 changeEmail();
-                userMenu.viewMenu();
+                userMenu.viewMenu(account);
                 break;
             case 3:
                 changePassword();
-                userMenu.viewMenu();
+                userMenu.viewMenu(account);
                 break;
             case 4:
                 deleteAccount();
                 MainMenu.getInstance().viewMenu();
                 break;
             case 5:
-                userMenu.viewMenu();
+                userMenu.viewMenu(account);
                 break;
             default:
                 System.out.println("Something went wrong.");
@@ -79,7 +89,8 @@ public class EditAccountController {
             } while (proceed && !isNameValid(name));
 
         if (!proceed) {
-            editAccountMenu = EditAccountMenu.getInstance(account);
+            editAccountMenu = EditAccountMenu.getInstance();
+            editAccountMenu.viewMenu();
         } else {
             account.setName(name);
             AccountDatabaseController.editAccountInDatabase(account.getId(), account);
@@ -98,7 +109,8 @@ public class EditAccountController {
         } while (proceed && !isNameValid(surname));
 
         if (!proceed) {
-            editAccountMenu = EditAccountMenu.getInstance(account);
+            editAccountMenu = EditAccountMenu.getInstance();
+            editAccountMenu.viewMenu(account);
         } else {
             account.setSurname(surname);
             AccountDatabaseController.editAccountInDatabase(account.getId(), account);
@@ -117,7 +129,8 @@ public class EditAccountController {
         } while (proceed && !isEmailValid(email));
 
         if (!proceed) {
-            editAccountMenu = EditAccountMenu.getInstance(account);
+            editAccountMenu = EditAccountMenu.getInstance();
+            editAccountMenu.viewMenu(account);
         } else {
             account.setEmail(email);
             AccountDatabaseController.editAccountInDatabase(account.getId(), account);
@@ -145,7 +158,8 @@ public class EditAccountController {
         }
 
         if (!proceed) {
-            editAccountMenu = EditAccountMenu.getInstance(account);
+            editAccountMenu = EditAccountMenu.getInstance();
+            editAccountMenu.viewMenu(account);
         } else {
             account.setPassword(password);
             AccountDatabaseController.editAccountInDatabase(account.getId(), account);

@@ -1,6 +1,9 @@
 package menus.loginMenu;
 
+import menus.Singleton;
 import menus.TerminalMenu;
+import menus.TerminalMenuWithUser;
+import menus.mainMenu.MainMenuController;
 import model.Account;
 import menus.mainMenu.MainMenu;
 import menus.userMenu.UserMenu;
@@ -11,12 +14,20 @@ import static database.account.AccountDatabaseController.getAccountFromDatabase;
 import static utilities.ClearConsole.cleanConsole;
 import static utilities.InputValidator.*;
 
-public class LoginController {
+public class LoginController implements Singleton {
     Scanner scanner;
     boolean proceed = true;
 
-    public LoginController() {
-        login();
+    private static LoginController loginController;
+
+    public static LoginController getInstance() {
+        if(loginController==null) {
+            loginController = new LoginController();
+        }
+        return loginController;
+    }
+
+    private LoginController(){;
     }
 
     public void login() {
@@ -26,8 +37,8 @@ public class LoginController {
 
         if (proceed) {
             Account account = getAccountFromDatabase(email, password);
-            TerminalMenu userMenu = UserMenu.getInstance(account);
-            userMenu.viewMenu();
+            TerminalMenuWithUser userMenu = UserMenu.getInstance();
+            userMenu.viewMenu(account);
         } else {
             cleanConsole();
             TerminalMenu mainMenu = MainMenu.getInstance();

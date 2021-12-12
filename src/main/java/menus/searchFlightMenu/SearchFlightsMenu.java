@@ -1,14 +1,13 @@
 package menus.searchFlightMenu;
 
+import menus.Singleton;
 import menus.TerminalMenu;
-import menus.mainMenu.MainMenu;
+import menus.TerminalMenuWithUser;
 import model.Account;
 
 import static utilities.ClearConsole.cleanConsole;
 
-public class SearchFlightsMenu implements TerminalMenu {
-    Account account;
-
+public class SearchFlightsMenu implements TerminalMenu, TerminalMenuWithUser, Singleton {
     private static TerminalMenu searchFlightsMenuInstance;
 
     public static TerminalMenu getInstance() {
@@ -18,30 +17,25 @@ public class SearchFlightsMenu implements TerminalMenu {
         return searchFlightsMenuInstance;
     }
 
-
-    public static TerminalMenu getInstance(Account account) {
-        if(searchFlightsMenuInstance==null) {
-            searchFlightsMenuInstance = new SearchFlightsMenu(account);
-        }
-        return searchFlightsMenuInstance;
-    }
-
-    private SearchFlightsMenu(Account account) {
-        this.account = account;
-    }
-
     private SearchFlightsMenu() {
     }
 
-    public void viewMenu() {
-        cleanConsole();
-        System.out.println("Please enter following information to view available flights (or press \"Q\" to quit):");
-        if(account == null) {
-            SearchFlightsController searchFlightsController = new SearchFlightsController();
-        } else {
-            SearchFlightsController searchFlightsController = new SearchFlightsController(account);
-        }
+    public void viewMenu(Account account) {
+        viewMenuHeader();
+        SearchFlightsController searchFlightsController = SearchFlightsController.getInstance();
+        searchFlightsController.searchFlights(account);
+
     }
 
+    public void viewMenu() {
+        viewMenuHeader();
+        SearchFlightsController searchFlightsController = SearchFlightsController.getInstance();
+        searchFlightsController.searchFlights();
+    }
+
+    private void viewMenuHeader() {
+        cleanConsole();
+        System.out.println("Please enter following information to view available flights (or press \"Q\" to quit):");
+    }
 
 }

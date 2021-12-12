@@ -1,32 +1,32 @@
 package menus.editAccountMenu;
 
+import menus.Singleton;
 import menus.TerminalMenu;
+import menus.TerminalMenuWithUser;
 import menus.loginMenu.LoginMenu;
 import model.Account;
 
 import static utilities.ClearConsole.cleanConsole;
 
-public class EditAccountMenu implements TerminalMenu {
-    Account account;
+public class EditAccountMenu implements TerminalMenuWithUser, Singleton {
     EditAccountController editAccountController;
-    static TerminalMenu editAccoutMenuInstance;
+    private static TerminalMenuWithUser editAccoutMenuInstance;
 
-    public static TerminalMenu getInstance(Account account) {
+    public static TerminalMenuWithUser getInstance() {
         if(editAccoutMenuInstance==null) {
-            editAccoutMenuInstance = new EditAccountMenu(account);
+            editAccoutMenuInstance = EditAccountMenu.getInstance();
         }
         return editAccoutMenuInstance;
     }
 
 
-    private EditAccountMenu(Account account) {
-        this.account = account;
+    private EditAccountMenu() {
     }
 
-    public void viewMenu() {
-
+    public void viewMenu(Account account) {
         cleanConsole();
         System.out.println("What would you like to do with your account?" );
-        editAccountController = new EditAccountController(account);
+        editAccountController = EditAccountController.getInstance();
+        editAccountController.viewOptions(account);
     }
 }

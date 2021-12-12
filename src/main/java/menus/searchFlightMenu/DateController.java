@@ -1,5 +1,8 @@
 package menus.searchFlightMenu;
 
+import menus.Singleton;
+import menus.mainMenu.MainMenuController;
+
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.GregorianCalendar;
@@ -8,12 +11,22 @@ import java.util.Scanner;
 import static utilities.InputValidator.checkForQuit;
 import static utilities.InputValidator.isDateValid;
 
-public class DateController {
+public class DateController implements Singleton {
     private boolean proceed;
     SimpleDateFormat sdfWithTime = new SimpleDateFormat("E, dd-MM-yyyy, HH:mm");
     SimpleDateFormat sdfWithoutTime = new SimpleDateFormat("E, dd-MM-yyyy");
     Calendar earliestDate;
     Calendar latestDate;
+    private static DateController dateControllerInstance;
+
+    public static DateController getInstance() {
+        if(dateControllerInstance==null) {
+            dateControllerInstance = new DateController();
+        }
+        return dateControllerInstance;
+    }
+
+    private DateController() {}
 
     public Calendar askForEarliestDate() {
         Calendar earliestDate=null;

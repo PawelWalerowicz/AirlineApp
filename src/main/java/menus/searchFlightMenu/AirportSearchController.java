@@ -1,5 +1,6 @@
 package menus.searchFlightMenu;
 
+import menus.Singleton;
 import model.Airport;
 
 import java.util.ArrayList;
@@ -13,8 +14,20 @@ import static model.Country.isCountry;
 import static utilities.InputOutputTools.capitaliseFirstLetter;
 import static utilities.InputValidator.checkForQuit;
 
-public class AirportSearchController {
+public class AirportSearchController implements Singleton {
     private boolean proceed=true;
+
+    private static AirportSearchController airportSearchControllerInstance;
+
+    public static AirportSearchController getInstance() {
+        if(airportSearchControllerInstance==null) {
+            airportSearchControllerInstance = new AirportSearchController();
+        }
+        return airportSearchControllerInstance;
+    }
+
+    private AirportSearchController() {}
+
 
     public List<Airport> askForAirports(String departureOrLanding) {
         Scanner scanner = new Scanner(System.in);

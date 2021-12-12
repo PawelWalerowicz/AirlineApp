@@ -1,32 +1,32 @@
 package menus.userMenu;
 
+import menus.Singleton;
 import menus.TerminalMenu;
+import menus.TerminalMenuWithUser;
 import menus.mainMenu.MainMenu;
 import model.Account;
 
 import static utilities.ClearConsole.cleanConsole;
 
-public class UserMenu implements TerminalMenu {
-    private Account account;
-    private UserMenuController userMenuController;
-    private static UserMenu userMenuInstance;
+public class UserMenu implements TerminalMenuWithUser {
+    private static TerminalMenuWithUser userMenuInstance;
 
-    public static TerminalMenu getInstance(Account account) {
+    public static TerminalMenuWithUser getInstance() {
         if(userMenuInstance==null) {
-            userMenuInstance = new UserMenu(account);
+            userMenuInstance = new UserMenu();
         }
         return userMenuInstance;
     }
 
 
-    private UserMenu(Account account) {
-        this.account = account;
+    private UserMenu() {
     }
 
-    public void viewMenu() {
+    public void viewMenu(Account account) {
         cleanConsole();
         System.out.println("Welcome again " + account.getName() + " " + account.getSurname()+". How can we help you?" );
-        UserMenuController userMenuController = new UserMenuController(account);
+        UserMenuController userMenuController = UserMenuController.getInstance();
+        userMenuController.viewOptions(account);
 
     }
 

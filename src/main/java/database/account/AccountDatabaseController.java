@@ -1,6 +1,8 @@
 package database.account;
 
+import menus.Singleton;
 import menus.TerminalMenu;
+import menus.createAccountMenu.CreateAccountController;
 import model.Account;
 import menus.mainMenu.MainMenu;
 
@@ -14,7 +16,17 @@ import static utilities.InputOutputTools.clearFile;
 import static utilities.InputOutputTools.loadDatabaseIntoScanner;
 import static utilities.ResourcesIndex.USER_DATABASE_FILE;
 
-public class AccountDatabaseController {
+public class AccountDatabaseController implements Singleton {
+    private static AccountDatabaseController accountDatabaseControllerInstance;
+
+    public static AccountDatabaseController getInstance() {
+        if(accountDatabaseControllerInstance==null) {
+            accountDatabaseControllerInstance = new AccountDatabaseController();
+        }
+        return accountDatabaseControllerInstance;
+    }
+
+    private AccountDatabaseController() {}
 
     public static void saveAccountToDatabase(Account account) {
         account.setId(getNumberOfAccountsInDatabase() + 1);

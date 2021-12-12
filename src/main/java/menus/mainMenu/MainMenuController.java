@@ -1,19 +1,28 @@
 package menus.mainMenu;
 
+import menus.Singleton;
 import menus.TerminalMenu;
 import menus.createAccountMenu.CreateAccountMenu;
 import menus.loginMenu.LoginMenu;
 import menus.searchFlightMenu.SearchFlightsMenu;
+import menus.userMenu.UserMenuController;
 
 import static utilities.InputOutputTools.readUserIntegerInput;
 import static utilities.InputOutputTools.printMenuOptions;
 import static utilities.ResourcesIndex.LIST_OF_MAIN_MENU_OPTIONS;
 
 
-public class MainMenuController {
+public class MainMenuController implements Singleton {
+    private static MainMenuController mainMenuController;
 
-    public MainMenuController() {
-        viewOptions();
+    public static MainMenuController getInstance() {
+        if(mainMenuController==null) {
+            mainMenuController = new MainMenuController();
+        }
+        return mainMenuController;
+    }
+
+    private MainMenuController() {
     }
 
     public void viewOptions() {

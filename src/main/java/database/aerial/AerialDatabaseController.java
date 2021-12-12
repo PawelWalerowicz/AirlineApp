@@ -1,5 +1,8 @@
 package database.aerial;
 
+import database.account.AccountDatabaseController;
+import menus.Singleton;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
@@ -7,7 +10,7 @@ import java.util.Scanner;
 import static utilities.InputOutputTools.loadDatabaseIntoScanner;
 import static utilities.ResourcesIndex.*;
 
-public class AerialDatabaseController {
+public class AerialDatabaseController implements Singleton {
 
     private static final int CITY_POSITION = 2;
 
@@ -30,6 +33,18 @@ public class AerialDatabaseController {
     public static List<String[]> getFlightsFromDatabase() {
         return getItemsFromDatabase(FLIGHTS_DATABASE_FILE);
     }
+
+    private static AerialDatabaseController aerialDatabaseControllerInstance;
+
+    public static AerialDatabaseController getInstance() {
+        if(aerialDatabaseControllerInstance==null) {
+            aerialDatabaseControllerInstance = new AerialDatabaseController();
+        }
+        return aerialDatabaseControllerInstance;
+    }
+
+    private AerialDatabaseController() {}
+
 
     private static List<String[]> getItemsFromDatabase(String databasePath) {
         Scanner scanner = loadDatabaseIntoScanner(databasePath);
