@@ -2,6 +2,7 @@ package model;
 
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
+import java.util.Objects;
 
 import static utilities.createFakeData.createFakeJourneyTime;
 import static utilities.createFakeData.createFakePrice;
@@ -24,12 +25,12 @@ public class Flight {
         this.landingDate = calculateLandingDate();
     }
 
-    public Flight(Route route, Calendar departureDate, TimeInterval flightTime, Calendar landingDate, Price price) {
-        this.route = route;
-        this.price = price;
-        this.departureDate = departureDate;
-        this.flightTime = flightTime;
-        this.landingDate = calculateLandingDate();
+    public static Flight generateFlightFromCompliteData(Route route, Calendar departureDate, TimeInterval flightTime, Calendar landingDate, Price price) {
+        Flight flight = new Flight(route, departureDate);
+        flight.setPrice(price);
+        flight.setFlightTime(flightTime);
+        flight.setLandingDate(landingDate);
+        return flight;
     }
 
     private Calendar calculateLandingDate() {
@@ -65,13 +66,38 @@ public class Flight {
         return route;
     }
 
+
+    public void setRoute(Route route) {
+        this.route = route;
+    }
+
+    public void setPrice(Price price) {
+        this.price = price;
+    }
+
+    public void setFlightTime(TimeInterval flightTime) {
+        this.flightTime = flightTime;
+    }
+
+    public void setLandingDate(Calendar landingDate) {
+        this.landingDate = landingDate;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Flight flight = (Flight) o;
+        return Objects.equals(route, flight.route) && Objects.equals(price, flight.price) && Objects.equals(departureDate, flight.departureDate) && Objects.equals(flightTime, flight.flightTime) && Objects.equals(landingDate, flight.landingDate);
+    }
+
     @Override
     public String toString() {
         return route.toString()
                 + ";\nDeparture on " + sdf.format(departureDate.getTime())
                 + ", landing on " + sdf.format(landingDate.getTime())
                 + " (" + flightTime.toString()
-                +"), price: " + price.toString() + "\n" ;
+                +"), single ticket price: " + price.toString();
     }
 
 

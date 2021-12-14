@@ -23,6 +23,25 @@ public class InputOutputTools {
         return answer;
     }
 
+
+    public static int readUserNotNullIntegerInput(int amountOfOptions) throws NumberFormatException {
+        Scanner userInput = new Scanner(System.in);
+        int answer = -1;
+        boolean validOption;
+
+        do {
+            try {
+                answer = Integer.parseInt(userInput.nextLine());
+                validOption = isValidFlightOption(answer, amountOfOptions);
+            } catch(NumberFormatException exc ) {
+                System.out.println("Invalid input, please try again.");
+                validOption=false;
+            }
+        } while (!validOption);
+
+        return answer;
+    }
+
     public static boolean isValidFlightOption(int answer, int amountOfFlights) {
         if (answer >= 1 && answer <= amountOfFlights) {
             return true;

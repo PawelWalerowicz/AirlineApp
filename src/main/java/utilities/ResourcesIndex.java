@@ -6,6 +6,7 @@ public class ResourcesIndex {
     public static final String LIST_OF_MAIN_MENU_OPTIONS = convertRelativePathToUnrelative("../ViewData/MainMenuOptions.csv");
     public static final String LIST_OF_USER_MENU_OPTIONS =  convertRelativePathToUnrelative("../ViewData/LoggedInUserOptions.csv");
     public static final String LIST_OF_EDIT_ACCOUNT_MENU_OPTIONS = convertRelativePathToUnrelative("../ViewData/EditAccountOptions.csv");
+    public static final String LIST_OF_EDIT_FLIGHT_MENU_OPTIONS = convertRelativePathToUnrelative("../ViewData/EditFlightOptions.csv");
 
     public static final String USER_DATABASE_FILE = convertRelativePathToUnrelative("../UserData/UserDatabase");
 

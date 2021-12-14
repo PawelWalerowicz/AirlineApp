@@ -106,6 +106,18 @@ public class AccountDatabaseController implements Singleton {
         rewriteDatabase(allAccounts);
     }
 
+    public static Account getAccountById(int id) {
+        Account account = null;
+        Scanner scanner = loadDatabaseIntoScanner(USER_DATABASE_FILE);
+        while (scanner.hasNextLine()) {
+            String user = scanner.nextLine();
+            Account currentAccount = convertDatabaseStringToAccount(user);
+            if (currentAccount.getId() == id) {
+                account = currentAccount;
+            }
+        }
+        return account;
+    }
 
     public static void deleteAccountFromDatabase(Account account) {
         Scanner scanner;

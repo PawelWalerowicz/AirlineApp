@@ -3,6 +3,13 @@
   <component name="CsvFileAttributes">
     <option name="attributeMap">
       <map>
+        <entry key="\src\main\resources\ViewData\EditFlightOptions.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
         <entry key="\src\main\resources\ViewData\LoggedInUserOptions.csv">
           <value>
             <Attribute>
@@ -11,13 +18,6 @@
           </value>
         </entry>
         <entry key="\src\main\resources\ViewData\MainMenuOptions.csv">
-          <value>
-            <Attribute>
-              <option name="separator" value="," />
-            </Attribute>
-          </value>
-        </entry>
-        <entry key="\src\main\resources\ViewData\SearchFlightOptions.csv">
           <value>
             <Attribute>
               <option name="separator" value="," />

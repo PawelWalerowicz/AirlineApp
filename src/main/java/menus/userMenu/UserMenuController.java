@@ -1,9 +1,9 @@
 package menus.userMenu;
 
-import database.aerial.FlightDatabaseController;
 import menus.Singleton;
 import menus.TerminalMenu;
 import menus.TerminalMenuWithUser;
+import menus.editReservedFlightsMenu.ReservedFlightsMenu;
 import model.Account;
 import menus.editAccountMenu.EditAccountMenu;
 import menus.mainMenu.MainMenu;
@@ -49,8 +49,8 @@ public class UserMenuController implements Singleton {
                 editAccountMenu.viewMenu(account);
                 break;
             case 1:
-                FlightDatabaseController flightDatabaseController = new FlightDatabaseController(account);
-                flightDatabaseController.printAllFlights();     //todo: create EditYourFlightsMenu
+                TerminalMenuWithUser reservedFlightsMenu = ReservedFlightsMenu.getInstance();
+                reservedFlightsMenu.viewMenu(account);
                 break;
             case 2:
                 TerminalMenuWithUser searchFlightsMenu = (TerminalMenuWithUser) SearchFlightsMenu.getInstance();

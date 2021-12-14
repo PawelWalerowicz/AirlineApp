@@ -2,12 +2,7 @@ package menus.searchFlightMenu;
 
 import database.aerial.FlightDatabaseController;
 import menus.Singleton;
-import menus.TerminalMenu;
-import menus.userMenu.UserMenuController;
-import model.Account;
-import model.Airport;
-import model.Flight;
-import model.Route;
+import model.*;
 import menus.mainMenu.MainMenu;
 import menus.userMenu.UserMenu;
 
@@ -20,6 +15,7 @@ import static model.Route.DESTINATION_AIRPORT_IATA_POSITION;
 import static model.Route.SOURCE_AIRPORT_IATA_POSITION;
 import static utilities.ClearConsole.cleanConsole;
 import static utilities.InputOutputTools.isValidFlightOption;
+import static utilities.InputOutputTools.readUserIntegerInput;
 import static utilities.createFakeData.*;
 
 
@@ -168,19 +164,28 @@ public class SearchFlightsController implements Singleton {
                 try {
                     chosenOption = Integer.parseInt(input);
                 } catch (NumberFormatException exc) {
+                    validOption=false;
                 } finally {
                     validOption = isValidFlightOption(chosenOption, availableFlights.size());
                 }
             }
         } while (!validOption);
-        addFlightToAccount(availableFlights.get(chosenOption));
+        int amount = askForTickietAmount();
+        ReservedFlight reservedFlight = new ReservedFlight(availableFlights.get(chosenOption),account,amount);
+        addFlightToAccount(reservedFlight);
         System.out.println("Flight added to account.");
         quit();
     }
 
-    private void addFlightToAccount(Flight flight) {
-        FlightDatabaseController flightDatabaseController = new FlightDatabaseController(account, flight);
-        flightDatabaseController.saveFlightToDatabase();
+    private int askForTickietAmount() {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("How many tickets would you like to purchase?");
+        return readUserIntegerInput(100);
+    }
+
+    private void addFlightToAccount(ReservedFlight reservedFlight) {
+        FlightDatabaseController flightDatabaseController = FlightDatabaseController.getInstance();
+        flightDatabaseController.saveReservedFlightToDatabase(reservedFlight);
     }
 
     private void returnToMainMenu() {
