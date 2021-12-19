@@ -1,16 +1,17 @@
 package menus.searchFlightMenu;
 
 import menus.Singleton;
+import model.AirlineFactory;
 import model.Airport;
+import model.AirportFactory;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-import static model.Airport.getAirportsInCity;
-import static model.Airport.getAirportsInCountry;
-import static model.Country.isCity;
-import static model.Country.isCountry;
+import static model.AirportFactory.airportExist;
+import static model.CountryFactory.isCity;
+import static model.CountryFactory.isCountry;
 import static utilities.InputOutputTools.capitaliseFirstLetter;
 import static utilities.InputValidator.checkForQuit;
 
@@ -39,21 +40,20 @@ public class AirportSearchController implements Singleton {
                 input = scanner.nextLine();
                 input = capitaliseFirstLetter(input);
                 proceed = checkForQuit(input);
-            } while (proceed && !isAirportOrCountryValid(input));
+            } while (proceed && !isAirportOrCountryorCityValid(input));
         }
-
         if (proceed) {
             if (isCountry(input) || isCity(input)) {
                 if(isCountry(input)) {
                     System.out.println("Listing all airports in " + input + ", it may take a while, please be patient.");
-                    airports = getAirportsInCountry(input);
+                    airports = AirportFactory.getAirportsInCountry(input);
 
                 } else {
-                    airports = getAirportsInCity(input);
+                    airports = AirportFactory.getAirportsInCity(input);
                 }
                 System.out.println(airports.size() + " airports found in " + input + ".");
             } else {
-                Airport airport = new Airport(input);
+                Airport airport = AirportFactory.createAirport(input);
                 if(airport.airportExist()) {
                     airports.add(airport);
                 } else {
@@ -67,20 +67,18 @@ public class AirportSearchController implements Singleton {
     }
 
 
-    public static boolean isAirportOrCountryValid(String name) {
-        boolean isCorrect;
+    public static boolean isAirportOrCountryorCityValid(String name) {
+        boolean isCorrect=false;
         if (isCountry(name)) {
-            isCorrect = true;
+            return true;
         } else if (isCity(name)) {
-            isCorrect = true;
+            return true;
+        } else if(airportExist(name)){
+            return true;
         } else {
-            Airport airport = new Airport(name);
-            isCorrect = airport.airportExist();
-        }
-        if(!isCorrect) {
             System.out.println("Airport/City/Country not found, please try again.");
+            return false;
         }
-        return isCorrect;
     }
 
 

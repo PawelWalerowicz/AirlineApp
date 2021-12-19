@@ -50,7 +50,7 @@ public class Route {
         String destinationAirportIATA = destinationAirport.getIATA();
         for (String[] route : allRoutes) {
             if (route[SOURCE_AIRPORT_IATA_POSITION].equals(sourceAirportIATA) && route[DESTINATION_AIRPORT_IATA_POSITION].equals(destinationAirportIATA)) {
-                this.airline = Airline.createAirline(route[AIRLINE_POSITION]);
+                this.airline = AirlineFactory.createAirline(route[AIRLINE_POSITION]);
                 this.distance = new Distance(sourceAirport.getGeolocation(),destinationAirport.getGeolocation());
                 this.timeZoneDifference = getTimeZoneDifference();
             }

@@ -16,30 +16,7 @@ public class Flight {
 
     SimpleDateFormat sdf = new SimpleDateFormat("E, dd-MM-yyyy, HH:mm");
 
-
-    public Flight(Route route, Calendar departureDate) {
-        this.route = route;
-        this.price = createFakePrice(route.getDistance());
-        this.departureDate = departureDate;
-        this.flightTime = createFakeJourneyTime(route.getDistance());
-        this.landingDate = calculateLandingDate();
-    }
-
-    public static Flight generateFlightFromCompliteData(Route route, Calendar departureDate, TimeInterval flightTime, Calendar landingDate, Price price) {
-        Flight flight = new Flight(route, departureDate);
-        flight.setPrice(price);
-        flight.setFlightTime(flightTime);
-        flight.setLandingDate(landingDate);
-        return flight;
-    }
-
-    private Calendar calculateLandingDate() {
-        Calendar landingDate = (Calendar) this.departureDate.clone();
-        landingDate.add(Calendar.HOUR,this.flightTime.getHours());
-        landingDate.add(Calendar.MINUTE,this.flightTime.getMinutes());
-        landingDate.add(Calendar.HOUR,this.route.getTimeZoneDifference().getHours());
-        landingDate.add(Calendar.MINUTE,this.route.getTimeZoneDifference().getMinutes());
-        return landingDate;
+    public Flight() {
     }
 
     public Calendar getDepartureDate() {
@@ -65,7 +42,6 @@ public class Flight {
     public Route getRoute() {
         return route;
     }
-
 
     public void setRoute(Route route) {
         this.route = route;

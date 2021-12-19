@@ -11,7 +11,6 @@ import java.util.stream.Collectors;
 
 import static database.account.AccountDatabaseController.getAccountById;
 import static database.aerial.AerialDatabaseController.getFlightsFromDatabase;
-import static model.Flight.generateFlightFromCompliteData;
 import static utilities.InputOutputTools.loadDatabaseIntoScanner;
 import static utilities.ResourcesIndex.FLIGHTS_DATABASE_FILE;
 
@@ -145,9 +144,9 @@ public class FlightDatabaseController implements Singleton {
 
     private ReservedFlight getReservedFlightFromParameters(String[] reservedFlightParameters) {
         Account account = getAccountById(Integer.parseInt(reservedFlightParameters[ACCOUNT_INDEX]));
-        Airline airline = Airline.createAirline(reservedFlightParameters[AIRLINE_NAME_INDEX]);
-        Airport departureAirport = new Airport(reservedFlightParameters[DEPARTURE_AIRPORT_IATA_INDEX]);
-        Airport landingAirport = new Airport(reservedFlightParameters[LANDING_AIRPORT_IATA_INDEX]);
+        Airline airline = AirlineFactory.createAirline(reservedFlightParameters[AIRLINE_NAME_INDEX]);
+        Airport departureAirport = AirportFactory.createAirport(reservedFlightParameters[DEPARTURE_AIRPORT_IATA_INDEX]);
+        Airport landingAirport = AirportFactory.createAirport(reservedFlightParameters[LANDING_AIRPORT_IATA_INDEX]);
         Route route = new Route(airline, departureAirport,landingAirport);
 
         Calendar departureDate = new GregorianCalendar();
@@ -163,7 +162,7 @@ public class FlightDatabaseController implements Singleton {
         Price price = new Price(Double.parseDouble(reservedFlightParameters[PRICE_INDEX]));
         int amount = Integer.parseInt(reservedFlightParameters[AMOUNT_INDEX]);
 
-        Flight flight = generateFlightFromCompliteData(route, departureDate, flightTime, landingDate, price);
+        Flight flight = FlightFactory.createFlightWithSetParameters(route, departureDate, flightTime, landingDate, price);
 
         ReservedFlight reservedFlight = new ReservedFlight(flight,account,amount);
         return reservedFlight;

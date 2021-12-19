@@ -14,9 +14,9 @@ public class InputOutputTools {
             try {
                 answer = Integer.parseInt(userInput.nextLine());
                 validOption = isOptionValid(answer, amountOfOptions);
-            } catch(NumberFormatException exc ) {
+            } catch (NumberFormatException exc) {
                 System.out.println("Invalid input, please try again.");
-                validOption=false;
+                validOption = false;
             }
         } while (!validOption);
 
@@ -33,9 +33,9 @@ public class InputOutputTools {
             try {
                 answer = Integer.parseInt(userInput.nextLine());
                 validOption = isValidFlightOption(answer, amountOfOptions);
-            } catch(NumberFormatException exc ) {
+            } catch (NumberFormatException exc) {
                 System.out.println("Invalid input, please try again.");
-                validOption=false;
+                validOption = false;
             }
         } while (!validOption);
 
@@ -108,9 +108,15 @@ public class InputOutputTools {
 
     public static String capitaliseFirstLetter(String string) {
 
-        //todo: add funcionality for multi-word names like New York
         if (!string.isEmpty()) {
-            return string.substring(0, 1).toUpperCase() + string.substring(1).toLowerCase();
+            String[] singleWords = string.split(" ");
+            for (int i = 0; i < singleWords.length; i++) {
+                singleWords[i] = singleWords[i].substring(0, 1).toUpperCase() + singleWords[i].substring(1).toLowerCase();
+            }
+            String wholeName = String.join( " ", singleWords);
+
+            return wholeName;
+
         } else return string;
     }
 

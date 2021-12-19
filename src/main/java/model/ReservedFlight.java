@@ -18,7 +18,6 @@ public class ReservedFlight {
         return new Price(flight.getPrice().getPrice()*amount);
     }
 
-
     public Flight getFlight() {
         return flight;
     }

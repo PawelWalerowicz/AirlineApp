@@ -2,9 +2,9 @@ package menus.searchFlightMenu;
 
 import database.aerial.FlightDatabaseController;
 import menus.Singleton;
-import model.*;
 import menus.mainMenu.MainMenu;
 import menus.userMenu.UserMenu;
+import model.*;
 
 import java.text.SimpleDateFormat;
 import java.util.*;
@@ -33,7 +33,7 @@ public class SearchFlightsController implements Singleton {
 
 
     public static SearchFlightsController getInstance() {
-        if(searchFlightsControllerInstance==null) {
+        if (searchFlightsControllerInstance == null) {
             searchFlightsControllerInstance = new SearchFlightsController();
         }
         return searchFlightsControllerInstance;
@@ -41,22 +41,31 @@ public class SearchFlightsController implements Singleton {
 
 
     private SearchFlightsController() {
-            }
+    }
 
     public void searchFlights() {
-        this.account=null;
-        searchForRoutes();
-        askForDates();
-        generateFlights();
-        printFlights(availableFlights);
+        this.account = null;
+        searchSteps();
     }
 
     public void searchFlights(Account account) {
-        this.account=account;
-        searchForRoutes();
-        askForDates();
-        generateFlights();
-        printFlights(availableFlights);
+        this.account = account;
+        searchSteps();
+    }
+
+    private void searchSteps() {
+        if (proceed) {
+            searchForRoutes();
+        }
+        if (proceed) {
+            askForDates();
+        }
+        if (proceed) {
+            generateFlights();
+        }
+        if (proceed) {
+            printFlights(availableFlights);
+        } else quit();
     }
 
     private void searchForRoutes() {
@@ -65,12 +74,15 @@ public class SearchFlightsController implements Singleton {
         List<Airport> landingAirport = null;
         if (proceed) {
             departureAirport = airportSearchController.askForAirports("Departure");
-        } else quit();
+        }
+        proceed = airportSearchController.getProceed();
         if (proceed) {
             landingAirport = airportSearchController.askForAirports("Landing");
-        } else quit();
+        }
         proceed = airportSearchController.getProceed();
-        availableRoutes = searchForFlightsInDatabase(departureAirport, landingAirport);
+        if (proceed) {
+            availableRoutes = searchForFlightsInDatabase(departureAirport, landingAirport);
+        }
     }
 
     private void askForDates() {
@@ -78,10 +90,10 @@ public class SearchFlightsController implements Singleton {
         dateController.setProceed(proceed);
         if (proceed) {
             earliestDate = dateController.askForEarliestDate();
-        } else quit();
+        }
         if (proceed) {
             latestDate = dateController.askForLatestDate(earliestDate);
-        } else quit();
+        }
         proceed = dateController.getProceed();
     }
 
@@ -93,11 +105,11 @@ public class SearchFlightsController implements Singleton {
             while (amountOfFlights < requiredAmountOfFlights) {
                 Route route = chooseRandomRoute(availableRoutes);
                 Calendar randomDate = createFakeDate(earliestDate, latestDate);
-                Flight flight = new Flight(route, randomDate);
+                Flight flight = FlightFactory.createFlightWithRandomParameters(route, randomDate);
                 allFlights.add(flight);
                 amountOfFlights++;
             }
-        } else quit();
+        }
         availableFlights = MapAllFlights(allFlights);
     }
 
@@ -126,7 +138,7 @@ public class SearchFlightsController implements Singleton {
             } else {
                 chooseFlight();
             }
-        } else quit();
+        }
     }
 
     private List<Route> searchForFlightsInDatabase(List<Airport> departureAirport, List<Airport> landingAirport) {
@@ -143,11 +155,11 @@ public class SearchFlightsController implements Singleton {
             } else {
                 System.out.println("Found " + allRoutesOnPath.size() + " direct connections.");
             }
-        } else quit();
+        }
         return allRoutesOnPath;
     }
 
-    private void chooseFlight() {     //TODO: add option to purchase multiple tickets
+    private void chooseFlight() {
         boolean validOption;
         int chosenOption = -1;
         Scanner scanner = new Scanner(System.in);
@@ -164,14 +176,14 @@ public class SearchFlightsController implements Singleton {
                 try {
                     chosenOption = Integer.parseInt(input);
                 } catch (NumberFormatException exc) {
-                    validOption=false;
+                    validOption = false;
                 } finally {
                     validOption = isValidFlightOption(chosenOption, availableFlights.size());
                 }
             }
         } while (!validOption);
         int amount = askForTickietAmount();
-        ReservedFlight reservedFlight = new ReservedFlight(availableFlights.get(chosenOption),account,amount);
+        ReservedFlight reservedFlight = new ReservedFlight(availableFlights.get(chosenOption), account, amount);
         addFlightToAccount(reservedFlight);
         System.out.println("Flight added to account.");
         quit();
@@ -225,7 +237,7 @@ public class SearchFlightsController implements Singleton {
             for (String[] route : allRoutesWithSetDepartureAirports) {
                 String endAirportIATA = endAirport.getIATA();
                 if (route[DESTINATION_AIRPORT_IATA_POSITION].equals(endAirportIATA)) {
-                    Airport startAirport = new Airport(route[SOURCE_AIRPORT_IATA_POSITION]);
+                    Airport startAirport = AirportFactory.createAirport(route[SOURCE_AIRPORT_IATA_POSITION]);
                     Route currentRoute = new Route(startAirport, endAirport);
                     allRoutesOnPath.add(currentRoute);
                 }
